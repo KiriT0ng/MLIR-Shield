@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="880" viewBox="0 0 1500 880">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#315EFB"/><stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <style>
+      .title{font:800 38px 'Segoe UI','Microsoft YaHei',Arial;fill:#102033}.sub{font:500 17px 'Segoe UI','Microsoft YaHei',Arial;fill:#64748B}.box{fill:#fff;stroke:#D8E2F0;stroke-width:2;rx:18}.accent{fill:#F1F7FF;stroke:#9CB8FF}.risk{fill:#FFF7ED;stroke:#FDBA74}.ok{fill:#ECFDF5;stroke:#6EE7B7}.h{font:800 20px 'Segoe UI','Microsoft YaHei',Arial;fill:#172033}.p{font:500 14px 'Segoe UI','Microsoft YaHei',Arial;fill:#53657D}.tag{font:800 13px 'Segoe UI','Microsoft YaHei',Arial;fill:#fff}.arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12z" fill="#334155"/></marker>
+  </defs>
+  <rect width="1500" height="880" fill="#F7FAFF"/>
+  <text x="64" y="70" class="title">MLIRShield 系统架构与证据链</text>
+  <text x="64" y="104" class="sub">输入治理、pipeline 调度、失败分诊、最小化复现、版本差分和用户门户构成闭环</text>
+  <g transform="translate(64 154)">
+    <rect class="box accent" width="250" height="118"/><text x="24" y="42" class="h">Seed Library</text><text x="24" y="72" class="p">官方测试 / 公开 issue / 原创搜索</text><text x="24" y="96" class="p">来源索引与匿名提交输入</text>
+  </g>
+  <g transform="translate(374 154)">
+    <rect class="box" width="250" height="118"/><text x="24" y="42" class="h">Pipeline Scheduler</text><text x="24" y="72" class="p">parse / canonicalize / CSE</text><text x="24" y="96" class="p">stress / issue-specific configs</text>
+  </g>
+  <g transform="translate(684 154)">
+    <rect class="box risk" width="250" height="118"/><text x="24" y="42" class="h">Toolchain Runner</text><text x="24" y="72" class="p">mock / local / SSH VM</text><text x="24" y="96" class="p">MLIR 15 / 22 / 23 snapshot</text>
+  </g>
+  <g transform="translate(994 154)">
+    <rect class="box" width="250" height="118"/><text x="24" y="42" class="h">Result Collector</text><text x="24" y="72" class="p">stdout / stderr / return code</text><text x="24" y="96" class="p">耗时、命令与产物路径</text>
+  </g>
+  <path class="arrow" d="M315 213H365"/><path class="arrow" d="M625 213H675"/><path class="arrow" d="M935 213H985"/>
+  <g transform="translate(220 378)">
+    <rect class="box ok" width="270" height="126"/><text x="24" y="44" class="h">Classifier + Signature</text><text x="24" y="75" class="p">parser / verifier / dialect</text><text x="24" y="99" class="p">memory/assertion / timeout</text>
+  </g>
+  <g transform="translate(615 378)">
+    <rect class="box accent" width="270" height="126"/><text x="24" y="44" class="h">P0/P1/P2 Triage</text><text x="24" y="75" class="p">按安全价值排序候选</text><text x="24" y="99" class="p">去重、降噪、人工复核入口</text>
+  </g>
+  <g transform="translate(1010 378)">
+    <rect class="box risk" width="270" height="126"/><text x="24" y="44" class="h">Minimizer + Diff</text><text x="24" y="75" class="p">1236 行 -> 61 行 -> 8 行</text><text x="24" y="99" class="p">跨版本与控制组验证</text>
+  </g>
+  <path class="arrow" d="M355 272C355 320 355 340 355 370"/><path class="arrow" d="M490 441H605"/><path class="arrow" d="M885 441H1000"/>
+  <g transform="translate(172 646)">
+    <rect class="box" width="310" height="112"/><text x="24" y="42" class="h">User Portal</text><text x="24" y="72" class="p">上传/粘贴 MLIR，用户可读结论</text><text x="24" y="96" class="p">历史记录与完整技术报告链接</text>
+  </g>
+  <g transform="translate(595 646)">
+    <rect class="box ok" width="310" height="112"/><text x="24" y="42" class="h">Lab Console</text><text x="24" y="72" class="p">报告、案例库、最小复现</text><text x="24" y="96" class="p">面向答辩和源码检查</text>
+  </g>
+  <g transform="translate(1018 646)">
+    <rect class="box accent" width="310" height="112"/><text x="24" y="42" class="h">Competition Evidence</text><text x="24" y="72" class="p">图表、截图、数据表、报告</text><text x="24" y="96" class="p">可复核、可提交、可追溯</text>
+  </g>
+  <path class="arrow" d="M1145 504C1145 575 1170 595 1170 636"/><path class="arrow" d="M750 504V636"/><path class="arrow" d="M355 504C355 575 327 595 327 636"/>
+  <rect x="64" y="794" width="1372" height="44" rx="22" fill="url(#g)"/>
+  <text x="92" y="823" class="tag">核心竞争力：不是堆崩溃数量，而是将编译基础设施异常输入风险沉淀为来源、命令、版本、最小复现和边界说明完整的证据链。</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify",
+      "description": "Parse and verify the current MLIR 23 candidate before running the crash pass.",
+      "args": []
+    },
+    {
+      "name": "mem2reg_dbg_declare_issue_197158",
+      "description": "Reproducer pipeline for LLVM issue #197158 on MLIR 23 development snapshot.",
+      "args": ["--mem2reg"]
+    }
+  ]
+}

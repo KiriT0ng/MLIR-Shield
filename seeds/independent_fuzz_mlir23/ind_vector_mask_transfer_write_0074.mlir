@@ -1,0 +1,6 @@
+func.func @ind_vector_mask_transfer_write_74(%src: memref<?x?xf32>, %dst: memref<?x?xf32>, %i: index, %j: index, %mask: vector<3x4xi1>) {
+  %pad = arith.constant 0.000000e+00 : f32
+  %v = vector.transfer_read %src[%i, %j], %pad {in_bounds = [true, false]} : memref<?x?xf32>, vector<3x4xf32>
+  vector.mask %mask { vector.transfer_write %v, %dst[%i, %j] {in_bounds = [true, false]} : vector<3x4xf32>, memref<?x?xf32> } : vector<3x4xi1>
+  return
+}

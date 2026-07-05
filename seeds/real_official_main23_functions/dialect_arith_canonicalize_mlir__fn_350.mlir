@@ -1,0 +1,9 @@
+func.func @sequences_no_fastmath(%arg0: bf16) -> bf16 {
+  %0 = arith.extf %arg0 : bf16 to f32
+  %1 = math.absf %0 : f32
+  %2 = arith.truncf %1 : f32 to bf16
+  %3 = arith.extf %2 : bf16 to f32
+  %4 = math.sin %3 : f32
+  %5 = arith.truncf %4 : f32 to bf16
+  return %5 : bf16
+}

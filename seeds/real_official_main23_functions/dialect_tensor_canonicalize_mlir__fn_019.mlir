@@ -1,0 +1,6 @@
+func.func @extract_from_tensor.from_elements_0d(%element : index) -> index {
+  %c0 = arith.constant 0 : index
+  %tensor = tensor.from_elements %element : tensor<index>
+  %extracted_element = tensor.extract %tensor[] : tensor<index>
+  return %extracted_element : index
+}

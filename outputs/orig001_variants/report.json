@@ -1,0 +1,296 @@
+{
+  "tool": "mlir-opt-23",
+  "variant_count": 10,
+  "pipelines": [
+    "parse_only",
+    "inline"
+  ],
+  "runs": [
+    {
+      "variant": "v01_return_nested_empty_region",
+      "kind": "returned-parent / unknown nested empty region",
+      "expectation": "If this crashes, the public no-terminator condition is not required.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 1704,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v01_return_nested_empty_region",
+      "kind": "returned-parent / unknown nested empty region",
+      "expectation": "If this crashes, the public no-terminator condition is not required.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": -1,
+      "category": "memory/assertion",
+      "elapsed_ms": 1554,
+      "stderr_excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x00007556ba1c11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x00007556ba1beb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x00007556ba1c1fd4\n3  libc.so.6       0x00007556b4842520\n4  libMLIR.so.23.0 0x00007556c51847cd\n5  libMLIR.so.23.0 0x00007556c51844c3\n6  libMLIR.so.23.0 0x00007556c51839a0 mlir::Inliner::doInlining() + 832\n7  libMLIR.so.23.0 0x00007556c519e265\n8  libMLIR.so.23.0 0x00007556c4eab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979\n9  libMLIR.so.23.0 0x00007556c4eabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x00007556c4eae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x00007556c5136358\n12 libMLIR.so.23.0 0x00007556c5135506\n13 libMLIR.so.23.0 0x00007556c4efae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x00007556c512c7cb mlir::Mli"
+    },
+    {
+      "variant": "v02_return_nested_plain_op",
+      "kind": "returned-parent / unknown nested plain op",
+      "expectation": "Project-discovered ORIG-CAND-001 minimal candidate.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 71,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v02_return_nested_plain_op",
+      "kind": "returned-parent / unknown nested plain op",
+      "expectation": "Project-discovered ORIG-CAND-001 minimal candidate.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": -1,
+      "category": "memory/assertion",
+      "elapsed_ms": 1351,
+      "stderr_excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x000072c5b9dc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x000072c5b9dbeb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x000072c5b9dc1fd4\n3  libc.so.6       0x000072c5b4442520\n4  libMLIR.so.23.0 0x000072c5c4d847cd\n5  libMLIR.so.23.0 0x000072c5c4d844c3\n6  libMLIR.so.23.0 0x000072c5c4d839a0 mlir::Inliner::doInlining() + 832\n7  libMLIR.so.23.0 0x000072c5c4d9e265\n8  libMLIR.so.23.0 0x000072c5c4aab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979\n9  libMLIR.so.23.0 0x000072c5c4aabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x000072c5c4aae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x000072c5c4d36358\n12 libMLIR.so.23.0 0x000072c5c4d35506\n13 libMLIR.so.23.0 0x000072c5c4afae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x000072c5c4d2c7cb mlir::Mli"
+    },
+    {
+      "variant": "v03_return_nested_two_ops",
+      "kind": "returned-parent / unknown nested two ops",
+      "expectation": "Checks whether crash generalizes beyond one nested operation.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v03_return_nested_two_ops",
+      "kind": "returned-parent / unknown nested two ops",
+      "expectation": "Checks whether crash generalizes beyond one nested operation.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": -1,
+      "category": "memory/assertion",
+      "elapsed_ms": 1358,
+      "stderr_excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x0000712e707c11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x0000712e707beb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x0000712e707c1fd4\n3  libc.so.6       0x0000712e6ae42520\n4  libMLIR.so.23.0 0x0000712e7b7847cd\n5  libMLIR.so.23.0 0x0000712e7b7844c3\n6  libMLIR.so.23.0 0x0000712e7b7839a0 mlir::Inliner::doInlining() + 832\n7  libMLIR.so.23.0 0x0000712e7b79e265\n8  libMLIR.so.23.0 0x0000712e7b4ab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979\n9  libMLIR.so.23.0 0x0000712e7b4abcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x0000712e7b4ae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x0000712e7b736358\n12 libMLIR.so.23.0 0x0000712e7b735506\n13 libMLIR.so.23.0 0x0000712e7b4fae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x0000712e7b72c7cb mlir::Mli"
+    },
+    {
+      "variant": "v04_return_nested_symbol_attr",
+      "kind": "returned-parent / unknown nested symbol attribute",
+      "expectation": "Checks symbol-use walking under a returned parent function.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 112,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v04_return_nested_symbol_attr",
+      "kind": "returned-parent / unknown nested symbol attribute",
+      "expectation": "Checks symbol-use walking under a returned parent function.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": -1,
+      "category": "memory/assertion",
+      "elapsed_ms": 1429,
+      "stderr_excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x00007c3c1ffc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x00007c3c1ffbeb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x00007c3c1ffc1fd4\n3  libc.so.6       0x00007c3c1a642520\n4  libMLIR.so.23.0 0x00007c3c2af847cd\n5  libMLIR.so.23.0 0x00007c3c2af844c3\n6  libMLIR.so.23.0 0x00007c3c2af839a0 mlir::Inliner::doInlining() + 832\n7  libMLIR.so.23.0 0x00007c3c2af9e265\n8  libMLIR.so.23.0 0x00007c3c2acab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979\n9  libMLIR.so.23.0 0x00007c3c2acabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x00007c3c2acae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x00007c3c2af36358\n12 libMLIR.so.23.0 0x00007c3c2af35506\n13 libMLIR.so.23.0 0x00007c3c2acfae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x00007c3c2af2c7cb mlir::Mli"
+    },
+    {
+      "variant": "v05_module_level_graph_region",
+      "kind": "module-level unknown region",
+      "expectation": "Control for function-specific behavior.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v05_module_level_graph_region",
+      "kind": "module-level unknown region",
+      "expectation": "Control for function-specific behavior.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": -1,
+      "category": "memory/assertion",
+      "elapsed_ms": 1371,
+      "stderr_excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x00007abd72bc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x00007abd72bbeb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x00007abd72bc1fd4\n3  libc.so.6       0x00007abd6d242520\n4  libMLIR.so.23.0 0x00007abd7db847cd\n5  libMLIR.so.23.0 0x00007abd7db845dd\n6  libMLIR.so.23.0 0x00007abd7db83826 mlir::Inliner::doInlining() + 454\n7  libMLIR.so.23.0 0x00007abd7db9e265\n8  libMLIR.so.23.0 0x00007abd7d8ab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979\n9  libMLIR.so.23.0 0x00007abd7d8abcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x00007abd7d8ae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x00007abd7db36358\n12 libMLIR.so.23.0 0x00007abd7db35506\n13 libMLIR.so.23.0 0x00007abd7d8fae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x00007abd7db2c7cb mlir::Mli"
+    },
+    {
+      "variant": "v06_public_no_return_empty_region",
+      "kind": "public-like baseline",
+      "expectation": "Matches the public #197960 shape: function has no terminator.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v06_public_no_return_empty_region",
+      "kind": "public-like baseline",
+      "expectation": "Matches the public #197960 shape: function has no terminator.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": -1,
+      "category": "memory/assertion",
+      "elapsed_ms": 1340,
+      "stderr_excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x0000716aaedc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x0000716aaedbeb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x0000716aaedc1fd4\n3  libc.so.6       0x0000716aa9442520\n4  libMLIR.so.23.0 0x0000716ab9d847cd\n5  libMLIR.so.23.0 0x0000716ab9d844c3\n6  libMLIR.so.23.0 0x0000716ab9d839a0 mlir::Inliner::doInlining() + 832\n7  libMLIR.so.23.0 0x0000716ab9d9e265\n8  libMLIR.so.23.0 0x0000716ab9aab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979\n9  libMLIR.so.23.0 0x0000716ab9aabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x0000716ab9aae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x0000716ab9d36358\n12 libMLIR.so.23.0 0x0000716ab9d35506\n13 libMLIR.so.23.0 0x0000716ab9afae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x0000716ab9d2c7cb mlir::Mli"
+    },
+    {
+      "variant": "v07_registered_scf_if_return",
+      "kind": "registered-region control",
+      "expectation": "Registered structured region should not trigger this crash.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v07_registered_scf_if_return",
+      "kind": "registered-region control",
+      "expectation": "Registered structured region should not trigger this crash.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v08_registered_scf_call_return",
+      "kind": "registered-call control",
+      "expectation": "Registered call graph should be analyzable by inliner.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v08_registered_scf_call_return",
+      "kind": "registered-call control",
+      "expectation": "Registered call graph should be analyzable by inliner.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v09_return_unknown_no_region",
+      "kind": "returned-parent / unknown op without region",
+      "expectation": "Unknown op without a region should not be enough to crash.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v09_return_unknown_no_region",
+      "kind": "returned-parent / unknown op without region",
+      "expectation": "Unknown op without a region should not be enough to crash.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 119,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v10_return_nested_multi_region",
+      "kind": "returned-parent / unknown op with two regions",
+      "expectation": "Checks whether multiple unknown nested regions keep the same failure mode.",
+      "pipeline": "parse_only",
+      "args": [
+        "--allow-unregistered-dialect"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "variant": "v10_return_nested_multi_region",
+      "kind": "returned-parent / unknown op with two regions",
+      "expectation": "Checks whether multiple unknown nested regions keep the same failure mode.",
+      "pipeline": "inline",
+      "args": [
+        "--allow-unregistered-dialect",
+        "--inline"
+      ],
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    }
+  ],
+  "summary": {
+    "category_counts": {
+      "parse_only:success": 10,
+      "inline:memory/assertion": 6,
+      "inline:success": 4
+    },
+    "inline_hard_failures": [
+      "v01_return_nested_empty_region",
+      "v02_return_nested_plain_op",
+      "v03_return_nested_two_ops",
+      "v04_return_nested_symbol_attr",
+      "v05_module_level_graph_region",
+      "v06_public_no_return_empty_region"
+    ],
+    "parse_failures": []
+  }
+}

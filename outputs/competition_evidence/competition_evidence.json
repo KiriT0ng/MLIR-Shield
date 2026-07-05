@@ -1,0 +1,540 @@
+{
+  "generated_from": "D:\\_KiriTong_\\信安赛\\MILR",
+  "seed_summary": {
+    "total": 4822,
+    "indexed": 4522,
+    "origins": {
+      "generated": 12,
+      "issue-current": 1,
+      "generated-original-frontier-fuzz": 240,
+      "generated-original-generic-fuzz": 80,
+      "generated-independent-fuzz": 960,
+      "issue": 9,
+      "original-candidate": 11,
+      "generated-original-search": 620,
+      "official": 109,
+      "official-main23": 41,
+      "official-main23-function-extract": 2439,
+      "unknown": 300
+    },
+    "groups": {
+      "affine": 1,
+      "arith": 2,
+      "cf": 1,
+      "current_mlir23": 1,
+      "demo_failures": 5,
+      "frontier_fuzz_mlir23": 240,
+      "generic_fuzz_mlir23": 80,
+      "independent_fuzz_mlir23": 960,
+      "issue_repros": 9,
+      "linalg": 1,
+      "orig001_variants": 10,
+      "original_candidates": 1,
+      "original_search_mlir23": 620,
+      "real_official": 109,
+      "real_official_main23": 41,
+      "real_official_main23_functions": 2439,
+      "real_official_main23_functions_focus": 240,
+      "real_official_main23_functions_focus60": 60,
+      "scf": 1,
+      "tosa": 1
+    }
+  },
+  "reports": [
+    {
+      "key": "demo",
+      "label": "Demo",
+      "exists": true,
+      "seeds": 4822,
+      "pipelines": 7,
+      "runs": 33754,
+      "issues": 5,
+      "clusters": 5,
+      "ir_deltas": 0,
+      "run_categories": {
+        "dialect registration": 1,
+        "memory/assertion": 1,
+        "parser": 1,
+        "success": 33749,
+        "type legality": 1,
+        "verifier": 1
+      },
+      "issue_severities": {
+        "high": 5
+      },
+      "issue_kinds": {
+        "pipeline divergence": 5
+      }
+    },
+    {
+      "key": "latest",
+      "label": "Mock Baseline",
+      "exists": true,
+      "seeds": 4822,
+      "pipelines": 8,
+      "runs": 38576,
+      "issues": 0,
+      "clusters": 0,
+      "ir_deltas": 0,
+      "run_categories": {
+        "success": 38576
+      },
+      "issue_severities": {},
+      "issue_kinds": {}
+    },
+    {
+      "key": "issues",
+      "label": "Issue Repros",
+      "exists": true,
+      "seeds": 9,
+      "pipelines": 10,
+      "runs": 90,
+      "issues": 9,
+      "clusters": 8,
+      "ir_deltas": 4,
+      "run_categories": {
+        "memory/assertion": 2,
+        "parser": 10,
+        "success": 34,
+        "unknown failure": 44
+      },
+      "issue_severities": {
+        "high": 4,
+        "medium": 5
+      },
+      "issue_kinds": {
+        "all pipelines failed": 5,
+        "pipeline divergence": 4
+      }
+    },
+    {
+      "key": "discovery",
+      "label": "Discovery",
+      "exists": true,
+      "seeds": 130,
+      "pipelines": 9,
+      "runs": 1170,
+      "issues": 99,
+      "clusters": 97,
+      "ir_deltas": 23,
+      "run_categories": {
+        "dialect registration": 54,
+        "memory/assertion": 10,
+        "parser": 108,
+        "success": 328,
+        "unknown failure": 670
+      },
+      "issue_severities": {
+        "high": 7,
+        "medium": 92
+      },
+      "issue_kinds": {
+        "all pipelines failed": 92,
+        "pipeline divergence": 7
+      }
+    },
+    {
+      "key": "discovery_mlir22",
+      "label": "Discovery MLIR22",
+      "exists": true,
+      "seeds": 130,
+      "pipelines": 9,
+      "runs": 1170,
+      "issues": 59,
+      "clusters": 61,
+      "ir_deltas": 50,
+      "run_categories": {
+        "dialect registration": 54,
+        "memory/assertion": 6,
+        "parser": 105,
+        "success": 719,
+        "type legality": 1,
+        "unknown failure": 285
+      },
+      "issue_severities": {
+        "high": 11,
+        "medium": 48
+      },
+      "issue_kinds": {
+        "all pipelines failed": 48,
+        "pipeline divergence": 11
+      }
+    },
+    {
+      "key": "current_issues_mlir23",
+      "label": "Current MLIR23 Issue",
+      "exists": true,
+      "seeds": 1,
+      "pipelines": 2,
+      "runs": 2,
+      "issues": 1,
+      "clusters": 1,
+      "ir_deltas": 0,
+      "run_categories": {
+        "memory/assertion": 1,
+        "success": 1
+      },
+      "issue_severities": {
+        "high": 1
+      },
+      "issue_kinds": {
+        "pipeline divergence": 1
+      }
+    },
+    {
+      "key": "orig001_variants",
+      "label": "ORIG-CAND-001 Variants",
+      "exists": true,
+      "seeds": 0,
+      "pipelines": 2,
+      "runs": 20,
+      "issues": 0,
+      "clusters": 0,
+      "ir_deltas": 0,
+      "run_categories": {
+        "success": 14,
+        "memory/assertion": 6
+      },
+      "issue_severities": {},
+      "issue_kinds": {}
+    },
+    {
+      "key": "independent_fuzz_mlir23",
+      "label": "Independent Fuzz MLIR23",
+      "exists": true,
+      "seeds": 960,
+      "pipelines": 8,
+      "runs": 2400,
+      "issues": 0,
+      "clusters": 0,
+      "ir_deltas": 0,
+      "run_categories": {
+        "success": 2304,
+        "parser/verifier": 96
+      },
+      "issue_severities": {},
+      "issue_kinds": {}
+    },
+    {
+      "key": "original_search_mlir23",
+      "label": "Original Search MLIR23",
+      "exists": true,
+      "seeds": 360,
+      "pipelines": 16,
+      "runs": 5760,
+      "issues": 0,
+      "clusters": 0,
+      "ir_deltas": 0,
+      "run_categories": {
+        "success": 5680,
+        "unknown failure": 80
+      },
+      "issue_severities": {},
+      "issue_kinds": {}
+    }
+  ],
+  "minimized": [
+    {
+      "file": "llvm_61085_linalg_core.mlir22.mlir",
+      "lines": 17,
+      "bytes": 673
+    },
+    {
+      "file": "llvm_61085_tosa_linalg_affine.min.mlir",
+      "lines": 19,
+      "bytes": 937
+    },
+    {
+      "file": "llvm_61085_tosa_linalg_affine.mlir22.mlir",
+      "lines": 19,
+      "bytes": 890
+    },
+    {
+      "file": "llvm_75811_gpu_parallel_probe.min.mlir",
+      "lines": 15,
+      "bytes": 618
+    },
+    {
+      "file": "mlir22_memref_canonicalize_current.chunk.min.mlir",
+      "lines": 8,
+      "bytes": 448
+    },
+    {
+      "file": "mlir22_memref_canonicalize_current.min.mlir",
+      "lines": 61,
+      "bytes": 3352
+    },
+    {
+      "file": "shape_fold_div_canonicalize.min.mlir",
+      "lines": 7,
+      "bytes": 180
+    }
+  ],
+  "case_matrix": [
+    {
+      "case": "MIN-004",
+      "mlir15": "未作为主验证版本",
+      "mlir22": "hard failure",
+      "mlir23": "not reproduced / fixed-like",
+      "upstream": "与历史公开 bug 形态接近，未作为严格原创上游提交",
+      "position": "MLIR 22 版本差分重点案例"
+    },
+    {
+      "case": "LLVM #197158",
+      "mlir15": "未作为主验证版本",
+      "mlir22": "未作为主验证版本",
+      "mlir23": "reproduced hard failure",
+      "upstream": "Open: https://github.com/llvm/llvm-project/issues/197158",
+      "position": "当前 MLIR 23 公开问题复核"
+    },
+    {
+      "case": "LLVM #197960 baseline",
+      "mlir15": "未作为主验证版本",
+      "mlir22": "未作为主验证版本",
+      "mlir23": "reproduced hard failure",
+      "upstream": "Open: https://github.com/llvm/llvm-project/issues/197960",
+      "position": "公开 issue baseline"
+    },
+    {
+      "case": "ORIG-CAND-001",
+      "mlir15": "未作为主验证版本",
+      "mlir22": "未作为主验证版本",
+      "mlir23": "reproduced hard failure",
+      "upstream": "待在 #197960 下确认是否同根因",
+      "position": "原创候选 / 已知问题影响范围扩展"
+    },
+    {
+      "case": "独立原创搜索批次",
+      "mlir15": "未作为主验证版本",
+      "mlir22": "未作为主验证版本",
+      "mlir23": "5700 runs, 0 independent hard failure",
+      "upstream": "未提交",
+      "position": "严谨负结果和去重证据"
+    }
+  ],
+  "pipeline_coverage": [
+    {
+      "name": "parse_verify",
+      "target": "所有输入",
+      "risk": "基础合法性与 verifier 边界",
+      "profile": "quick/standard/deep",
+      "args": "parse/verify only"
+    },
+    {
+      "name": "canonicalize",
+      "target": "arith/memref/tensor/shape",
+      "risk": "规范化路径稳定性",
+      "profile": "quick/standard/deep",
+      "args": "--canonicalize"
+    },
+    {
+      "name": "cse",
+      "target": "通用 IR",
+      "risk": "公共子表达式消除差分",
+      "profile": "standard/deep",
+      "args": "--cse"
+    },
+    {
+      "name": "canonicalize_cse",
+      "target": "通用 IR",
+      "risk": "常见优化组合差分",
+      "profile": "standard/deep",
+      "args": "--canonicalize --cse"
+    },
+    {
+      "name": "symbol_dce_canonicalize",
+      "target": "func/symbol",
+      "risk": "符号清理和内联前后边界",
+      "profile": "standard/deep",
+      "args": "--symbol-dce --canonicalize"
+    },
+    {
+      "name": "canonicalize_sccp_cse",
+      "target": "shape/arith/scf",
+      "risk": "标量传播与折叠路径",
+      "profile": "deep",
+      "args": "--canonicalize --sccp --cse"
+    },
+    {
+      "name": "lower_affine",
+      "target": "affine",
+      "risk": "affine lowering 兼容性",
+      "profile": "deep",
+      "args": "--lower-affine"
+    },
+    {
+      "name": "convert_scf_to_cf",
+      "target": "scf/cf",
+      "risk": "控制流 lowering 边界",
+      "profile": "deep",
+      "args": "--convert-scf-to-cf"
+    },
+    {
+      "name": "canonicalize_cse_sccp",
+      "target": "shape/memref/arith",
+      "risk": "MIN-004 与 P0 差分重点路径",
+      "profile": "discovery",
+      "args": "--canonicalize --cse --sccp --canonicalize"
+    },
+    {
+      "name": "symbol_dce_inliner_canonicalize",
+      "target": "func-heavy",
+      "risk": "跨函数清理与 inliner",
+      "profile": "discovery",
+      "args": "--symbol-dce --inline --canonicalize --cse"
+    },
+    {
+      "name": "affine_lowering_stress",
+      "target": "affine",
+      "risk": "lower-affine stress",
+      "profile": "discovery",
+      "args": "--lower-affine --canonicalize --cse"
+    },
+    {
+      "name": "scf_to_cf_stress",
+      "target": "scf/cf",
+      "risk": "SCF lowering stress",
+      "profile": "discovery",
+      "args": "--convert-scf-to-cf --canonicalize --cse"
+    },
+    {
+      "name": "vector_lowering_stress",
+      "target": "vector/scf/llvm",
+      "risk": "vector lowering stress",
+      "profile": "discovery",
+      "args": "--convert-vector-to-scf --convert-vector-to-llvm --canonicalize"
+    },
+    {
+      "name": "bufferization_probe",
+      "target": "tensor/linalg/memref",
+      "risk": "bufferization 候选路径",
+      "profile": "discovery",
+      "args": "--one-shot-bufferize --canonicalize"
+    },
+    {
+      "name": "linalg_affine_probe",
+      "target": "linalg/affine",
+      "risk": "linalg to affine lowering",
+      "profile": "discovery",
+      "args": "--convert-linalg-to-affine-loops --canonicalize"
+    },
+    {
+      "name": "gpu_parallel_probe",
+      "target": "scf/gpu",
+      "risk": "parallel loop to GPU lowering",
+      "profile": "discovery",
+      "args": "--convert-parallel-loops-to-gpu --canonicalize"
+    }
+  ],
+  "real_toolchain_summary": {
+    "local_runner": {
+      "mlir_opt_on_path": false,
+      "note": "当前 Windows 工作区未发现可直接执行的 mlir-opt；真实结论来自已保存的 VM/MLIR 运行产物。"
+    },
+    "version_diff": {
+      "tools": [
+        "mlir-opt-15",
+        "mlir-opt-22"
+      ],
+      "cases": 4,
+      "results": 8,
+      "status_counts": {
+        "fixed-or-version-resolved": 2,
+        "pipeline-incompatible-on-newer": 1,
+        "newer-version-hard-failure": 1
+      },
+      "category_counts": {
+        "memory/assertion": 4,
+        "success": 2,
+        "unknown failure": 2
+      },
+      "min004": [
+        {
+          "case_id": "MIN-004",
+          "tool": "mlir-opt-15",
+          "command": "mlir-opt-15 --canonicalize --cse --sccp --canonicalize -o -",
+          "return_code": 1,
+          "elapsed_ms": 48,
+          "category": "unknown failure",
+          "signature": "unknown failure:46357f23b4",
+          "excerpt": "<stdin>:2:29: error: expected attribute value\n    %arg0: memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>>, %arg1: index) -> index {\n                            ^"
+        },
+        {
+          "case_id": "MIN-004",
+          "tool": "mlir-opt-22",
+          "command": "mlir-opt-22 --canonicalize --cse --sccp --canonicalize -o -",
+          "return_code": -1,
+          "elapsed_ms": 1349,
+          "category": "memory/assertion",
+          "signature": "memory/assertion:dc1cf21e24",
+          "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-22 --canonicalize --cse --sccp --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.22.1 0x000075b4244b33a6 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 54\n1  libLLVM.so.22...."
+        }
+      ]
+    },
+    "p0_version_diff": {
+      "tools": [
+        "mlir-opt-15",
+        "mlir-opt-22"
+      ],
+      "cases": 9,
+      "results": 18,
+      "status_counts": {
+        "still-fails-different-mode": 1,
+        "fixed-or-version-resolved": 8
+      },
+      "category_counts": {
+        "memory/assertion": 9,
+        "unknown failure": 1,
+        "success": 8
+      }
+    },
+    "min004_mlir23_validation": {
+      "tool": "mlir-opt-23",
+      "args": [
+        "--canonicalize",
+        "--cse",
+        "--sccp",
+        "--canonicalize",
+        "-o",
+        "-"
+      ],
+      "seed": "outputs/minimized/mlir22_memref_canonicalize_current.chunk.min.mlir",
+      "return_code": 0,
+      "elapsed_ms": 580.33,
+      "stdout": "module {\n  func.func @no_crash_dim_of_ambiguous_subview(%arg0: memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>>, %arg1: index) -> index {\n    return %arg1 : index\n  }\n}\n\n",
+      "stderr": "",
+      "classification": "resolved-or-not-reproduced"
+    }
+  },
+  "service_smoke_summary": {
+    "runtime": {
+      "available": true,
+      "configured": "C:\\Users\\KiriTong\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\user_demo_mlir_opt.py",
+      "display_name": "MLIRShield demo runner 1.0 (UI flow only, not a real LLVM toolchain)",
+      "detail": "MLIRShield demo runner 1.0 (UI flow only, not a real LLVM toolchain)"
+    },
+    "seed_count": 4822,
+    "public_seed_count": 130,
+    "jobs": [
+      {
+        "case": "ok_job",
+        "status": "passed",
+        "risk": "low",
+        "pipelines": 5,
+        "runs": 5,
+        "elapsed_ms": 321,
+        "title": "未发现内部异常"
+      },
+      {
+        "case": "bad_job",
+        "status": "attention",
+        "risk": "high",
+        "pipelines": 8,
+        "runs": 8,
+        "elapsed_ms": 474,
+        "title": "发现需要项目成员复核的内部异常"
+      }
+    ],
+    "history_items": 2
+  }
+}

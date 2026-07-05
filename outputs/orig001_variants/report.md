@@ -1,0 +1,164 @@
+# ORIG-CAND-001 Variant Matrix
+
+- Tool: `mlir-opt-23`
+- Variants: 10
+- Runs: 20
+
+| Variant | Kind | Parse | Inline | Interpretation |
+| --- | --- | --- | --- | --- |
+| `v01_return_nested_empty_region` | returned-parent / unknown nested empty region | success | memory/assertion | If this crashes, the public no-terminator condition is not required. |
+| `v02_return_nested_plain_op` | returned-parent / unknown nested plain op | success | memory/assertion | Project-discovered ORIG-CAND-001 minimal candidate. |
+| `v03_return_nested_two_ops` | returned-parent / unknown nested two ops | success | memory/assertion | Checks whether crash generalizes beyond one nested operation. |
+| `v04_return_nested_symbol_attr` | returned-parent / unknown nested symbol attribute | success | memory/assertion | Checks symbol-use walking under a returned parent function. |
+| `v05_module_level_graph_region` | module-level unknown region | success | memory/assertion | Control for function-specific behavior. |
+| `v06_public_no_return_empty_region` | public-like baseline | success | memory/assertion | Matches the public #197960 shape: function has no terminator. |
+| `v07_registered_scf_if_return` | registered-region control | success | success | Registered structured region should not trigger this crash. |
+| `v08_registered_scf_call_return` | registered-call control | success | success | Registered call graph should be analyzable by inliner. |
+| `v09_return_unknown_no_region` | returned-parent / unknown op without region | success | success | Unknown op without a region should not be enough to crash. |
+| `v10_return_nested_multi_region` | returned-parent / unknown op with two regions | success | success | Checks whether multiple unknown nested regions keep the same failure mode. |
+
+## Hard Inline Failures
+
+### `v01_return_nested_empty_region`
+
+```text
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+0  libLLVM.so.23.0 0x00007556ba1c11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60
+1  libLLVM.so.23.0 0x00007556ba1beb63 llvm::sys::RunSignalHandlers() + 131
+2  libLLVM.so.23.0 0x00007556ba1c1fd4
+3  libc.so.6       0x00007556b4842520
+4  libMLIR.so.23.0 0x00007556c51847cd
+5  libMLIR.so.23.0 0x00007556c51844c3
+6  libMLIR.so.23.0 0x00007556c51839a0 mlir::Inliner::doInlining() + 832
+7  libMLIR.so.23.0 0x00007556c519e265
+8  libMLIR.so.23.0 0x00007556c4eab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979
+9  libMLIR.so.23.0 0x00007556c4eabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311
+10 libMLIR.so.23.0 0x00007556c4eae070 mlir::PassManager::run(mlir::Operation*) + 848
+11 libMLIR.so.23.0 0x00007556c5136358
+12 libMLIR.so.23.0 0x00007556c5135506
+13 libMLIR.so.23.0 0x00007556c4efae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344
+14 libMLIR.so.23.0 0x00007556c512c7cb mlir::Mli
+```
+
+### `v02_return_nested_plain_op`
+
+```text
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+0  libLLVM.so.23.0 0x000072c5b9dc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60
+1  libLLVM.so.23.0 0x000072c5b9dbeb63 llvm::sys::RunSignalHandlers() + 131
+2  libLLVM.so.23.0 0x000072c5b9dc1fd4
+3  libc.so.6       0x000072c5b4442520
+4  libMLIR.so.23.0 0x000072c5c4d847cd
+5  libMLIR.so.23.0 0x000072c5c4d844c3
+6  libMLIR.so.23.0 0x000072c5c4d839a0 mlir::Inliner::doInlining() + 832
+7  libMLIR.so.23.0 0x000072c5c4d9e265
+8  libMLIR.so.23.0 0x000072c5c4aab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979
+9  libMLIR.so.23.0 0x000072c5c4aabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311
+10 libMLIR.so.23.0 0x000072c5c4aae070 mlir::PassManager::run(mlir::Operation*) + 848
+11 libMLIR.so.23.0 0x000072c5c4d36358
+12 libMLIR.so.23.0 0x000072c5c4d35506
+13 libMLIR.so.23.0 0x000072c5c4afae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344
+14 libMLIR.so.23.0 0x000072c5c4d2c7cb mlir::Mli
+```
+
+### `v03_return_nested_two_ops`
+
+```text
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+0  libLLVM.so.23.0 0x0000712e707c11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60
+1  libLLVM.so.23.0 0x0000712e707beb63 llvm::sys::RunSignalHandlers() + 131
+2  libLLVM.so.23.0 0x0000712e707c1fd4
+3  libc.so.6       0x0000712e6ae42520
+4  libMLIR.so.23.0 0x0000712e7b7847cd
+5  libMLIR.so.23.0 0x0000712e7b7844c3
+6  libMLIR.so.23.0 0x0000712e7b7839a0 mlir::Inliner::doInlining() + 832
+7  libMLIR.so.23.0 0x0000712e7b79e265
+8  libMLIR.so.23.0 0x0000712e7b4ab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979
+9  libMLIR.so.23.0 0x0000712e7b4abcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311
+10 libMLIR.so.23.0 0x0000712e7b4ae070 mlir::PassManager::run(mlir::Operation*) + 848
+11 libMLIR.so.23.0 0x0000712e7b736358
+12 libMLIR.so.23.0 0x0000712e7b735506
+13 libMLIR.so.23.0 0x0000712e7b4fae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344
+14 libMLIR.so.23.0 0x0000712e7b72c7cb mlir::Mli
+```
+
+### `v04_return_nested_symbol_attr`
+
+```text
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+0  libLLVM.so.23.0 0x00007c3c1ffc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60
+1  libLLVM.so.23.0 0x00007c3c1ffbeb63 llvm::sys::RunSignalHandlers() + 131
+2  libLLVM.so.23.0 0x00007c3c1ffc1fd4
+3  libc.so.6       0x00007c3c1a642520
+4  libMLIR.so.23.0 0x00007c3c2af847cd
+5  libMLIR.so.23.0 0x00007c3c2af844c3
+6  libMLIR.so.23.0 0x00007c3c2af839a0 mlir::Inliner::doInlining() + 832
+7  libMLIR.so.23.0 0x00007c3c2af9e265
+8  libMLIR.so.23.0 0x00007c3c2acab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979
+9  libMLIR.so.23.0 0x00007c3c2acabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311
+10 libMLIR.so.23.0 0x00007c3c2acae070 mlir::PassManager::run(mlir::Operation*) + 848
+11 libMLIR.so.23.0 0x00007c3c2af36358
+12 libMLIR.so.23.0 0x00007c3c2af35506
+13 libMLIR.so.23.0 0x00007c3c2acfae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344
+14 libMLIR.so.23.0 0x00007c3c2af2c7cb mlir::Mli
+```
+
+### `v05_module_level_graph_region`
+
+```text
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+0  libLLVM.so.23.0 0x00007abd72bc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60
+1  libLLVM.so.23.0 0x00007abd72bbeb63 llvm::sys::RunSignalHandlers() + 131
+2  libLLVM.so.23.0 0x00007abd72bc1fd4
+3  libc.so.6       0x00007abd6d242520
+4  libMLIR.so.23.0 0x00007abd7db847cd
+5  libMLIR.so.23.0 0x00007abd7db845dd
+6  libMLIR.so.23.0 0x00007abd7db83826 mlir::Inliner::doInlining() + 454
+7  libMLIR.so.23.0 0x00007abd7db9e265
+8  libMLIR.so.23.0 0x00007abd7d8ab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979
+9  libMLIR.so.23.0 0x00007abd7d8abcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311
+10 libMLIR.so.23.0 0x00007abd7d8ae070 mlir::PassManager::run(mlir::Operation*) + 848
+11 libMLIR.so.23.0 0x00007abd7db36358
+12 libMLIR.so.23.0 0x00007abd7db35506
+13 libMLIR.so.23.0 0x00007abd7d8fae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344
+14 libMLIR.so.23.0 0x00007abd7db2c7cb mlir::Mli
+```
+
+### `v06_public_no_return_empty_region`
+
+```text
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+0  libLLVM.so.23.0 0x0000716aaedc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60
+1  libLLVM.so.23.0 0x0000716aaedbeb63 llvm::sys::RunSignalHandlers() + 131
+2  libLLVM.so.23.0 0x0000716aaedc1fd4
+3  libc.so.6       0x0000716aa9442520
+4  libMLIR.so.23.0 0x0000716ab9d847cd
+5  libMLIR.so.23.0 0x0000716ab9d844c3
+6  libMLIR.so.23.0 0x0000716ab9d839a0 mlir::Inliner::doInlining() + 832
+7  libMLIR.so.23.0 0x0000716ab9d9e265
+8  libMLIR.so.23.0 0x0000716ab9aab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979
+9  libMLIR.so.23.0 0x0000716ab9aabcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311
+10 libMLIR.so.23.0 0x0000716ab9aae070 mlir::PassManager::run(mlir::Operation*) + 848
+11 libMLIR.so.23.0 0x0000716ab9d36358
+12 libMLIR.so.23.0 0x0000716ab9d35506
+13 libMLIR.so.23.0 0x0000716ab9afae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344
+14 libMLIR.so.23.0 0x0000716ab9d2c7cb mlir::Mli
+```

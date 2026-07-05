@@ -1,0 +1,29 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify",
+      "description": "Parse and verify MLIR Core profile inputs.",
+      "args": []
+    },
+    {
+      "name": "canonicalize",
+      "description": "Run canonicalization for scalar/vector/kernel-like IR.",
+      "args": ["--canonicalize"]
+    },
+    {
+      "name": "cse",
+      "description": "Run common subexpression elimination.",
+      "args": ["--cse"]
+    },
+    {
+      "name": "canonicalize_cse",
+      "description": "Run canonicalize followed by CSE.",
+      "args": ["--canonicalize", "--cse"]
+    },
+    {
+      "name": "symbol_dce_canonicalize",
+      "description": "Run symbol DCE and canonicalization.",
+      "args": ["--symbol-dce", "--canonicalize"]
+    }
+  ]
+}

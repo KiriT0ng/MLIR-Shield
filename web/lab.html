@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MLIR 实验室控制台</title>
+  <link rel="stylesheet" href="/web/lab-styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>MLIR 编译基础设施安全缺陷发现系统</h1>
+      <p>真实 seed、差分执行、失败聚类、最小化复现与版本差分的一体化展示台。</p>
+    </div>
+    <div class="actions">
+      <button id="demoMode" type="button">演示模式</button>
+      <button id="runDemo" type="button">Run Demo</button>
+      <button id="runMock" type="button">Run Mock Baseline</button>
+      <label class="vm-password">
+        <span>VM Password</span>
+        <input id="vmPassword" type="password" autocomplete="off" placeholder="Issue/Discovery">
+      </label>
+      <button id="runIssues" type="button">Run Issue Repros</button>
+      <button id="runDiscovery" type="button">Run Discovery</button>
+      <button id="runReal" type="button">Run Real mlir-opt</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="hero-panel">
+      <div class="hero-copy">
+        <span class="eyebrow">信息安全竞赛作品包装版</span>
+        <h2>从复现历史 issue，推进到发现当前 MLIR 22 新问题候选</h2>
+        <p>系统面向 MLIR pass pipeline 组合空间，使用 LLVM 官方测试和真实 issue 样例进行批量验证，并将高价值 crash 候选压缩成可答辩、可复现、可继续上游报告的最小案例。</p>
+      </div>
+      <div class="hero-focus">
+        <span>核心案例</span>
+        <strong>MIN-004</strong>
+        <p>官方 memref seed -> MLIR22 Discovery -> 8 行最小复现 -> hard failure 候选</p>
+        <a href="/docs/MIN-004案例报告.md" target="_blank" rel="noreferrer">打开案例报告</a>
+      </div>
+    </section>
+
+    <section class="demo-strip" aria-label="Demo path">
+      <div>
+        <span>30 分钟答辩路径</span>
+        <strong>背景 -> 架构 -> 实验 -> MIN-004 -> 源码 -> 应用价值</strong>
+      </div>
+      <div class="demo-steps">
+        <button type="button" data-scroll-target="overview">1 背景</button>
+        <button type="button" data-scroll-target="visuals">2 架构</button>
+        <button type="button" data-scroll-target="reports">3 结果</button>
+        <button type="button" data-scroll-target="minimized-section">4 MIN-004</button>
+        <button type="button" data-scroll-target="source-review">5 源码</button>
+        <button type="button" data-scroll-target="application-value">6 应用</button>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Project metrics">
+      <div class="metric"><span>Seeds</span><strong id="seedCount">0</strong></div>
+      <div class="metric"><span>Real Seeds</span><strong id="realSeedCount">0</strong></div>
+      <div class="metric"><span>Runs</span><strong id="runCount">0</strong></div>
+      <div class="metric"><span>Issues</span><strong id="issueCount">0</strong></div>
+    </section>
+
+    <section class="outcome-grid" aria-label="Competition outcomes">
+      <article>
+        <span>真实语料</span>
+        <strong>LLVM 官方 + GitHub Issue</strong>
+        <p>避免只用玩具输入，seed 来源可追溯。</p>
+      </article>
+      <article>
+        <span>深度能力</span>
+        <strong>分类 / 聚类 / 最小化</strong>
+        <p>从大规模日志中收敛出可复核案例。</p>
+      </article>
+      <article>
+        <span>版本验证</span>
+        <strong>MLIR 15 vs MLIR 22</strong>
+        <p>区分历史问题、已修复问题和当前版本候选。</p>
+      </article>
+      <article>
+        <span>答辩重点</span>
+        <strong>MIN-004 当前候选</strong>
+        <p>8 行 IR 触发 MLIR 22 hard failure。</p>
+      </article>
+    </section>
+
+    <section class="panel judge-entry">
+      <div class="panel-title">
+        <h2>Judge Quick Entry</h2>
+        <a href="/docs/评委快速入口.md" target="_blank" rel="noreferrer">Open Guide</a>
+      </div>
+      <div class="quick-path">
+        <a href="/docs/重点案例版本状态矩阵.md" target="_blank" rel="noreferrer">版本状态矩阵</a>
+        <a href="/docs/MIN-004案例报告.md" target="_blank" rel="noreferrer">MIN-004 核心案例</a>
+        <a href="/docs/ORIG-CAND-001变体验证.md" target="_blank" rel="noreferrer">ORIG-CAND-001 变体验证</a>
+        <a href="/docs/源码检查说明.md" target="_blank" rel="noreferrer">源码说明</a>
+        <a href="/docs/提交包说明.md" target="_blank" rel="noreferrer">提交说明</a>
+      </div>
+    </section>
+
+    <section class="panel version-matrix">
+      <div class="panel-title">
+        <h2>Version Status Matrix</h2>
+        <a href="/docs/重点案例版本状态矩阵.md" target="_blank" rel="noreferrer">Open Detail</a>
+      </div>
+      <div class="table-wrap compact">
+        <table>
+          <thead>
+            <tr><th>Case</th><th>MLIR 22</th><th>MLIR 23</th><th>Upstream</th><th>Positioning</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>MIN-004</strong></td>
+              <td><span class="status-badge bad">crash</span></td>
+              <td><span class="status-badge good">not reproduced</span></td>
+              <td>historical-similar</td>
+              <td>版本差分重点案例</td>
+            </tr>
+            <tr>
+              <td><strong>LLVM #197158</strong></td>
+              <td><span class="status-badge neutral">not primary</span></td>
+              <td><span class="status-badge bad">open crash</span></td>
+              <td><a href="https://github.com/llvm/llvm-project/issues/197158" target="_blank" rel="noreferrer">open</a></td>
+              <td>当前公开问题复核</td>
+            </tr>
+            <tr>
+              <td><strong>LLVM #197960</strong></td>
+              <td><span class="status-badge neutral">not primary</span></td>
+              <td><span class="status-badge bad">open crash</span></td>
+              <td><a href="https://github.com/llvm/llvm-project/issues/197960" target="_blank" rel="noreferrer">open</a></td>
+              <td>公开 baseline</td>
+            </tr>
+            <tr>
+              <td><strong>ORIG-CAND-001</strong></td>
+              <td><span class="status-badge neutral">not primary</span></td>
+              <td><span class="status-badge bad">crash</span></td>
+              <td>待确认</td>
+              <td>原创候选 / 影响范围扩展</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="reports" class="panel report-switcher">
+      <div class="panel-title">
+        <h2>Reports</h2>
+        <span id="activeReport">issues</span>
+      </div>
+      <div class="segmented">
+        <button id="showDemo" type="button">Demo</button>
+        <button id="showLatest" type="button">Mock Baseline</button>
+        <button id="showIssues" type="button">Issue Repros</button>
+        <button id="showDiscovery" type="button">Discovery</button>
+        <button id="showDiscovery22" type="button">Discovery MLIR22</button>
+        <a href="/docs/competition_optimization.md" target="_blank" rel="noreferrer">Optimization Plan</a>
+      </div>
+      <p id="reportNote" class="hint"></p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Competition Materials</h2>
+        <span>docs</span>
+      </div>
+      <div class="material-links">
+        <a href="/docs/作品包装说明.md" target="_blank" rel="noreferrer">作品包装说明</a>
+        <a href="/docs/MIN-004案例报告.md" target="_blank" rel="noreferrer">MIN-004 案例报告</a>
+        <a href="/outputs/current_validation/min004_current_validation.md" target="_blank" rel="noreferrer">MIN-004 当前验证</a>
+        <a href="/docs/MLIR23当前开放问题复核.md" target="_blank" rel="noreferrer">MLIR23 当前开放问题复核</a>
+        <a href="/outputs/current_issues_mlir23/llvm_197158_current_validation.md" target="_blank" rel="noreferrer">LLVM #197158 当前验证</a>
+        <a href="/docs/MLIR23最新版本问题搜索.md" target="_blank" rel="noreferrer">MLIR23 问题搜索</a>
+        <a href="/docs/原创问题搜索记录.md" target="_blank" rel="noreferrer">原创问题搜索记录</a>
+        <a href="/docs/原创漏洞候选_ORIG-001.md" target="_blank" rel="noreferrer">ORIG-CAND-001</a>
+        <a href="/docs/ORIG-CAND-001变体验证.md" target="_blank" rel="noreferrer">ORIG-CAND-001 变体验证</a>
+        <a href="/docs/原创性证明材料.md" target="_blank" rel="noreferrer">原创性证明材料</a>
+        <a href="/docs/ORIG-CAND-001上游沟通草稿.md" target="_blank" rel="noreferrer">上游沟通草稿</a>
+        <a href="/docs/ORIG-CAND-001_github_comment.md" target="_blank" rel="noreferrer">GitHub 评论正文</a>
+        <a href="/outputs/orig001_variants/report.html" target="_blank" rel="noreferrer">ORIG-CAND-001 结果页</a>
+        <a href="/docs/独立原创漏洞搜索_20260601.md" target="_blank" rel="noreferrer">独立原创漏洞搜索</a>
+        <a href="/outputs/independent_fuzz_mlir23/report.html" target="_blank" rel="noreferrer">独立搜索结果页</a>
+        <a href="/docs/评委快速入口.md" target="_blank" rel="noreferrer">评委快速入口</a>
+        <a href="/docs/重点案例版本状态矩阵.md" target="_blank" rel="noreferrer">版本状态矩阵</a>
+        <a href="/docs/最终清理建议.md" target="_blank" rel="noreferrer">最终清理建议</a>
+        <a href="/docs/答辩讲稿.md" target="_blank" rel="noreferrer">答辩讲稿</a>
+        <a href="/docs/源码检查说明.md" target="_blank" rel="noreferrer">源码检查说明</a>
+        <a href="/docs/应用前景与安全价值.md" target="_blank" rel="noreferrer">应用前景</a>
+        <a href="/docs/提交包说明.md" target="_blank" rel="noreferrer">提交包说明</a>
+        <a href="/docs/Mojo应用桥接扩展.md" target="_blank" rel="noreferrer">Mojo 应用桥接扩展</a>
+        <a href="/apps/mojo/README.md" target="_blank" rel="noreferrer">Mojo 样例说明</a>
+        <a href="/apps/mojo/mojo_manifest.json" target="_blank" rel="noreferrer">Mojo 采集 Manifest</a>
+        <a href="/outputs/mojo_core_profile/report.html" target="_blank" rel="noreferrer">Mojo Core Profile 结果页</a>
+        <a href="/docs/比赛技术报告.md" target="_blank" rel="noreferrer">技术报告</a>
+        <a href="/docs/典型案例库.md" target="_blank" rel="noreferrer">典型案例库</a>
+        <a href="/docs/威胁模型.md" target="_blank" rel="noreferrer">威胁模型</a>
+        <a href="/docs/演示脚本.md" target="_blank" rel="noreferrer">演示脚本</a>
+        <a href="/docs/答辩PPT大纲.md" target="_blank" rel="noreferrer">答辩 PPT 大纲</a>
+        <a href="/docs/真实Issue扩展队列.md" target="_blank" rel="noreferrer">真实 Issue 队列</a>
+        <a href="/docs/新问题候选.md" target="_blank" rel="noreferrer">新问题候选</a>
+        <a href="/docs/P0候选复核报告.md" target="_blank" rel="noreferrer">P0 复核报告</a>
+        <a href="/docs/项目发现清单.md" target="_blank" rel="noreferrer">项目发现清单</a>
+        <a href="/docs/版本差分实验.md" target="_blank" rel="noreferrer">版本差分实验</a>
+        <a href="/docs/P0版本差分实验.md" target="_blank" rel="noreferrer">P0 版本差分</a>
+        <a href="/materials/system_architecture.svg" target="_blank" rel="noreferrer">系统架构图</a>
+        <a href="/materials/experiment_results.svg" target="_blank" rel="noreferrer">实验结果图表</a>
+      </div>
+    </section>
+
+    <section id="application-value" class="panel">
+      <div class="panel-title">
+        <h2>Application Value</h2>
+        <a href="/docs/应用前景与安全价值.md" target="_blank" rel="noreferrer">Open Detail</a>
+      </div>
+      <div class="value-grid">
+        <article>
+          <span>AI 编译供应链安全</span>
+          <p>在 LLVM/MLIR 升级、模型编译器集成和第三方算子接入前，批量发现 pass 组合风险。</p>
+        </article>
+        <article>
+          <span>云端编译服务防护</span>
+          <p>筛查可能触发 hard failure 的 IR 输入，降低在线编译服务被异常输入拖垮的风险。</p>
+        </article>
+        <article>
+          <span>国产软硬件适配</span>
+          <p>可扩展到国产 CPU、操作系统、AI 芯片后端和国产编译工具链的迁移测试。</p>
+        </article>
+        <article>
+          <span>Mojo 应用桥接</span>
+          <p>围绕 Mojo 数值内核建立源码采集、LLVM IR 产物登记和 MLIR Core profile 验证入口，服务 AI 原生语言的编译安全接入。</p>
+        </article>
+        <article>
+          <span>开源生态反馈</span>
+          <p>将高价值候选最小化为上游可接受的复现，推动基础设施修复。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="visuals" class="grid visual-grid">
+      <div class="panel visual-panel">
+        <div class="panel-title">
+          <h2>系统架构图</h2>
+          <a href="/materials/system_architecture.svg" target="_blank" rel="noreferrer">Open</a>
+        </div>
+        <img src="/materials/system_architecture.svg" alt="系统架构图">
+      </div>
+      <div class="panel visual-panel">
+        <div class="panel-title">
+          <h2>实验结果图表</h2>
+          <a href="/materials/experiment_results.svg" target="_blank" rel="noreferrer">Open</a>
+        </div>
+        <img src="/materials/experiment_results.svg" alt="实验结果图表">
+      </div>
+    </section>
+
+    <section id="source-review" class="panel">
+      <div class="panel-title">
+        <h2>Source Review Path</h2>
+        <a href="/docs/源码检查说明.md" target="_blank" rel="noreferrer">Open Source Guide</a>
+      </div>
+      <p class="hint">决赛现场可能检查源代码。建议按执行引擎、分类器、差分分析、最小化、版本差分和 Web 展示的顺序讲解。</p>
+      <div class="source-map">
+        <code>mlirdiff/engine.py</code>
+        <code>mlirdiff/classifier.py</code>
+        <code>mlirdiff/diffing.py</code>
+        <code>scripts/minimize_seed.py</code>
+        <code>configs/version_diff_cases.json</code>
+        <code>web/server.py</code>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Seed Groups</h2>
+          <span id="statusText">Idle</span>
+        </div>
+        <div id="seedGroups" class="tag-list"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Pipeline Configs</h2>
+        </div>
+        <table>
+          <thead><tr><th>Config</th><th>Pipelines</th></tr></thead>
+          <tbody id="configRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="minimized-section" class="panel">
+      <div class="panel-title">
+        <h2>MLIR Toolchain</h2>
+        <span id="toolchainBadge">Checking</span>
+      </div>
+      <table>
+        <tbody id="toolchainRows"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Execution Environments</h2>
+        <span>version-diff ready path</span>
+      </div>
+      <table>
+        <thead><tr><th>Name</th><th>Tool</th><th>Status</th><th>Detail</th></tr></thead>
+        <tbody id="environmentRows"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Seed Origins</h2>
+      </div>
+      <p class="hint">Official and issue seeds come from LLVM sources; generated seeds are local baseline/demo cases.</p>
+      <table>
+        <thead><tr><th>Origin</th><th>Count</th></tr></thead>
+        <tbody id="originRows"></tbody>
+      </table>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Severity</h2>
+        </div>
+        <table>
+          <thead><tr><th>Severity</th><th>Count</th></tr></thead>
+          <tbody id="severityRows"></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Issue Types</h2>
+        </div>
+        <table>
+          <thead><tr><th>Type</th><th>Count</th></tr></thead>
+          <tbody id="issueKindRows"></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Run Categories</h2>
+        </div>
+        <table>
+          <thead><tr><th>Category</th><th>Count</th></tr></thead>
+          <tbody id="categoryRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Failure Clusters</h2>
+        <span id="clusterCount">0 clusters</span>
+      </div>
+      <div id="clusters" class="clusters"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Post-Lowering Invariants</h2>
+        <span id="invariantCount">0 checks</span>
+      </div>
+      <p class="hint">Successful lowering pipelines are checked for suspicious residual high-level dialects.</p>
+      <div id="invariants" class="clusters"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Issue Case Library</h2>
+        <span id="caseCount">0 cases</span>
+      </div>
+      <div id="cases" class="cases"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Minimized Repros</h2>
+        <span id="minimizedCount">0 repros</span>
+      </div>
+      <p class="hint">Crash candidates reduced by delta debugging while preserving the same failure signature.</p>
+      <div id="minimized" class="clusters"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Seed Catalog</h2>
+        <span id="seedCatalogCount">0 seeds</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Seed</th><th>Origin</th><th>Group</th><th>Source</th></tr></thead>
+          <tbody id="seedCatalogRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Findings</h2>
+        <a id="htmlReport" href="/outputs/demo/report.html" target="_blank" rel="noreferrer">Open Full HTML Report</a>
+      </div>
+      <div id="issues" class="issues"></div>
+    </section>
+  </main>
+
+  <script src="/web/lab-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-07-04T00:29:07.5379424+08:00",
+  "runner_source": "real",
+  "toolchain": {
+    "path": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe",
+    "version": "LLVM (http://llvm.org/):\r\n  LLVM version 22.1.8\r\n  Optimized build.",
+    "probe": "outputs/toolchain_probe/real_msys2_mingw64_probe.json"
+  },
+  "seed": "outputs\\minimized\\mlir22_memref_canonicalize_current.chunk.min.mlir",
+  "pipeline": "--canonicalize --cse --sccp --canonicalize -o -",
+  "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\minimized\\mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -",
+  "exit_code": -1073741819,
+  "elapsed_ms": 187.34,
+  "started_at": "2026-07-04T00:29:07.2755048+08:00",
+  "stdout": "outputs\\real_msys2_mingw64\\20260704_002907\\stdout.txt",
+  "stderr": "outputs\\real_msys2_mingw64\\20260704_002907\\stderr.txt",
+  "stderr_excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\minimized\\\\mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF762DE2C05, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0x1272C05 byte(s)\n0x00007FF765185FE8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0x3615FE8 byte(s)\n0x00007FF7651861E2, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0x36161E2 byte(s)\n0x00007FF765B0F6D7, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0x3F9F6D7 byte(s)\n0x00007FF765B0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0x3F9D32F byte(s)\n0x00007FF76446BD42, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0x28FBD42 byte(s)\n0x00007FF761C4C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0xDC434 byte(s)\n0x00007FF761C501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0xE01B9 byte(s)\n0x00007FF761B7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0xFAFC byte(s)\n0x00007FF761B7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF761B70000) + 0xECEC byte",
+  "classification": "memory/assertion",
+  "signature": "Exception Code / Stack dump / mlir-opt"
+}

@@ -1,0 +1,14 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify_allow_unregistered",
+      "description": "Parse candidate with unregistered dialects enabled.",
+      "args": ["--allow-unregistered-dialect"]
+    },
+    {
+      "name": "inline_allow_unregistered",
+      "description": "Inliner crash probe for unregistered nested region candidate.",
+      "args": ["--allow-unregistered-dialect", "--inline"]
+    }
+  ]
+}

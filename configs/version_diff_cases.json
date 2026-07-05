@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "id": "MIN-001",
+      "title": "LLVM #75811 minimized GPU parallel lowering crash",
+      "seed": "outputs/minimized/llvm_75811_gpu_parallel_probe.min.mlir",
+      "source": "https://github.com/llvm/llvm-project/issues/75811",
+      "args": ["--convert-parallel-loops-to-gpu", "--canonicalize", "-o", "-"]
+    },
+    {
+      "id": "MIN-002",
+      "title": "Discovery shape.fold_div canonicalize crash candidate",
+      "seed": "outputs/minimized/shape_fold_div_canonicalize.min.mlir",
+      "source": "LLVM official mlir/test/Dialect/Shape/fold-div.mlir",
+      "args": ["--canonicalize", "--cse", "--sccp", "--canonicalize", "-o", "-"]
+    },
+    {
+      "id": "MIN-003",
+      "title": "LLVM #61085 minimized TOSA/Linalg/Affine crash",
+      "seed": "outputs/minimized/llvm_61085_tosa_linalg_affine.min.mlir",
+      "source": "https://github.com/llvm/llvm-project/issues/61085",
+      "args": [
+        "--pass-pipeline=func.func(tosa-to-arith)",
+        "--linalg-bufferize",
+        "--pass-pipeline=func.func(tosa-to-linalg)",
+        "--convert-linalg-to-affine-loops",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "MIN-004",
+      "title": "MLIR 22 current memref.subview dim canonicalize crash",
+      "seed": "outputs/minimized/mlir22_memref_canonicalize_current.chunk.min.mlir",
+      "source": "Discovery with mlir-opt-22 over LLVM official memref/canonicalize.mlir",
+      "args": ["--canonicalize", "--cse", "--sccp", "--canonicalize", "-o", "-"]
+    }
+  ],
+  "tools": ["mlir-opt-15", "mlir-opt-22"]
+}

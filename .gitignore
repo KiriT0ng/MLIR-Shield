@@ -1,0 +1,48 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.matplotlib-cache/
+.claude/
+.vscode/
+
+# Local secrets / machine-specific config
+.env
+.env.*
+*.local.json
+configs/toolchains/*.local.json
+
+# Generated run outputs
+outputs/smoke_demo/
+outputs/user_jobs/
+outputs/toolchain_probe/
+outputs/**/artifacts/
+*.log
+*.synctex.gz
+*.aux
+*.out
+*.toc
+
+# Report render checks and temporary build folders
+reports/
+reports/**/render_check*/
+reports/award_xelatex/render_check*/
+reports/award_xelatex/report_revision_*.diff
+
+# Legacy upload-package folders left from the ZIP submission layout.
+# They are not part of the GitHub-ready project.
+01_documents/
+02_executable/
+03_source_code/
+04_other_materials/
+_legacy_*/
+MLIRShield_submission_package_backup_*/
+
+# Archives generated for platform upload
+*.zip
+*.rar
+*.7z

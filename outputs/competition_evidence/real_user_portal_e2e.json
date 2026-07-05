@@ -1,0 +1,213 @@
+{
+  "scope": "User portal real runner E2E and control-plane availability smoke.",
+  "toolchain": "<MSYS2_ROOT>/mingw64/bin/mlir-opt.exe",
+  "runtime": {
+    "available": true,
+    "configured": "${MLIRSHIELD_MLIR_OPT}",
+    "display_name": "LLVM (http://llvm.org/):",
+    "mode": "real",
+    "warning": ""
+  },
+  "primary_job": {
+    "id": "job-20260703-145420-a3c40a78",
+    "profile": "deep",
+    "status": "attention",
+    "risk": "high",
+    "pipeline_count": 9,
+    "run_count": 9,
+    "report_url": "/outputs/user_jobs/job-20260703-145420-a3c40a78/result/report.html",
+    "memory_assertion_runs": 5,
+    "representative_return_code": 3221225477,
+    "representative_category": "memory/assertion"
+  },
+  "repeated_exception_jobs": [
+    {
+      "id": "job-20260703-145421-c42fb5bd",
+      "status": "attention",
+      "risk": "high",
+      "runtime_mode": "real",
+      "report_url": "/outputs/user_jobs/job-20260703-145421-c42fb5bd/result/report.html"
+    },
+    {
+      "id": "job-20260703-145421-ff2d6892",
+      "status": "attention",
+      "risk": "high",
+      "runtime_mode": "real",
+      "report_url": "/outputs/user_jobs/job-20260703-145421-ff2d6892/result/report.html"
+    },
+    {
+      "id": "job-20260703-145421-b55b81f8",
+      "status": "attention",
+      "risk": "high",
+      "runtime_mode": "real",
+      "report_url": "/outputs/user_jobs/job-20260703-145421-b55b81f8/result/report.html"
+    }
+  ],
+  "history_after_jobs": {
+    "items": [
+      {
+        "id": "job-20260703-145421-b55b81f8",
+        "created_at": "2026-07-03T14:54:22+08:00",
+        "filename": "min004_isolation_3.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "attention",
+        "title": "发现需要项目成员复核的内部异常"
+      },
+      {
+        "id": "job-20260703-145420-a3c40a78",
+        "created_at": "2026-07-03T14:54:21+08:00",
+        "filename": "min004_real_e2e.mlir",
+        "profile": "deep",
+        "profile_name": "深度检查",
+        "status": "attention",
+        "title": "发现需要项目成员复核的内部异常"
+      },
+      {
+        "id": "job-20260703-145421-c42fb5bd",
+        "created_at": "2026-07-03T14:54:21+08:00",
+        "filename": "min004_isolation_1.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "attention",
+        "title": "发现需要项目成员复核的内部异常"
+      },
+      {
+        "id": "job-20260703-145421-ff2d6892",
+        "created_at": "2026-07-03T14:54:21+08:00",
+        "filename": "min004_isolation_2.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "attention",
+        "title": "发现需要项目成员复核的内部异常"
+      },
+      {
+        "id": "job-20260703-145256-caade6f1",
+        "created_at": "2026-07-03T14:52:57+08:00",
+        "filename": "min004_real_e2e.mlir",
+        "profile": "deep",
+        "profile_name": "深度检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-145257-1019e1d1",
+        "created_at": "2026-07-03T14:52:57+08:00",
+        "filename": "min004_isolation_3.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-145257-80ead61e",
+        "created_at": "2026-07-03T14:52:57+08:00",
+        "filename": "min004_isolation_1.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-145257-b63d3b4d",
+        "created_at": "2026-07-03T14:52:57+08:00",
+        "filename": "min004_isolation_2.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-144743-c9042930",
+        "created_at": "2026-07-03T14:47:44+08:00",
+        "filename": "min004_isolation_2.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-144744-67aa3208",
+        "created_at": "2026-07-03T14:47:44+08:00",
+        "filename": "min004_isolation_3.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-144743-25b11d85",
+        "created_at": "2026-07-03T14:47:43+08:00",
+        "filename": "min004_real_e2e.mlir",
+        "profile": "deep",
+        "profile_name": "深度检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-144743-4b36f4b5",
+        "created_at": "2026-07-03T14:47:43+08:00",
+        "filename": "min004_isolation_1.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "review",
+        "title": "检查结果需要进一步判断"
+      },
+      {
+        "id": "job-20260703-022722-7bd90ab2",
+        "created_at": "2026-07-03T02:27:22+08:00",
+        "filename": "assertion_demo.mlir",
+        "profile": "deep",
+        "profile_name": "深度检查",
+        "status": "attention",
+        "title": "发现需要项目成员复核的内部异常"
+      },
+      {
+        "id": "job-20260703-022722-9aa14c43",
+        "created_at": "2026-07-03T02:27:22+08:00",
+        "filename": "ok.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "passed",
+        "title": "未发现内部异常"
+      }
+    ]
+  },
+  "overview_after_jobs": {
+    "seed_count": 4825,
+    "public_seed_count": 133,
+    "runtime": {
+      "available": true,
+      "configured": "${MLIRSHIELD_MLIR_OPT}",
+      "display_name": "LLVM (http://llvm.org/):",
+      "detail": "LLVM (http://llvm.org/):\n  LLVM version 22.1.8\n  Optimized build.",
+      "mode": "real",
+      "warning": ""
+    },
+    "profiles": [
+      {
+        "id": "quick",
+        "name": "快速检查",
+        "description": "优先检查基础合法性与常见优化路径，适合首次提交。",
+        "estimate": "约 10 秒"
+      },
+      {
+        "id": "standard",
+        "name": "标准检查",
+        "description": "加入 CSE、符号清理和常见优化组合，适合日常开发。",
+        "estimate": "约 30 秒"
+      },
+      {
+        "id": "deep",
+        "name": "深度检查",
+        "description": "覆盖更多 lowering 与组合路径，适合发布前或工具链升级前复核。",
+        "estimate": "约 1 分钟"
+      }
+    ],
+    "example": {
+      "filename": "basic_example.mlir",
+      "content": "module {\n  func.func @main() {\n    return\n  }\n}\n"
+    }
+  },
+  "isolation_claim": "Each request is executed as subprocess-backed job output under outputs/user_jobs with timeout and output truncation."
+}

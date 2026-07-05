@@ -1,0 +1,123 @@
+{
+  "cases": [
+    {
+      "id": "P0-001",
+      "title": "gpu_parallel_probe / llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir / memory/assertion:eab4d4b02a",
+      "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-parallel-loops-to-gpu",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-002",
+      "title": "linalg_affine_probe / fill_tensor.mlir / memory/assertion:b22341475e",
+      "seed": "seeds\\linalg\\fill_tensor.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-linalg-to-affine-loops",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-003",
+      "title": "canonicalize_cse_sccp / fold_div.mlir / memory/assertion:1b5140366a",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--canonicalize",
+        "--cse",
+        "--sccp",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-004",
+      "title": "symbol_dce_inliner_canonicalize / fold_div.mlir / memory/assertion:d71f5288fe",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--symbol-dce",
+        "--inline",
+        "--canonicalize",
+        "--cse",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-005",
+      "title": "affine_lowering_stress / fold_div.mlir / memory/assertion:557b77397b",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--lower-affine",
+        "--canonicalize",
+        "--cse",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-006",
+      "title": "scf_to_cf_stress / fold_div.mlir / memory/assertion:ff5f72ebfd",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-scf-to-cf",
+        "--canonicalize",
+        "--cse",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-007",
+      "title": "vector_lowering_stress / fold_div.mlir / memory/assertion:1b6ed177c5",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-vector-to-scf",
+        "--convert-vector-to-llvm",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-008",
+      "title": "bufferization_probe / fold_div.mlir / memory/assertion:4c45f29ec2",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--one-shot-bufferize",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-009",
+      "title": "linalg_affine_probe / fold_div.mlir / memory/assertion:15c58d956b",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-linalg-to-affine-loops",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    }
+  ],
+  "tools": [
+    "mlir-opt-15",
+    "mlir-opt-22"
+  ]
+}

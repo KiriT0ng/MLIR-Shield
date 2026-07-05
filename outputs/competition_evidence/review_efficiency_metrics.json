@@ -1,0 +1,11 @@
+{
+  "log_to_signature_compression": 92.14,
+  "log_to_p0_compression": 99.23,
+  "signature_to_p0_compression": 90.22,
+  "min004_line_reduction": 99.35,
+  "discovery_runs": 1170,
+  "triage_signatures": 92,
+  "p0_candidates": 9,
+  "min004_original_lines": 1236,
+  "min004_minimized_lines": 8
+}

@@ -1,0 +1,69 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify",
+      "description": "Parse and verify issue reproducer inputs.",
+      "args": []
+    },
+    {
+      "name": "canonicalize_cse",
+      "description": "Baseline canonicalization plus CSE.",
+      "args": ["--canonicalize", "--cse"]
+    },
+    {
+      "name": "convert_parallel_loops_to_gpu",
+      "description": "Pipeline used by LLVM issue #75811.",
+      "args": ["--convert-parallel-loops-to-gpu"]
+    },
+    {
+      "name": "linalg_parallel_to_gpu_issue_82382",
+      "description": "Pipeline used by LLVM issue #82382.",
+      "args": [
+        "--convert-linalg-to-affine-loops",
+        "--affine-loop-tile=tile-sizes=4,28,28,16,7,7,3",
+        "--affine-loop-unroll=unroll-factor=4",
+        "--canonicalize",
+        "--affine-parallelize",
+        "--lower-affine",
+        "--canonicalize",
+        "--gpu-map-parallel-loops",
+        "--convert-parallel-loops-to-gpu"
+      ]
+    },
+    {
+      "name": "test_linalg_multiuse_fusion_issue_119868",
+      "description": "Test-only pipeline used by LLVM issue #119868.",
+      "args": ["--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer"]
+    },
+    {
+      "name": "test_rewrite_dynamic_op_issue_60569",
+      "description": "Test-only pipeline used by LLVM issue #60569.",
+      "args": ["--allow-unregistered-dialect", "--test-rewrite-dynamic-op"]
+    },
+    {
+      "name": "tosa_linalg_affine_issue_61085",
+      "description": "TOSA/Linalg/Affine lowering crash path from LLVM issue #61085.",
+      "args": [
+        "--pass-pipeline=func.func(tosa-to-arith)",
+        "--linalg-bufferize",
+        "--pass-pipeline=func.func(tosa-to-linalg)",
+        "--convert-linalg-to-affine-loops"
+      ]
+    },
+    {
+      "name": "transform_tile_reduction_issue_60210",
+      "description": "Transform dialect reduction tiling crash path from LLVM issue #60210.",
+      "args": ["--test-transform-dialect-interpreter"]
+    },
+    {
+      "name": "transform_linalg_tile_issue_113021",
+      "description": "Transform dialect tiling reproducer for LLVM issue #113021.",
+      "args": ["--test-transform-dialect-interpreter"]
+    },
+    {
+      "name": "vector_scatter_canonicalize_issue_168695",
+      "description": "Canonicalization reproducer for LLVM issue #168695.",
+      "args": ["--pass-pipeline=builtin.module(func.func(canonicalize))"]
+    }
+  ]
+}

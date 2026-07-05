@@ -1,0 +1,59 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify",
+      "description": "Parse and verify before aggressive current-version passes.",
+      "args": []
+    },
+    {
+      "name": "canonicalize_convergence_probe",
+      "description": "Canonicalization with CSE/SCCP cleanup.",
+      "args": ["--canonicalize", "--cse", "--sccp", "--canonicalize"]
+    },
+    {
+      "name": "memref_alias_metadata",
+      "description": "MemRef alias folding and metadata expansion.",
+      "args": ["--fold-memref-alias-ops", "--expand-strided-metadata", "--canonicalize", "--cse"]
+    },
+    {
+      "name": "memref_llvm_lowering",
+      "description": "MemRef expansion and LLVM lowering path.",
+      "args": ["--expand-strided-metadata", "--memref-expand", "--normalize-memrefs", "--finalize-memref-to-llvm", "--canonicalize"]
+    },
+    {
+      "name": "vector_reduction_lowering",
+      "description": "Vector multi-reduction and mask lowering.",
+      "args": ["--lower-vector-multi-reduction", "--lower-vector-mask", "--canonicalize", "--cse"]
+    },
+    {
+      "name": "vector_to_scf_llvm",
+      "description": "Vector to SCF/LLVM lowering path.",
+      "args": ["--convert-vector-to-scf", "--convert-vector-to-llvm", "--canonicalize"]
+    },
+    {
+      "name": "tensor_linalg_loop_lowering",
+      "description": "Tensor to Linalg to loops.",
+      "args": ["--convert-tensor-to-linalg", "--convert-linalg-to-loops", "--canonicalize", "--cse"]
+    },
+    {
+      "name": "linalg_parallel_gpu",
+      "description": "Linalg to parallel loops then GPU conversion.",
+      "args": ["--convert-linalg-to-parallel-loops", "--canonicalize", "--convert-parallel-loops-to-gpu"]
+    },
+    {
+      "name": "bufferization_deallocation",
+      "description": "One-shot bufferization plus ownership deallocation.",
+      "args": ["--one-shot-bufferize", "--ownership-based-buffer-deallocation", "--bufferization-lower-deallocations", "--canonicalize"]
+    },
+    {
+      "name": "shape_reify_resolve",
+      "description": "Shape result reification and dim resolution.",
+      "args": ["--reify-result-shapes", "--resolve-shaped-type-result-dims", "--canonicalize", "--cse"]
+    },
+    {
+      "name": "sparse_lowering_probe",
+      "description": "Sparse tensor lowering probe.",
+      "args": ["--pre-sparsification-rewrite", "--lower-sparse-ops-to-foreach", "--lower-sparse-foreach-to-scf", "--canonicalize"]
+    }
+  ]
+}

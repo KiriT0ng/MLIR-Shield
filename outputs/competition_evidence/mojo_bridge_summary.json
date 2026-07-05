@@ -1,0 +1,18 @@
+{
+  "bridge_scope": "Mojo build evidence and MLIR Core profile bridge; not Mojo internal MLIR export.",
+  "mojo_available": false,
+  "mojo_error": "executable not found: mojo",
+  "sample_count": 3,
+  "sample_status": {
+    "unavailable": 3
+  },
+  "mlir_core_profile": {
+    "seeds": 3,
+    "pipelines": 5,
+    "runs": 15,
+    "issues": 0,
+    "categories": {
+      "success": 15
+    }
+  }
+}

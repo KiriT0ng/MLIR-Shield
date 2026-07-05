@@ -1,0 +1,78 @@
+{
+  "seeds": [
+    "seeds\\current_mlir23\\llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir"
+  ],
+  "pipelines": [
+    "parse_verify",
+    "mem2reg_dbg_declare_issue_197158"
+  ],
+  "runs": [
+    {
+      "seed": "seeds\\current_mlir23\\llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
+      "pipeline": "parse_verify",
+      "command": "C:\\Users\\lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\ssh_mlir_opt.py  -o - < seeds\\current_mlir23\\llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_ms": 603,
+      "stdout": "#di_basic_type = #llvm.di_basic_type<tag = DW_TAG_base_type, name = \"double\", sizeInBits = 64>\n#di_file = #llvm.di_file<\"repro.ll\" in \"\">\n#di_compile_unit = #llvm.di_compile_unit<id = distinct[0]<>, sourceLanguage = DW_LANG_C_plus_plus_14, file = #di_file, producer = \"clang\", emissionKind = Full>\n#di_subprogram = #llvm.di_subprogram<compileUnit = #di_compile_unit, scope = #di_file, name = \"foo\", linkageName = \"foo\", file = #di_file, line = 1, subprogramFlags = Definition>\n#di_local_variable = #llvm.di_local_variable<scope = #di_subprogram, name = \"d\", file = #di_file, line = 2, type = #di_basic_type>\nmodule {\n  llvm.func @foo() {\n    %0 = llvm.mlir.constant(1 : i32) : i32\n    %1 = llvm.mlir.constant(4.000000e+00 : f64) : f64\n    %2 = llvm.alloca %0 x f64 : (i32) -> !llvm.ptr\n    llvm.intr.dbg.declare #di_local_variable = %2 : !llvm.ptr\n    llvm.store %1, %2 : f64, !llvm.ptr\n    %3 = llvm.load %2 : !llvm.ptr -> f64\n    llvm.store %3, %2 : f64, !llvm.ptr\n    llvm.return\n  }\n}\n\n",
+      "stderr": "",
+      "stdout_path": "outputs\\current_issues_mlir23\\artifacts\\llvm_197158_mem2reg_dbg_declare_use_after_erase__parse_verify.stdout.mlir",
+      "stderr_path": "outputs\\current_issues_mlir23\\artifacts\\llvm_197158_mem2reg_dbg_declare_use_after_erase__parse_verify.stderr.txt",
+      "category": "success"
+    },
+    {
+      "seed": "seeds\\current_mlir23\\llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
+      "pipeline": "mem2reg_dbg_declare_issue_197158",
+      "command": "C:\\Users\\lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\ssh_mlir_opt.py --mem2reg -o - < seeds\\current_mlir23\\llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
+      "return_code": 4294967295,
+      "timed_out": false,
+      "elapsed_ms": 1795,
+      "stdout": "",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --mem2reg -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x000071ec503c11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x000071ec503beb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x000071ec503c1fd4\n3  libc.so.6       0x000071ec4aa42520\n4  libMLIR.so.23.0 0x000071ec5b05d763 mlir::Type::getContext() const + 3\n5  libMLIR.so.23.0 0x000071ec5b060b8a\n6  libMLIR.so.23.0 0x000071ec5b060d57\n7  libMLIR.so.23.0 0x000071ec5b0601d7 mlir::verify(mlir::Operation*, bool) + 39\n8  libMLIR.so.23.0 0x000071ec5b0ab7b2 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 1250\n9  libMLIR.so.23.0 0x000071ec5b0abcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x000071ec5b0ae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x000071ec5b336358\n12 libMLIR.so.23.0 0x000071ec5b335506\n13 libMLIR.so.23.0 0x000071ec5b0fae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x000071ec5b32c7cb mlir::MlirOptMain(llvm::raw_ostream&, std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, mlir::DialectRegistry&, mlir::MlirOptMainConfig const&) + 555\n15 libMLIR.so.23.0 0x000071ec5b32cb08 mlir::MlirOptMain(int, char**, llvm::StringRef, llvm::StringRef, mlir::DialectRegistry&) + 424\n16 libMLIR.so.23.0 0x000071ec5b32cd98 mlir::MlirOptMain(int, char**, llvm::StringRef, mlir::DialectRegistry&) + 312\n17 mlir-opt-23     0x00006197ea7760c3 main + 867\n18 libc.so.6       0x000071ec4aa29d90\n19 libc.so.6       0x000071ec4aa29e40 __libc_start_main + 128\n20 mlir-opt-23     0x00006197ea775c95 _start + 37\n",
+      "stdout_path": "outputs\\current_issues_mlir23\\artifacts\\llvm_197158_mem2reg_dbg_declare_use_after_erase__mem2reg_dbg_declare_issue_197158.stdout.mlir",
+      "stderr_path": "outputs\\current_issues_mlir23\\artifacts\\llvm_197158_mem2reg_dbg_declare_use_after_erase__mem2reg_dbg_declare_issue_197158.stderr.txt",
+      "category": "memory/assertion"
+    }
+  ],
+  "issues": [
+    {
+      "seed": "seeds\\current_mlir23\\llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
+      "severity": "high",
+      "kind": "pipeline divergence",
+      "summary": "Some pipelines succeeded while others failed.",
+      "details": "pipeline | return_code | category | timed_out\n--- | --- | --- | ---\nparse_verify | 0 | success | false\nmem2reg_dbg_declare_issue_197158 | 4294967295 | memory/assertion | false"
+    }
+  ],
+  "summary": {
+    "run_categories": {
+      "memory/assertion": 1,
+      "success": 1
+    },
+    "issue_severities": {
+      "high": 1
+    },
+    "issue_kinds": {
+      "pipeline divergence": 1
+    },
+    "failure_clusters": [
+      {
+        "signature": "memory/assertion:f7d55b8bae",
+        "category": "memory/assertion",
+        "count": 1,
+        "seed_count": 1,
+        "pipeline_count": 1,
+        "seeds": [
+          "seeds\\current_mlir23\\llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir"
+        ],
+        "pipelines": [
+          "mem2reg_dbg_declare_issue_197158"
+        ],
+        "example": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --mem2reg -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM..."
+      }
+    ],
+    "invariant_findings": [],
+    "invariant_kinds": {},
+    "output_deltas": [],
+    "output_delta_count": 0
+  }
+}

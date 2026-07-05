@@ -1,0 +1,63 @@
+{
+  "name": "MLIRShield-Mojo Application Bridge",
+  "scope": "Mojo build evidence and MLIR Core profile bridge; not Mojo internal MLIR export.",
+  "environment": {
+    "use_wsl": false,
+    "wsl_status": {
+      "return_code": 4294967295,
+      "stdout_excerpt": "WSL unavailable on current host; Mojo build bridge is recorded as unavailable.",
+      "stderr_excerpt": ""
+    },
+    "mojo_command": "mojo --version",
+    "mojo_available": false,
+    "mojo_version": "",
+    "mojo_error": "executable not found: mojo"
+  },
+  "records": [
+    {
+      "scenario": "parametric_kernel",
+      "source": "apps/mojo/samples/parametric_kernel.mojo",
+      "status": "unavailable",
+      "mojo_version": "",
+      "build_command": "mojo build --emit llvm apps/mojo/samples/parametric_kernel.mojo -o apps/mojo/artifacts/parametric_kernel.ll",
+      "return_code": null,
+      "elapsed_ms": 0,
+      "llvm_ir_artifact": "",
+      "source_sha256": "4dce38d49671f3642dc440d1f0ee6048e9b8be77a0dd8f7389b883ce64aef6d8",
+      "artifact_sha256": "",
+      "stdout_excerpt": "",
+      "stderr_excerpt": "executable not found: mojo",
+      "note": "Current host cannot run Mojo; bridge records source and environment evidence only."
+    },
+    {
+      "scenario": "scalar_add",
+      "source": "apps/mojo/samples/scalar_add.mojo",
+      "status": "unavailable",
+      "mojo_version": "",
+      "build_command": "mojo build --emit llvm apps/mojo/samples/scalar_add.mojo -o apps/mojo/artifacts/scalar_add.ll",
+      "return_code": null,
+      "elapsed_ms": 0,
+      "llvm_ir_artifact": "",
+      "source_sha256": "c1305f211c6f035926be36655f9e12e15fcfa2d7cd46293913bc850f06da12f2",
+      "artifact_sha256": "",
+      "stdout_excerpt": "",
+      "stderr_excerpt": "executable not found: mojo",
+      "note": "Current host cannot run Mojo; bridge records source and environment evidence only."
+    },
+    {
+      "scenario": "vector_add",
+      "source": "apps/mojo/samples/vector_add.mojo",
+      "status": "unavailable",
+      "mojo_version": "",
+      "build_command": "mojo build --emit llvm apps/mojo/samples/vector_add.mojo -o apps/mojo/artifacts/vector_add.ll",
+      "return_code": null,
+      "elapsed_ms": 0,
+      "llvm_ir_artifact": "",
+      "source_sha256": "13a082757a96eb5ad67e14f7c0243c480b157eb39abc6a5a7f1c07af04bdcf43",
+      "artifact_sha256": "",
+      "stdout_excerpt": "",
+      "stderr_excerpt": "executable not found: mojo",
+      "note": "Current host cannot run Mojo; bridge records source and environment evidence only."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "tool": "mlir-opt-23",
+  "args": [
+    "--canonicalize",
+    "--cse",
+    "--sccp",
+    "--canonicalize",
+    "-o",
+    "-"
+  ],
+  "seed": "outputs/minimized/mlir22_memref_canonicalize_current.chunk.min.mlir",
+  "return_code": 0,
+  "elapsed_ms": 580.33,
+  "stdout": "module {\n  func.func @no_crash_dim_of_ambiguous_subview(%arg0: memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>>, %arg1: index) -> index {\n    return %arg1 : index\n  }\n}\n\n",
+  "stderr": "",
+  "classification": "resolved-or-not-reproduced"
+}

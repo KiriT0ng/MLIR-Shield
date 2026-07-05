@@ -1,0 +1,230 @@
+{
+  "bad": {
+    "ok": true,
+    "id": "job-20260703-022722-7bd90ab2",
+    "filename": "assertion_demo.mlir",
+    "profile": "deep",
+    "profile_name": "深度检查",
+    "pipeline_count": 8,
+    "run_count": 8,
+    "summary": {
+      "status": "attention",
+      "risk": "high",
+      "kicker": "需要进一步复核",
+      "title": "发现需要项目成员复核的内部异常",
+      "description": "至少一条预设检查路径没有以正常诊断方式结束。建议先保存本次结果，再由项目成员查看技术详情、最小化输入并进行版本复核。",
+      "recommendations": [
+        "不要把该结论直接理解为已确认漏洞；它表示存在值得进一步核查的稳定性风险候选。",
+        "保留本次检测记录，并向项目成员提供“完整技术报告”链接。",
+        "项目成员应优先检查触发 pipeline、错误摘要和输入是否可被进一步最小化。"
+      ],
+      "categories": [
+        {
+          "label": "内部异常",
+          "count": 8,
+          "key": "attention"
+        }
+      ],
+      "category_explanation": "系统观察到内部异常或超时。此类情况不会直接等同于安全漏洞，但比普通语法错误更值得进入后续复核流程。",
+      "technical_hint": "技术详情列出了每条预设 pipeline 的状态。原始日志和完整运行记录可在“完整技术报告”中查看。",
+      "elapsed_ms": 474
+    },
+    "runs": [
+      {
+        "pipeline": "parse_verify",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 76,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      },
+      {
+        "pipeline": "canonicalize",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 60,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      },
+      {
+        "pipeline": "cse",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 59,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      },
+      {
+        "pipeline": "canonicalize_cse",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 52,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      },
+      {
+        "pipeline": "symbol_dce_canonicalize",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 53,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      },
+      {
+        "pipeline": "canonicalize_sccp_cse",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 54,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      },
+      {
+        "pipeline": "lower_affine",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 53,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      },
+      {
+        "pipeline": "convert_scf_to_cf",
+        "category": "memory/assertion",
+        "category_label": "内部异常",
+        "category_key": "attention",
+        "elapsed_ms": 52,
+        "short_message": "出现内部断言或异常退出，需要人工复核。"
+      }
+    ],
+    "report_url": "/outputs/user_jobs/job-20260703-022722-7bd90ab2/result/report.html"
+  },
+  "overview": {
+    "seed_count": 4822,
+    "public_seed_count": 130,
+    "runtime": {
+      "available": true,
+      "configured": "C:\\Users\\KiriTong\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\user_demo_mlir_opt.py",
+      "display_name": "MLIRShield demo runner 1.0 (UI flow only, not a real LLVM toolchain)",
+      "detail": "MLIRShield demo runner 1.0 (UI flow only, not a real LLVM toolchain)"
+    },
+    "profiles": [
+      {
+        "id": "quick",
+        "name": "快速检查",
+        "description": "优先检查基础合法性与常见优化路径，适合首次提交。",
+        "estimate": "约 10 秒"
+      },
+      {
+        "id": "standard",
+        "name": "标准检查",
+        "description": "加入 CSE、符号清理和常见优化组合，适合日常开发。",
+        "estimate": "约 30 秒"
+      },
+      {
+        "id": "deep",
+        "name": "深度检查",
+        "description": "覆盖更多 lowering 与组合路径，适合发布前或工具链升级前复核。",
+        "estimate": "约 1 分钟"
+      }
+    ],
+    "example": {
+      "filename": "basic_example.mlir",
+      "content": "module {\n  func.func @main() {\n    return\n  }\n}\n"
+    }
+  },
+  "ok": {
+    "ok": true,
+    "id": "job-20260703-022722-9aa14c43",
+    "filename": "ok.mlir",
+    "profile": "standard",
+    "profile_name": "标准检查",
+    "pipeline_count": 5,
+    "run_count": 5,
+    "summary": {
+      "status": "passed",
+      "risk": "low",
+      "kicker": "检查通过",
+      "title": "未发现内部异常",
+      "description": "本次预设检查路径均正常完成。该结果表示输入在当前工具链与当前检查范围内表现稳定，不代表对所有版本和所有 pass 组合的绝对保证。",
+      "recommendations": [
+        "可以将该输入作为当前版本下的通过记录保存。",
+        "在发布前、切换工具链或引入新的 dialect 后，建议再次执行“深度检查”。",
+        "对于生产服务，仍建议配合资源限制、隔离 worker 和持续回归测试。"
+      ],
+      "categories": [
+        {
+          "label": "正常完成",
+          "count": 5,
+          "key": "success"
+        }
+      ],
+      "category_explanation": "当前预设检查路径均已完成，系统没有观察到内部断言、异常退出或超时。",
+      "technical_hint": "技术详情列出了每条预设 pipeline 的状态。原始日志和完整运行记录可在“完整技术报告”中查看。",
+      "elapsed_ms": 321
+    },
+    "runs": [
+      {
+        "pipeline": "parse_verify",
+        "category": "success",
+        "category_label": "正常完成",
+        "category_key": "success",
+        "elapsed_ms": 68,
+        "short_message": "该路径正常完成。"
+      },
+      {
+        "pipeline": "canonicalize",
+        "category": "success",
+        "category_label": "正常完成",
+        "category_key": "success",
+        "elapsed_ms": 57,
+        "short_message": "该路径正常完成。"
+      },
+      {
+        "pipeline": "cse",
+        "category": "success",
+        "category_label": "正常完成",
+        "category_key": "success",
+        "elapsed_ms": 72,
+        "short_message": "该路径正常完成。"
+      },
+      {
+        "pipeline": "canonicalize_cse",
+        "category": "success",
+        "category_label": "正常完成",
+        "category_key": "success",
+        "elapsed_ms": 56,
+        "short_message": "该路径正常完成。"
+      },
+      {
+        "pipeline": "symbol_dce_canonicalize",
+        "category": "success",
+        "category_label": "正常完成",
+        "category_key": "success",
+        "elapsed_ms": 58,
+        "short_message": "该路径正常完成。"
+      }
+    ],
+    "report_url": "/outputs/user_jobs/job-20260703-022722-9aa14c43/result/report.html"
+  },
+  "history": {
+    "items": [
+      {
+        "id": "job-20260703-022722-7bd90ab2",
+        "created_at": "2026-07-03T02:27:22+08:00",
+        "filename": "assertion_demo.mlir",
+        "profile": "deep",
+        "profile_name": "深度检查",
+        "status": "attention",
+        "title": "发现需要项目成员复核的内部异常"
+      },
+      {
+        "id": "job-20260703-022722-9aa14c43",
+        "created_at": "2026-07-03T02:27:22+08:00",
+        "filename": "ok.mlir",
+        "profile": "standard",
+        "profile_name": "标准检查",
+        "status": "passed",
+        "title": "未发现内部异常"
+      }
+    ]
+  }
+}

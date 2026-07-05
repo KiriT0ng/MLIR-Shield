@@ -1,0 +1,166 @@
+{
+  "tools": [
+    "mlir-opt-15",
+    "mlir-opt-22"
+  ],
+  "cases": [
+    {
+      "id": "MIN-001",
+      "title": "LLVM #75811 minimized GPU parallel lowering crash",
+      "seed": "outputs/minimized/llvm_75811_gpu_parallel_probe.min.mlir",
+      "source": "https://github.com/llvm/llvm-project/issues/75811",
+      "args": [
+        "--convert-parallel-loops-to-gpu",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "MIN-002",
+      "title": "Discovery shape.fold_div canonicalize crash candidate",
+      "seed": "outputs/minimized/shape_fold_div_canonicalize.min.mlir",
+      "source": "LLVM official mlir/test/Dialect/Shape/fold-div.mlir",
+      "args": [
+        "--canonicalize",
+        "--cse",
+        "--sccp",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "MIN-003",
+      "title": "LLVM #61085 minimized TOSA/Linalg/Affine crash",
+      "seed": "outputs/minimized/llvm_61085_tosa_linalg_affine.min.mlir",
+      "source": "https://github.com/llvm/llvm-project/issues/61085",
+      "args": [
+        "--pass-pipeline=func.func(tosa-to-arith)",
+        "--linalg-bufferize",
+        "--pass-pipeline=func.func(tosa-to-linalg)",
+        "--convert-linalg-to-affine-loops",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "MIN-004",
+      "title": "MLIR 22 current memref.subview dim canonicalize crash",
+      "seed": "outputs/minimized/mlir22_memref_canonicalize_current.chunk.min.mlir",
+      "source": "Discovery with mlir-opt-22 over LLVM official memref/canonicalize.mlir",
+      "args": [
+        "--canonicalize",
+        "--cse",
+        "--sccp",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "case_id": "MIN-001",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1424,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:eab4d4b02a",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --convert-parallel-loops-to-gpu --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x7902535043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so...."
+    },
+    {
+      "case_id": "MIN-001",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "return_code": 0,
+      "elapsed_ms": 104,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @main() {\n    return\n  }\n}"
+    },
+    {
+      "case_id": "MIN-002",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --canonicalize --cse --sccp --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1296,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:1b5140366a",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --canonicalize --cse --sccp --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x76e4e09043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_Z..."
+    },
+    {
+      "case_id": "MIN-002",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --canonicalize --cse --sccp --canonicalize -o -",
+      "return_code": 0,
+      "elapsed_ms": 107,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    },
+    {
+      "case_id": "MIN-003",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 '--pass-pipeline=func.func(tosa-to-arith)' --linalg-bufferize '--pass-pipeline=func.func(tosa-to-linalg)' --convert-linalg-to-affine-loops -o -",
+      "return_code": -1,
+      "elapsed_ms": 1290,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:c42721cfdd",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintS..."
+    },
+    {
+      "case_id": "MIN-003",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 '--pass-pipeline=func.func(tosa-to-arith)' --linalg-bufferize '--pass-pipeline=func.func(tosa-to-linalg)' --convert-linalg-to-affine-loops -o -",
+      "return_code": 1,
+      "elapsed_ms": 185,
+      "category": "unknown failure",
+      "signature": "unknown failure:6165fe2999",
+      "excerpt": "mlir-opt-22: Unknown command line argument '--linalg-bufferize'.  Try: 'mlir-opt-22 --help'\nmlir-opt-22: Did you mean '--linalg-detensorize'?"
+    },
+    {
+      "case_id": "MIN-004",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --canonicalize --cse --sccp --canonicalize -o -",
+      "return_code": 1,
+      "elapsed_ms": 48,
+      "category": "unknown failure",
+      "signature": "unknown failure:46357f23b4",
+      "excerpt": "<stdin>:2:29: error: expected attribute value\n    %arg0: memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>>, %arg1: index) -> index {\n                            ^"
+    },
+    {
+      "case_id": "MIN-004",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --canonicalize --cse --sccp --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1349,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:dc1cf21e24",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-22 --canonicalize --cse --sccp --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.22.1 0x000075b4244b33a6 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 54\n1  libLLVM.so.22...."
+    }
+  ],
+  "summary": [
+    {
+      "case_id": "MIN-001",
+      "title": "LLVM #75811 minimized GPU parallel lowering crash",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "MIN-002",
+      "title": "Discovery shape.fold_div canonicalize crash candidate",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "MIN-003",
+      "title": "LLVM #61085 minimized TOSA/Linalg/Affine crash",
+      "status": "pipeline-incompatible-on-newer"
+    },
+    {
+      "case_id": "MIN-004",
+      "title": "MLIR 22 current memref.subview dim canonicalize crash",
+      "status": "newer-version-hard-failure"
+    }
+  ]
+}

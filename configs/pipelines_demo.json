@@ -1,0 +1,39 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify",
+      "description": "Parse the input and run MLIR verification.",
+      "args": []
+    },
+    {
+      "name": "canonicalize",
+      "description": "Run canonicalization patterns.",
+      "args": ["--canonicalize"]
+    },
+    {
+      "name": "mock_verifier_path",
+      "description": "Demo path that simulates verifier failures for marked seeds.",
+      "args": []
+    },
+    {
+      "name": "mock_parser_path",
+      "description": "Demo path that simulates parser-sensitive failures for marked seeds.",
+      "args": []
+    },
+    {
+      "name": "mock_dialect_path",
+      "description": "Demo path that simulates unregistered dialect failures for marked seeds.",
+      "args": []
+    },
+    {
+      "name": "mock_type_path",
+      "description": "Demo path that simulates type legality failures for marked seeds.",
+      "args": []
+    },
+    {
+      "name": "mock_assertion_path",
+      "description": "Demo path that simulates assertion or crash failures for marked seeds.",
+      "args": []
+    }
+  ]
+}

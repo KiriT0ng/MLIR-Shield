@@ -1,0 +1,13 @@
+{
+  "name": "MSYS2 MinGW64 MLIR",
+  "runner_kind": "real",
+  "msys2_root": "<SET_MLIRSHIELD_MSYS2_ROOT_OR_EDIT_THIS_PATH>",
+  "mlir_opt": "<SET_MLIRSHIELD_MLIR_OPT_OR_EDIT_THIS_PATH>",
+  "shell_mode": "native_or_bash_detected",
+  "probe_output": "outputs/toolchain_probe/real_msys2_mingw64_probe.json",
+  "env_overrides": [
+    "MLIRSHIELD_MSYS2_ROOT",
+    "MLIRSHIELD_MLIR_OPT",
+    "MLIR_OPT"
+  ]
+}

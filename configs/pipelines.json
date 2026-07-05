@@ -1,0 +1,49 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify",
+      "description": "Parse the input and run MLIR verification.",
+      "args": []
+    },
+    {
+      "name": "canonicalize",
+      "description": "Run canonicalization patterns.",
+      "args": ["--canonicalize"]
+    },
+    {
+      "name": "cse",
+      "description": "Run common subexpression elimination.",
+      "args": ["--cse"]
+    },
+    {
+      "name": "canonicalize_cse",
+      "description": "Run canonicalize followed by CSE.",
+      "args": ["--canonicalize", "--cse"]
+    },
+    {
+      "name": "symbol_dce_canonicalize",
+      "description": "Run symbol DCE before canonicalization.",
+      "args": ["--symbol-dce", "--canonicalize"]
+    },
+    {
+      "name": "canonicalize_sccp_cse",
+      "description": "Run a common scalar simplification path.",
+      "args": ["--canonicalize", "--sccp", "--cse"]
+    },
+    {
+      "name": "canonicalize_cse_sccp_canonicalize",
+      "description": "Run the scalar simplification chain used by the MIN-004 stability check.",
+      "args": ["--canonicalize", "--cse", "--sccp", "--canonicalize"]
+    },
+    {
+      "name": "lower_affine",
+      "description": "Lower affine operations when affine dialect appears.",
+      "args": ["--lower-affine"]
+    },
+    {
+      "name": "convert_scf_to_cf",
+      "description": "Convert SCF regions to control-flow operations.",
+      "args": ["--convert-scf-to-cf"]
+    }
+  ]
+}

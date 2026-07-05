@@ -1,0 +1,282 @@
+﻿[
+    {
+        "source":  "mlir/test/Dialect/Arith/vscale_constants.mlir",
+        "dest":  "seeds/real_official/arith/vscale_constants.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Arith/int-range-opts-crash.mlir",
+        "dest":  "seeds/real_official/arith/int_range_opts_crash.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Arith/constant-fold.mlir",
+        "dest":  "seeds/real_official/arith/constant_fold.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Arith/int-range-opts-bug-119045.mlir",
+        "dest":  "seeds/real_official/arith/int_range_opts_bug_119045.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Arith/int-range-loop-iter-args.mlir",
+        "dest":  "seeds/real_official/arith/int_range_loop_iter_args.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/MemRef/runtime-verification.mlir",
+        "dest":  "seeds/real_official/memref/runtime_verification.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/MemRef/high-rank-overflow.mlir",
+        "dest":  "seeds/real_official/memref/high_rank_overflow.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/MemRef/expand-ops.mlir",
+        "dest":  "seeds/real_official/memref/expand_ops.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/MemRef/alloc-to-alloca.mlir",
+        "dest":  "seeds/real_official/memref/alloc_to_alloca.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/MemRef/int-range-inference.mlir",
+        "dest":  "seeds/real_official/memref/int_range_inference.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Tensor/extract-from-collapse-shape.mlir",
+        "dest":  "seeds/real_official/tensor/extract_from_collapse_shape.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Tensor/reify-shapes.mlir",
+        "dest":  "seeds/real_official/tensor/reify_shapes.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Tensor/fold-constant-extract-slice.mlir",
+        "dest":  "seeds/real_official/tensor/fold_constant_extract_slice.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Tensor/int-range-inference.mlir",
+        "dest":  "seeds/real_official/tensor/int_range_inference.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Tensor/decompose-concat.mlir",
+        "dest":  "seeds/real_official/tensor/decompose_concat.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Vector/inlining.mlir",
+        "dest":  "seeds/real_official/vector/inlining.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Vector/bufferize-invalid.mlir",
+        "dest":  "seeds/real_official/vector/bufferize_invalid.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Vector/constant-fold.mlir",
+        "dest":  "seeds/real_official/vector/constant_fold.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Vector/side-effects.mlir",
+        "dest":  "seeds/real_official/vector/side_effects.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Vector/canonicalize/vector-to-elements.mlir",
+        "dest":  "seeds/real_official/vector/canonicalize_vector_to_elements.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SparseTensor/conversion_invalid.mlir",
+        "dest":  "seeds/real_official/sparsetensor/conversion_invalid.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SparseTensor/codegen_to_llvm.mlir",
+        "dest":  "seeds/real_official/sparsetensor/codegen_to_llvm.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SparseTensor/sparse_vector_mv.mlir",
+        "dest":  "seeds/real_official/sparsetensor/sparse_vector_mv.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SparseTensor/sparse_relu.mlir",
+        "dest":  "seeds/real_official/sparsetensor/sparse_relu.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SparseTensor/minipipeline_vector.mlir",
+        "dest":  "seeds/real_official/sparsetensor/minipipeline_vector.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/LLVMIR/ptr.mlir",
+        "dest":  "seeds/real_official/llvmir/ptr.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/LLVMIR/terminator.mlir",
+        "dest":  "seeds/real_official/llvmir/terminator.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/LLVMIR/comdat.mlir",
+        "dest":  "seeds/real_official/llvmir/comdat.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/LLVMIR/inlining-debuginfo.mlir",
+        "dest":  "seeds/real_official/llvmir/inlining_debuginfo.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/LLVMIR/nvvm-target-invalid.mlir",
+        "dest":  "seeds/real_official/llvmir/nvvm_target_invalid.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/GPU/module-to-binary-invalid.mlir",
+        "dest":  "seeds/real_official/gpu/module_to_binary_invalid.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/GPU/bufferization-buffer-deallocation.mlir",
+        "dest":  "seeds/real_official/gpu/bufferization_buffer_deallocation.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/GPU/constant-address-space.mlir",
+        "dest":  "seeds/real_official/gpu/constant_address_space.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/GPU/memref-to-llvm.mlir",
+        "dest":  "seeds/real_official/gpu/memref_to_llvm.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/GPU/multiple-all-reduce.mlir",
+        "dest":  "seeds/real_official/gpu/multiple_all_reduce.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Math/depends-on-arith.mlir",
+        "dest":  "seeds/real_official/math/depends_on_arith.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Math/uplift-to-fma.mlir",
+        "dest":  "seeds/real_official/math/uplift_to_fma.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Math/extend-to-supported-types.mlir",
+        "dest":  "seeds/real_official/math/extend_to_supported_types.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Math/sincos-fusion.mlir",
+        "dest":  "seeds/real_official/math/sincos_fusion.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Complex/attribute.mlir",
+        "dest":  "seeds/real_official/complex/attribute.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Complex/powi-simplify.mlir",
+        "dest":  "seeds/real_official/complex/powi_simplify.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Complex/invalid.mlir",
+        "dest":  "seeds/real_official/complex/invalid.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Complex/ops.mlir",
+        "dest":  "seeds/real_official/complex/ops.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Shape/fold-div.mlir",
+        "dest":  "seeds/real_official/shape/fold_div.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Shape/arg_with_shape.mlir",
+        "dest":  "seeds/real_official/shape/arg_with_shape.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Shape/bufferize.mlir",
+        "dest":  "seeds/real_official/shape/bufferize.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Shape/shape-to-shape.mlir",
+        "dest":  "seeds/real_official/shape/shape_to_shape.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Async/canonicalize.mlir",
+        "dest":  "seeds/real_official/async/canonicalize.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Async/verify.mlir",
+        "dest":  "seeds/real_official/async/verify.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Async/coro.mlir",
+        "dest":  "seeds/real_official/async/coro.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Quant/parse-calibrated.mlir",
+        "dest":  "seeds/real_official/quant/parse_calibrated.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Quant/parse-any.mlir",
+        "dest":  "seeds/real_official/quant/parse_any.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Quant/inlining.mlir",
+        "dest":  "seeds/real_official/quant/inlining.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/Quant/normalize-quant-types.mlir",
+        "dest":  "seeds/real_official/quant/normalize_quant_types.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/OpenMP/canonicalize.mlir",
+        "dest":  "seeds/real_official/openmp/canonicalize.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/OpenMP/cli-unroll-heuristic.mlir",
+        "dest":  "seeds/real_official/openmp/cli_unroll_heuristic.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/OpenMP/invalid-fuse.mlir",
+        "dest":  "seeds/real_official/openmp/invalid_fuse.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SPIRV/IR/primitive-ops.mlir",
+        "dest":  "seeds/real_official/spirv/IR_primitive_ops.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SPIRV/IR/target.mlir",
+        "dest":  "seeds/real_official/spirv/IR_target.mlir"
+    },
+    {
+        "source":  "mlir/test/Dialect/SPIRV/IR/invalid.mlir",
+        "dest":  "seeds/real_official/spirv/IR_invalid.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/ArithToLLVM/arith-to-llvm.mlir",
+        "dest":  "seeds/real_official/conversion/arith_to_llvm.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/FuncToLLVM/convert-funcs.mlir",
+        "dest":  "seeds/real_official/conversion/convert_funcs.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/MemRefToLLVM/memref-to-llvm.mlir",
+        "dest":  "seeds/real_official/conversion/memref_to_llvm.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/VectorToLLVM/vector-to-llvm.mlir",
+        "dest":  "seeds/real_official/conversion/vector_to_llvm.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/TosaToLinalg/tosa-to-linalg.mlir",
+        "dest":  "seeds/real_official/conversion/tosa_to_linalg.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/GPUToNVVM/gpu-to-nvvm.mlir",
+        "dest":  "seeds/real_official/conversion/gpu_to_nvvm.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/GPUToSPIRV/module-opencl.mlir",
+        "dest":  "seeds/real_official/conversion/module_opencl.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/SCFToOpenMP/scf-to-openmp.mlir",
+        "dest":  "seeds/real_official/conversion/scf_to_openmp.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/MathToLLVM/math-to-llvm.mlir",
+        "dest":  "seeds/real_official/conversion/math_to_llvm.mlir"
+    },
+    {
+        "source":  "mlir/test/Conversion/ComplexToStandard/convert-to-standard.mlir",
+        "dest":  "seeds/real_official/conversion/convert_to_standard.mlir"
+    }
+]

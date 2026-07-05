@@ -1,0 +1,352 @@
+{
+  "tools": [
+    "mlir-opt-15",
+    "mlir-opt-22"
+  ],
+  "cases": [
+    {
+      "id": "P0-001",
+      "title": "gpu_parallel_probe / llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir / memory/assertion:eab4d4b02a",
+      "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-parallel-loops-to-gpu",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-002",
+      "title": "linalg_affine_probe / fill_tensor.mlir / memory/assertion:b22341475e",
+      "seed": "seeds\\linalg\\fill_tensor.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-linalg-to-affine-loops",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-003",
+      "title": "canonicalize_cse_sccp / fold_div.mlir / memory/assertion:1b5140366a",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--canonicalize",
+        "--cse",
+        "--sccp",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-004",
+      "title": "symbol_dce_inliner_canonicalize / fold_div.mlir / memory/assertion:d71f5288fe",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--symbol-dce",
+        "--inline",
+        "--canonicalize",
+        "--cse",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-005",
+      "title": "affine_lowering_stress / fold_div.mlir / memory/assertion:557b77397b",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--lower-affine",
+        "--canonicalize",
+        "--cse",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-006",
+      "title": "scf_to_cf_stress / fold_div.mlir / memory/assertion:ff5f72ebfd",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-scf-to-cf",
+        "--canonicalize",
+        "--cse",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-007",
+      "title": "vector_lowering_stress / fold_div.mlir / memory/assertion:1b6ed177c5",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-vector-to-scf",
+        "--convert-vector-to-llvm",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-008",
+      "title": "bufferization_probe / fold_div.mlir / memory/assertion:4c45f29ec2",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--one-shot-bufferize",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    },
+    {
+      "id": "P0-009",
+      "title": "linalg_affine_probe / fold_div.mlir / memory/assertion:15c58d956b",
+      "seed": "seeds\\real_official\\shape\\fold_div.mlir",
+      "source": "Discovery P0 candidate",
+      "args": [
+        "--convert-linalg-to-affine-loops",
+        "--canonicalize",
+        "-o",
+        "-"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "case_id": "P0-001",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1459,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:eab4d4b02a",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --convert-parallel-loops-to-gpu --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x70f9273043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so...."
+    },
+    {
+      "case_id": "P0-001",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "return_code": 1,
+      "elapsed_ms": 104,
+      "category": "unknown failure",
+      "signature": "unknown failure:1d2c7dea60",
+      "excerpt": "<stdin>:12:5: error: 'scf.parallel' op expects body to terminate with 'scf.reduce'\n    scf.parallel (%arg0) = (%c0_6) to (%c1) step (%c1_7) {\n    ^\n<stdin>:12:5: note: see current operation:\n\"scf.parallel\"(%3, %4, %5) <{operandSegmentSizes = array<i32: 1, 1, 1, 0>}> ({\n^bb0(%arg0: index):\n  %6 = \"arith.constant\"() <{value = 0 : index}> : () -> index\n  %7 = \"arith.constant\"() <{value = 1 : index}> : () -> index"
+    },
+    {
+      "case_id": "P0-002",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --convert-linalg-to-affine-loops --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1291,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:b22341475e",
+      "excerpt": "LLVM ERROR: out of memory\nAllocation failed\nPLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --convert-linalg-to-affine-loops --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x77aa2..."
+    },
+    {
+      "case_id": "P0-002",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --convert-linalg-to-affine-loops --canonicalize -o -",
+      "return_code": 0,
+      "elapsed_ms": 104,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fill_tensor(%arg0: tensor<4xf32>) -> tensor<4xf32> {\n    %cst = arith.constant 0.000000e+00 : f32\n    %0 = linalg.fill ins(%cst : f32) outs(%arg0 : tensor<4xf32>) -> tensor<4xf32>\n    return %0 : tensor<4xf32>\n  }\n}"
+    },
+    {
+      "case_id": "P0-003",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --canonicalize --cse --sccp --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1294,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:1b5140366a",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --canonicalize --cse --sccp --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x7897447043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_Z..."
+    },
+    {
+      "case_id": "P0-003",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --canonicalize --cse --sccp --canonicalize -o -",
+      "return_code": 0,
+      "elapsed_ms": 111,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    },
+    {
+      "case_id": "P0-004",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --symbol-dce --inline --canonicalize --cse -o -",
+      "return_code": -1,
+      "elapsed_ms": 1292,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:d71f5288fe",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --symbol-dce --inline --canonicalize --cse -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x70ce093043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_Z..."
+    },
+    {
+      "case_id": "P0-004",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --symbol-dce --inline --canonicalize --cse -o -",
+      "return_code": 0,
+      "elapsed_ms": 112,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    },
+    {
+      "case_id": "P0-005",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --lower-affine --canonicalize --cse -o -",
+      "return_code": -1,
+      "elapsed_ms": 1277,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:557b77397b",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --lower-affine --canonicalize --cse -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x7046217043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3..."
+    },
+    {
+      "case_id": "P0-005",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --lower-affine --canonicalize --cse -o -",
+      "return_code": 0,
+      "elapsed_ms": 106,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    },
+    {
+      "case_id": "P0-006",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --convert-scf-to-cf --canonicalize --cse -o -",
+      "return_code": -1,
+      "elapsed_ms": 1272,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:ff5f72ebfd",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --convert-scf-to-cf --canonicalize --cse -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x7aa28d1043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4..."
+    },
+    {
+      "case_id": "P0-006",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --convert-scf-to-cf --canonicalize --cse -o -",
+      "return_code": 0,
+      "elapsed_ms": 98,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    },
+    {
+      "case_id": "P0-007",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1290,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:1b6ed177c5",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x770fcbd043b1]\n/lib/x86_64-linux-g..."
+    },
+    {
+      "case_id": "P0-007",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "return_code": 0,
+      "elapsed_ms": 107,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    },
+    {
+      "case_id": "P0-008",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --one-shot-bufferize --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1285,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:4c45f29ec2",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --one-shot-bufferize --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x755d671043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3..."
+    },
+    {
+      "case_id": "P0-008",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --one-shot-bufferize --canonicalize -o -",
+      "return_code": 0,
+      "elapsed_ms": 103,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    },
+    {
+      "case_id": "P0-009",
+      "tool": "mlir-opt-15",
+      "command": "mlir-opt-15 --convert-linalg-to-affine-loops --canonicalize -o -",
+      "return_code": -1,
+      "elapsed_ms": 1272,
+      "category": "memory/assertion",
+      "signature": "memory/assertion:15c58d956b",
+      "excerpt": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-opt-15 --convert-linalg-to-affine-loops --canonicalize -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n/lib/x86_64-linux-gnu/libLLVM-15.so.1(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x31)[0x70c725b043b1]\n/lib/x86_64-linux-gnu/libLLVM-15.so..."
+    },
+    {
+      "case_id": "P0-009",
+      "tool": "mlir-opt-22",
+      "command": "mlir-opt-22 --convert-linalg-to-affine-loops --canonicalize -o -",
+      "return_code": 0,
+      "elapsed_ms": 107,
+      "category": "success",
+      "signature": "",
+      "excerpt": "module {\n  func.func @fold_div_index_neg_rhs() -> index {\n    %c0 = arith.constant 0 : index\n    %0 = shape.div %c0, %c0 : index, index -> index\n    return %0 : index\n  }\n}"
+    }
+  ],
+  "summary": [
+    {
+      "case_id": "P0-001",
+      "title": "gpu_parallel_probe / llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir / memory/assertion:eab4d4b02a",
+      "status": "still-fails-different-mode"
+    },
+    {
+      "case_id": "P0-002",
+      "title": "linalg_affine_probe / fill_tensor.mlir / memory/assertion:b22341475e",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "P0-003",
+      "title": "canonicalize_cse_sccp / fold_div.mlir / memory/assertion:1b5140366a",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "P0-004",
+      "title": "symbol_dce_inliner_canonicalize / fold_div.mlir / memory/assertion:d71f5288fe",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "P0-005",
+      "title": "affine_lowering_stress / fold_div.mlir / memory/assertion:557b77397b",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "P0-006",
+      "title": "scf_to_cf_stress / fold_div.mlir / memory/assertion:ff5f72ebfd",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "P0-007",
+      "title": "vector_lowering_stress / fold_div.mlir / memory/assertion:1b6ed177c5",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "P0-008",
+      "title": "bufferization_probe / fold_div.mlir / memory/assertion:4c45f29ec2",
+      "status": "fixed-or-version-resolved"
+    },
+    {
+      "case_id": "P0-009",
+      "title": "linalg_affine_probe / fold_div.mlir / memory/assertion:15c58d956b",
+      "status": "fixed-or-version-resolved"
+    }
+  ]
+}

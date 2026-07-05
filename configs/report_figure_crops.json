@@ -1,0 +1,78 @@
+{
+  "source_root": "reports/report_assets/raw",
+  "raw_root": "reports/report_assets/raw",
+  "processed_root": "reports/report_assets/processed",
+  "contact_sheet": "reports/report_assets/contact_sheets/figure_crop_contact_sheet.png",
+  "figures": [
+    {
+      "id": "fig_runtime_distribution",
+      "source": "11_performance_by_experiment_subtype.png",
+      "crop": [60, 45, 2140, 1380],
+      "output": "fig_runtime_distribution.png",
+      "metric": "不同实验子类型的运行耗时与规模分布",
+      "data_source": "competition evidence and batch report snapshots",
+      "rq": "RQ3",
+      "preserve": "title, axes, legend, runtime labels"
+    },
+    {
+      "id": "fig_category_distribution",
+      "source": "12_run_category_heatmap.png",
+      "crop": [60, 45, 2140, 1380],
+      "output": "fig_category_distribution.png",
+      "metric": "运行类别分布与普通诊断分离",
+      "data_source": "outputs/competition_evidence/competition_evidence.json",
+      "rq": "RQ1",
+      "preserve": "title, matrix labels, category legend, data source"
+    },
+    {
+      "id": "fig_version_pipeline_matrix",
+      "source": "13_case_version_status_heatmap.png",
+      "crop": [60, 45, 2140, 1380],
+      "output": "fig_version_pipeline_matrix.png",
+      "metric": "案例在不同版本与 pipeline 下的状态矩阵",
+      "data_source": "outputs/version_diff/report.json and current validation",
+      "rq": "RQ3",
+      "preserve": "title, version labels, pipeline labels, status legend"
+    },
+    {
+      "id": "fig_issue_review_matrix",
+      "source": "14_issue_review_confusion_matrix.png",
+      "crop": [60, 45, 2140, 1380],
+      "output": "fig_issue_review_matrix.png",
+      "metric": "公开 issue 复核与分类边界矩阵",
+      "data_source": "outputs/issues/report.json",
+      "rq": "RQ1",
+      "preserve": "title, axes, counts, data source"
+    },
+    {
+      "id": "fig_failure_rate_by_batch",
+      "source": "15_failure_rate_by_experiment_batch.png",
+      "crop": [60, 45, 2140, 1380],
+      "output": "fig_failure_rate_by_batch.png",
+      "metric": "不同实验批次的非成功率与环境噪声边界",
+      "data_source": "batch report snapshots",
+      "rq": "RQ3",
+      "preserve": "title, axes, labels, data source"
+    },
+    {
+      "id": "fig_triage_reduction",
+      "source": "16_triage_compression_funnel.png",
+      "crop": [60, 45, 2140, 1380],
+      "output": "fig_triage_reduction.png",
+      "metric": "运行记录到签名、P0 候选与 MIN-004 最小复现的收敛过程",
+      "data_source": "outputs/competition_evidence/review_efficiency_metrics.json and outputs/real_msys2_min004/summary.json",
+      "rq": "RQ2",
+      "preserve": "title, numeric cards, bars, table, data source"
+    },
+    {
+      "id": "fig_seed_source_coverage",
+      "source": "17_seed_source_coverage_matrix.png",
+      "crop": [60, 45, 2140, 1380],
+      "output": "fig_seed_source_coverage.png",
+      "metric": "seed 来源覆盖与实验批次关联",
+      "data_source": "data/seed_sources.json and fixed report snapshot",
+      "rq": "RQ1",
+      "preserve": "title, matrix labels, source counts, data source"
+    }
+  ]
+}

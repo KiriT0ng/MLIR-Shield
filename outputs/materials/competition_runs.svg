@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<rect width="1200" height="620" rx="24" fill="#F7FAFF"/>
+<text x="54" y="56" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="30" font-weight="800" fill="#102033">运行规模对比</text>
+<text x="54" y="86" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="15" fill="#64748B">Generated from outputs/*/report.json</text>
+<text x="54" y="118" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Demo</text>
+<rect x="255" y="98" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="98" width="735" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="118" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">33754</text>
+<text x="54" y="166" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Mock Baseline</text>
+<rect x="255" y="146" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="146" width="840" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="166" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">38576</text>
+<text x="54" y="214" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Issue Repros</text>
+<rect x="255" y="194" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="194" width="1" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="214" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">90</text>
+<text x="54" y="262" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Discovery</text>
+<rect x="255" y="242" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="242" width="25" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="262" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">1170</text>
+<text x="54" y="310" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Discovery MLIR22</text>
+<rect x="255" y="290" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="290" width="25" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="310" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">1170</text>
+<text x="54" y="358" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Current MLIR23 Issue</text>
+<rect x="255" y="338" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="338" width="0" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="358" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">2</text>
+<text x="54" y="406" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">ORIG-CAND-001 Variants</text>
+<rect x="255" y="386" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="386" width="0" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="406" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">20</text>
+<text x="54" y="454" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Independent Fuzz MLIR23</text>
+<rect x="255" y="434" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="434" width="52" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="454" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">2400</text>
+<text x="54" y="502" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="700" fill="#334155">Original Search MLIR23</text>
+<rect x="255" y="482" width="840" height="24" rx="12" fill="#E5ECF7"/>
+<rect x="255" y="482" width="125" height="24" rx="12" fill="#315EFB"/>
+<text x="1113" y="502" font-family="Segoe UI, Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#102033">5760</text>
+</svg>

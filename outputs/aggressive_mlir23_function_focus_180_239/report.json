@@ -1,0 +1,5300 @@
+{
+  "tool": "mlir-opt-23",
+  "seed_count": 60,
+  "pipelines": [
+    "parse_verify",
+    "canonicalize_convergence_probe",
+    "memref_alias_metadata",
+    "memref_llvm_lowering",
+    "vector_reduction_lowering",
+    "vector_to_scf_llvm",
+    "tensor_linalg_loop_lowering",
+    "linalg_parallel_gpu",
+    "bufferization_deallocation",
+    "shape_reify_resolve",
+    "sparse_lowering_probe"
+  ],
+  "runs": [
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 367,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 79,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 194,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 94,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 113,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 171,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 134,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 147,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_050.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 116,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 136,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 131,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 150,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 86,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 197,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 140,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 93,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 90,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 84,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_051.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 150,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 115,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 93,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 90,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 156,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 89,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 71,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 154,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_052.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 174,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 122,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 73,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 145,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 137,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 130,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 83,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 172,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_053.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 128,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 60,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 189,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 117,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 123,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 142,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 94,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 162,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 140,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_054.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 115,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 87,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 171,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 63,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 182,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 151,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 143,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 143,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_055.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 136,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 125,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 124,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 162,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 132,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 90,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 68,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 190,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 133,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_056.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 117,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 66,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 114,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 179,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 124,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 127,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 84,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 154,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 117,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 85,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_057.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 148,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 120,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 83,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 166,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 116,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 123,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 111,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 166,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 159,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_058.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 128,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 58,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 143,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 154,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 87,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 157,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 111,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 92,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 140,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 139,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_059.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 89,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 171,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 175,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 115,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 124,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 122,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 146,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 157,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 81,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 151,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_060.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 126,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 175,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 114,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 174,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 123,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 129,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 160,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 86,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 185,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_061.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 131,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 114,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 118,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 89,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 153,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 127,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 125,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 132,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_062.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 61,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 176,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 118,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 132,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 85,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 213,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 131,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 111,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 179,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 146,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 136,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_063.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 59,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 158,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 140,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 144,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 142,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 129,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 61,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 178,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_064.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 93,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 145,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 124,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 69,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 163,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 128,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 93,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 89,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 179,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 139,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_065.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 71,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 119,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 132,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 175,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 147,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 143,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 151,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 139,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 170,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 157,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_066.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 124,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 56,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 127,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 178,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 156,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 113,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 85,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 130,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_067.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 91,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 210,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 80,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 170,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 142,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 144,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 141,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 164,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 153,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 82,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 205,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_068.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 160,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 140,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 75,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 120,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 115,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 216,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 141,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 128,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 156,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 128,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 89,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_069.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 63,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 156,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 144,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 143,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 121,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 171,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 169,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 136,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 136,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 69,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_070.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 137,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 119,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 132,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 141,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 79,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 155,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 131,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 136,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 126,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_071.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 132,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 57,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 111,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 94,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_072.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_073.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_074.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 94,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_075.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_076.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 117,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_077.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 94,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 111,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_078.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_079.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_080.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 111,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_081.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_082.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_083.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_084.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 91,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_085.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_086.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 113,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_087.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 94,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_088.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_089.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_090.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_091.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_092.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_093.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 92,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_094.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_095.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_096.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 108,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_097.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 112,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 112,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 120,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_098.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 112,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_099.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 92,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 110,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_100.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 93,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 136,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_101.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 80,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_102.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 96,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_103.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 92,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 105,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_104.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_105.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 95,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 94,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_106.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 101,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/conversion_vectortollvm_vector_to_llvm_mlir__fn_107.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 103,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 109,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 102,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 107,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_000.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "parse_verify",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "canonicalize_convergence_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "memref_alias_metadata",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "memref_llvm_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 98,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "vector_reduction_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 99,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "vector_to_scf_llvm",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "tensor_linalg_loop_lowering",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "linalg_parallel_gpu",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 100,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "bufferization_deallocation",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 106,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "shape_reify_resolve",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 97,
+      "stderr_excerpt": ""
+    },
+    {
+      "seed": "seeds/real_official_main23_functions_focus/dialect_affine_supervectorize_vectorize_1d_mlir__fn_001.mlir",
+      "pipeline": "sparse_lowering_probe",
+      "return_code": 0,
+      "category": "success",
+      "elapsed_ms": 104,
+      "stderr_excerpt": ""
+    }
+  ],
+  "hard_failures": []
+}

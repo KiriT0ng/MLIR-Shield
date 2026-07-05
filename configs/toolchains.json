@@ -1,0 +1,31 @@
+{
+  "toolchains": [
+    {
+      "name": "windows-native",
+      "kind": "local",
+      "command": "mlir-opt",
+      "purpose": "Native Windows execution when mlir-opt.exe is installed and on PATH."
+    },
+    {
+      "name": "ssh-mlir15-optional",
+      "kind": "ssh-stdin-runner",
+      "command": "python scripts/ssh_mlir_opt.py",
+      "remote_command": "mlir-opt-15",
+      "purpose": "Optional remote execution path for older MLIR environments. Disabled unless MLIRSHIELD_USE_SSH=1 is configured."
+    },
+    {
+      "name": "ssh-mlir22-evidence",
+      "kind": "ssh-stdin-runner",
+      "command": "python scripts/ssh_mlir_opt.py",
+      "remote_command": "mlir-opt-22",
+      "purpose": "Historical LLVM/MLIR 22 toolchain used to generate Discovery MLIR22 and MIN-004 crash evidence."
+    },
+    {
+      "name": "ssh-mlir23-optional",
+      "kind": "ssh-stdin-runner",
+      "command": "python scripts/ssh_mlir_opt.py",
+      "remote_command": "mlir-opt-23",
+      "purpose": "Optional LLVM/MLIR development snapshot runner for current validation."
+    }
+  ]
+}

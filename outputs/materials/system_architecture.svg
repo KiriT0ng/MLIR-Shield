@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .title { font: 700 38px Arial, 'Microsoft YaHei', sans-serif; fill: #172033; }
+      .subtitle { font: 18px Arial, 'Microsoft YaHei', sans-serif; fill: #5b6678; }
+      .stage-title { font: 700 20px Arial, 'Microsoft YaHei', sans-serif; fill: #172033; }
+      .stage-copy { font: 15px Arial, 'Microsoft YaHei', sans-serif; fill: #4b5565; }
+      .small { font: 13px Arial, 'Microsoft YaHei', sans-serif; fill: #64748b; }
+      .box { fill: #ffffff; stroke: #cfd8e3; stroke-width: 2; rx: 8; }
+      .box-accent { fill: #e8f5f3; stroke: #0f766e; stroke-width: 2; rx: 8; }
+      .box-risk { fill: #fff4e5; stroke: #b45309; stroke-width: 2; rx: 8; }
+      .lane { fill: #eef3f8; stroke: #d7e0ea; stroke-width: 1.5; rx: 10; }
+      .arrow { stroke: #334155; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #64748b; stroke-width: 2; stroke-dasharray: 7 6; fill: none; marker-end: url(#arrow-muted); }
+      .pill { fill: #0f766e; rx: 16; }
+      .pill-text { font: 700 13px Arial, 'Microsoft YaHei', sans-serif; fill: #ffffff; }
+    </style>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L10,5.5 L0,11 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-muted" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L10,5.5 L0,11 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1440" height="900"/>
+  <text x="72" y="72" class="title">MLIR 差分一致性与安全验证系统架构</text>
+  <text x="72" y="108" class="subtitle">从真实 seed 到多 pipeline 调度、失败分类、根因聚类和比赛演示报告的端到端链路</text>
+
+  <rect x="72" y="150" width="1296" height="160" class="lane"/>
+  <text x="96" y="185" class="stage-title">输入层：Seed Library</text>
+  <g>
+    <rect x="100" y="215" width="210" height="70" class="box"/>
+    <text x="118" y="245" class="stage-title">Generated Seeds</text>
+    <text x="118" y="270" class="stage-copy">本地基础 / Demo 样例</text>
+  </g>
+  <g>
+    <rect x="360" y="215" width="230" height="70" class="box-accent"/>
+    <text x="378" y="245" class="stage-title">LLVM Official Tests</text>
+    <text x="378" y="270" class="stage-copy">109 个官方 MLIR seed</text>
+  </g>
+  <g>
+    <rect x="640" y="215" width="230" height="70" class="box-risk"/>
+    <text x="658" y="245" class="stage-title">LLVM Issue Repros</text>
+    <text x="658" y="270" class="stage-copy">5 个真实 issue 复现</text>
+  </g>
+  <g>
+    <rect x="920" y="215" width="250" height="70" class="box"/>
+    <text x="938" y="245" class="stage-title">Source Manifest</text>
+    <text x="938" y="270" class="stage-copy">data/seed_sources.json</text>
+  </g>
+  <path class="arrow" d="M310 250 H350"/>
+  <path class="arrow" d="M590 250 H630"/>
+  <path class="arrow" d="M870 250 H910"/>
+
+  <rect x="72" y="350" width="1296" height="190" class="lane"/>
+  <text x="96" y="385" class="stage-title">执行层：Pipeline Scheduler + Toolchain Runner</text>
+  <g>
+    <rect x="100" y="420" width="230" height="82" class="box"/>
+    <text x="118" y="450" class="stage-title">Pipeline Configs</text>
+    <text x="118" y="475" class="stage-copy">baseline / demo / issue-specific</text>
+  </g>
+  <g>
+    <rect x="395" y="420" width="245" height="82" class="box-accent"/>
+    <text x="413" y="450" class="stage-title">Run Engine</text>
+    <text x="413" y="475" class="stage-copy">逐 seed × pipeline 调度执行</text>
+  </g>
+  <g>
+    <rect x="705" y="420" width="245" height="82" class="box"/>
+    <text x="723" y="450" class="stage-title">Windows Native</text>
+    <text x="723" y="475" class="stage-copy">mlir-opt.exe 当前缺失</text>
+  </g>
+  <g>
+    <rect x="1015" y="420" width="245" height="82" class="box-risk"/>
+    <text x="1033" y="450" class="stage-title">VM Ubuntu Runner</text>
+    <text x="1033" y="475" class="stage-copy">SSH → mlir-opt-15</text>
+  </g>
+  <path class="arrow" d="M330 461 H385"/>
+  <path class="arrow" d="M640 461 H695"/>
+  <path class="dash" d="M950 461 H1005"/>
+
+  <rect x="72" y="580" width="1296" height="190" class="lane"/>
+  <text x="96" y="615" class="stage-title">分析层：分类、差分与聚类</text>
+  <g>
+    <rect x="100" y="650" width="220" height="82" class="box"/>
+    <text x="118" y="680" class="stage-title">Result Collector</text>
+    <text x="118" y="705" class="stage-copy">stdout / stderr / artifacts</text>
+  </g>
+  <g>
+    <rect x="370" y="650" width="230" height="82" class="box-risk"/>
+    <text x="388" y="680" class="stage-title">Safety Classifier</text>
+    <text x="388" y="705" class="stage-copy">parser / verifier / crash</text>
+  </g>
+  <g>
+    <rect x="650" y="650" width="230" height="82" class="box-accent"/>
+    <text x="668" y="680" class="stage-title">Differential Analyzer</text>
+    <text x="668" y="705" class="stage-copy">divergence / mismatch</text>
+  </g>
+  <g>
+    <rect x="930" y="650" width="230" height="82" class="box"/>
+    <text x="948" y="680" class="stage-title">Failure Clustering</text>
+    <text x="948" y="705" class="stage-copy">signature 根因聚类</text>
+  </g>
+  <path class="arrow" d="M320 691 H360"/>
+  <path class="arrow" d="M600 691 H640"/>
+  <path class="arrow" d="M880 691 H920"/>
+
+  <text x="96" y="818" class="stage-title">输出层</text>
+  <g>
+    <rect x="210" y="795" width="325" height="36" class="pill"/>
+    <text x="228" y="819" class="pill-text">JSON / Markdown / HTML 报告</text>
+  </g>
+  <g>
+    <rect x="500" y="795" width="190" height="36" class="pill"/>
+    <text x="518" y="819" class="pill-text">Web Dashboard</text>
+  </g>
+  <g>
+    <rect x="720" y="795" width="234" height="36" class="pill"/>
+    <text x="738" y="819" class="pill-text">Issue Case Library</text>
+  </g>
+  <g>
+    <rect x="1010" y="795" width="190" height="36" class="pill"/>
+    <text x="1028" y="819" class="pill-text">比赛技术报告 / 答辩材料</text>
+  </g>
+  <path class="arrow" d="M1160 691 C1240 700 1270 760 1180 795"/>
+</svg>

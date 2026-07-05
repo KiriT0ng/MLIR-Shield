@@ -1,0 +1,49 @@
+{
+  "pipelines": [
+    {
+      "name": "parse_verify",
+      "description": "Parse and verify every seed before stress passes.",
+      "args": []
+    },
+    {
+      "name": "canonicalize_cse_sccp",
+      "description": "Common cleanup and scalar propagation stress path.",
+      "args": ["--canonicalize", "--cse", "--sccp", "--canonicalize"]
+    },
+    {
+      "name": "symbol_dce_inliner_canonicalize",
+      "description": "Interprocedural cleanup path for func-heavy seeds.",
+      "args": ["--symbol-dce", "--inline", "--canonicalize", "--cse"]
+    },
+    {
+      "name": "affine_lowering_stress",
+      "description": "Affine lowering followed by cleanup.",
+      "args": ["--lower-affine", "--canonicalize", "--cse"]
+    },
+    {
+      "name": "scf_to_cf_stress",
+      "description": "SCF lowering path.",
+      "args": ["--convert-scf-to-cf", "--canonicalize", "--cse"]
+    },
+    {
+      "name": "vector_lowering_stress",
+      "description": "Vector-to-SCF/LLVM lowering path.",
+      "args": ["--convert-vector-to-scf", "--convert-vector-to-llvm", "--canonicalize"]
+    },
+    {
+      "name": "bufferization_probe",
+      "description": "One-shot bufferization probe for tensor/linalg seeds.",
+      "args": ["--one-shot-bufferize", "--canonicalize"]
+    },
+    {
+      "name": "linalg_affine_probe",
+      "description": "Linalg to affine loop lowering probe.",
+      "args": ["--convert-linalg-to-affine-loops", "--canonicalize"]
+    },
+    {
+      "name": "gpu_parallel_probe",
+      "description": "SCF parallel loop to GPU lowering probe.",
+      "args": ["--convert-parallel-loops-to-gpu", "--canonicalize"]
+    }
+  ]
+}

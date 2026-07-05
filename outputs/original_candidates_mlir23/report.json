@@ -1,0 +1,78 @@
+{
+  "seeds": [
+    "seeds\\original_candidates\\orig_001_inliner_nested_region_returned_func.mlir"
+  ],
+  "pipelines": [
+    "parse_verify_allow_unregistered",
+    "inline_allow_unregistered"
+  ],
+  "runs": [
+    {
+      "seed": "seeds\\original_candidates\\orig_001_inliner_nested_region_returned_func.mlir",
+      "pipeline": "parse_verify_allow_unregistered",
+      "command": "C:\\Users\\lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\ssh_mlir_opt.py --allow-unregistered-dialect -o - < seeds\\original_candidates\\orig_001_inliner_nested_region_returned_func.mlir",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_ms": 710,
+      "stdout": "module {\n  func.func @f() {\n    \"a.b\"() ({\n      \"a.t\"() : () -> ()\n    }) : () -> ()\n    return\n  }\n}\n\n",
+      "stderr": "",
+      "stdout_path": "outputs\\original_candidates_mlir23\\artifacts\\orig_001_inliner_nested_region_returned_func__parse_verify_allow_unregistered.stdout.mlir",
+      "stderr_path": "outputs\\original_candidates_mlir23\\artifacts\\orig_001_inliner_nested_region_returned_func__parse_verify_allow_unregistered.stderr.txt",
+      "category": "success"
+    },
+    {
+      "seed": "seeds\\original_candidates\\orig_001_inliner_nested_region_returned_func.mlir",
+      "pipeline": "inline_allow_unregistered",
+      "command": "C:\\Users\\lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\ssh_mlir_opt.py --allow-unregistered-dialect --inline -o - < seeds\\original_candidates\\orig_001_inliner_nested_region_returned_func.mlir",
+      "return_code": 4294967295,
+      "timed_out": false,
+      "elapsed_ms": 2035,
+      "stdout": "",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):\n0  libLLVM.so.23.0 0x0000706c9cbc11fc llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) + 60\n1  libLLVM.so.23.0 0x0000706c9cbbeb63 llvm::sys::RunSignalHandlers() + 131\n2  libLLVM.so.23.0 0x0000706c9cbc1fd4\n3  libc.so.6       0x0000706c97242520\n4  libMLIR.so.23.0 0x0000706ca7b847cd\n5  libMLIR.so.23.0 0x0000706ca7b844c3\n6  libMLIR.so.23.0 0x0000706ca7b839a0 mlir::Inliner::doInlining() + 832\n7  libMLIR.so.23.0 0x0000706ca7b9e265\n8  libMLIR.so.23.0 0x0000706ca78ab6a3 mlir::detail::OpToOpPassAdaptor::run(mlir::Pass*, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int) + 979\n9  libMLIR.so.23.0 0x0000706ca78abcc7 mlir::detail::OpToOpPassAdaptor::runPipeline(mlir::OpPassManager&, mlir::Operation*, mlir::AnalysisManager, bool, unsigned int, mlir::PassInstrumentor*, mlir::PassInstrumentation::PipelineParentInfo const*) + 311\n10 libMLIR.so.23.0 0x0000706ca78ae070 mlir::PassManager::run(mlir::Operation*) + 848\n11 libMLIR.so.23.0 0x0000706ca7b36358\n12 libMLIR.so.23.0 0x0000706ca7b35506\n13 libMLIR.so.23.0 0x0000706ca78fae18 mlir::splitAndProcessBuffer(std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::function_ref<llvm::LogicalResult (std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, llvm::MemoryBufferRef const&, llvm::raw_ostream&)>, llvm::raw_ostream&, llvm::StringRef, llvm::StringRef) + 344\n14 libMLIR.so.23.0 0x0000706ca7b2c7cb mlir::MlirOptMain(llvm::raw_ostream&, std::unique_ptr<llvm::MemoryBuffer, std::default_delete<llvm::MemoryBuffer>>, mlir::DialectRegistry&, mlir::MlirOptMainConfig const&) + 555\n15 libMLIR.so.23.0 0x0000706ca7b2cb08 mlir::MlirOptMain(int, char**, llvm::StringRef, llvm::StringRef, mlir::DialectRegistry&) + 424\n16 libMLIR.so.23.0 0x0000706ca7b2cd98 mlir::MlirOptMain(int, char**, llvm::StringRef, mlir::DialectRegistry&) + 312\n17 mlir-opt-23     0x00005b003d04e0c3 main + 867\n18 libc.so.6       0x0000706c97229d90\n19 libc.so.6       0x0000706c97229e40 __libc_start_main + 128\n20 mlir-opt-23     0x00005b003d04dc95 _start + 37\n",
+      "stdout_path": "outputs\\original_candidates_mlir23\\artifacts\\orig_001_inliner_nested_region_returned_func__inline_allow_unregistered.stdout.mlir",
+      "stderr_path": "outputs\\original_candidates_mlir23\\artifacts\\orig_001_inliner_nested_region_returned_func__inline_allow_unregistered.stderr.txt",
+      "category": "memory/assertion"
+    }
+  ],
+  "issues": [
+    {
+      "seed": "seeds\\original_candidates\\orig_001_inliner_nested_region_returned_func.mlir",
+      "severity": "high",
+      "kind": "pipeline divergence",
+      "summary": "Some pipelines succeeded while others failed.",
+      "details": "pipeline | return_code | category | timed_out\n--- | --- | --- | ---\nparse_verify_allow_unregistered | 0 | success | false\ninline_allow_unregistered | 4294967295 | memory/assertion | false"
+    }
+  ],
+  "summary": {
+    "run_categories": {
+      "memory/assertion": 1,
+      "success": 1
+    },
+    "issue_severities": {
+      "high": 1
+    },
+    "issue_kinds": {
+      "pipeline divergence": 1
+    },
+    "failure_clusters": [
+      {
+        "signature": "memory/assertion:d34961e10d",
+        "category": "memory/assertion",
+        "count": 1,
+        "seed_count": 1,
+        "pipeline_count": 1,
+        "seeds": [
+          "seeds\\original_candidates\\orig_001_inliner_nested_region_returned_func.mlir"
+        ],
+        "pipelines": [
+          "inline_allow_unregistered"
+        ],
+        "example": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: mlir-opt-23 --allow-unregistered-dialect --inline -o -\nStack dump without symbol names (ensure you have llvm-symbolizer in your PATH or s..."
+      }
+    ],
+    "invariant_findings": [],
+    "invariant_kinds": {},
+    "output_deltas": [],
+    "output_delta_count": 0
+  }
+}
