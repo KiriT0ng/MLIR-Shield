@@ -27,6 +27,27 @@ outputs/**/artifacts/
 *.out
 *.toc
 
+# Local write-up and evidence notes that are useful for report drafting but
+# not needed in the GitHub-facing project documentation.
+docs/*.md
+!docs/project_overview.md
+!docs/seed_library_overview.md
+!docs/source_review_notes.md
+
+# Local report/export helper scripts kept for project write-ups, not for the
+# GitHub-facing runnable project body.
+scripts/build_award_report_v7.py
+scripts/build_competition_evidence.py
+scripts/build_release.py
+scripts/build_review_evidence.py
+scripts/capture_report_screenshots.py
+scripts/crop_report_figures.py
+scripts/export_competition_materials.py
+scripts/export_visual_materials.py
+scripts/final_check.py
+scripts/generate_report_assets.py
+scripts/rebuild_report.py
+
 # Report render checks and temporary build folders
 reports/
 reports/**/render_check*/

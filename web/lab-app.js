@@ -248,7 +248,7 @@ function renderMinimized(repros) {
       <p>${escapeHtml(item.source || "local minimized repro")}</p>
       <p class="case-links">
         <a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Open minimized MLIR</a>
-        ${item.id === "MIN-004" ? `<a href="/docs/MIN-004案例报告.md" target="_blank" rel="noreferrer">Open MIN-004 report</a>` : ""}
+        ${item.id === "MIN-004" ? `<a href="/outputs/current_validation/min004_current_validation.md" target="_blank" rel="noreferrer">Open MIN-004 validation</a>` : ""}
       </p>
       ${item.command ? `<pre>${escapeHtml(item.command)}</pre>` : ""}
       <pre>${escapeHtml(item.preview || "")}</pre>

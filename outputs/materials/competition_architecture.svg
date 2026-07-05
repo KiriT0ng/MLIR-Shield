@@ -38,10 +38,10 @@
     <rect class="box" width="310" height="112"/><text x="24" y="42" class="h">User Portal</text><text x="24" y="72" class="p">上传/粘贴 MLIR，用户可读结论</text><text x="24" y="96" class="p">历史记录与完整技术报告链接</text>
   </g>
   <g transform="translate(595 646)">
-    <rect class="box ok" width="310" height="112"/><text x="24" y="42" class="h">Lab Console</text><text x="24" y="72" class="p">报告、案例库、最小复现</text><text x="24" y="96" class="p">面向答辩和源码检查</text>
+    <rect class="box ok" width="310" height="112"/><text x="24" y="42" class="h">Lab Console</text><text x="24" y="72" class="p">结果页、案例库、最小复现</text><text x="24" y="96" class="p">面向复核和源码检查</text>
   </g>
   <g transform="translate(1018 646)">
-    <rect class="box accent" width="310" height="112"/><text x="24" y="42" class="h">Competition Evidence</text><text x="24" y="72" class="p">图表、截图、数据表、报告</text><text x="24" y="96" class="p">可复核、可提交、可追溯</text>
+    <rect class="box accent" width="310" height="112"/><text x="24" y="42" class="h">Evidence Assets</text><text x="24" y="72" class="p">图表、截图、数据表、结果页</text><text x="24" y="96" class="p">可复核、可追溯、可复现</text>
   </g>
   <path class="arrow" d="M1145 504C1145 575 1170 595 1170 636"/><path class="arrow" d="M750 504V636"/><path class="arrow" d="M355 504C355 575 327 595 327 636"/>
   <rect x="64" y="794" width="1372" height="44" rx="22" fill="url(#g)"/>

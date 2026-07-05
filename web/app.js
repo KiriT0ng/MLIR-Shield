@@ -187,7 +187,7 @@ function renderOverview() {
     .reduce((sum, [, value]) => sum + Number(value || 0), 0);
 
   $("snapshotTime").textContent = state.evidence
-    ? "固定快照未记录 generated_at；本轮说明见 docs/evidence_snapshot.md"
+    ? "固定快照未记录 generated_at；数据来自 outputs/competition_evidence/competition_evidence.json"
     : "未能读取固定快照";
   $("metricRuns").textContent = number(discovery22.runs || metrics.discovery_runs);
   $("metricNonSuccess").textContent = number(nonSuccess);
@@ -504,7 +504,7 @@ function renderMin004(minCode) {
     : "未读取 real_user_portal_e2e.json";
   $("lineReduction").textContent = metrics.min004_line_reduction
     ? `行数缩减 ${metrics.min004_line_reduction}%：从 ${metrics.min004_original_lines} 行到 ${metrics.min004_minimized_lines} 行。`
-    : "行数缩减来自 docs/MIN-004案例报告.md：约 1236 行到 8 行。";
+    : "行数缩减来自固定 evidence 快照：约 1236 行到 8 行。";
   $("min004Code").textContent = minCode || "未能读取最小复现文件。";
 
   renderVersionMatrix();
@@ -540,7 +540,7 @@ function renderEvidenceRows(primary) {
   const rows = [
     ["最小复现", "outputs/minimized/mlir22_memref_canonicalize_current.chunk.min.mlir", "8 行 MLIR 复现文件", "/outputs/minimized/mlir22_memref_canonicalize_current.chunk.min.mlir"],
     ["当前版本验证", "outputs/current_validation/min004_current_validation.md", "MLIR 23 development snapshot 未复现 hard failure", "/outputs/current_validation/min004_current_validation.md"],
-    ["案例报告", "docs/MIN-004案例报告.md", "发现路径、版本差分和展示建议", "/docs/MIN-004案例报告.md"],
+    ["项目说明", "docs/project_overview.md", "框架目标、运行入口和模块概览", "/docs/project_overview.md"],
     ["真实门户 E2E", "outputs/competition_evidence/real_user_portal_e2e.json", "deep profile 下 9 条 pipeline 中 5 次 memory/assertion", "/outputs/competition_evidence/real_user_portal_e2e.json"],
   ];
   if (primary.report_url) {

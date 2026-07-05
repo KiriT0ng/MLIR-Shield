@@ -19,7 +19,7 @@
   </defs>
   <rect class="bg" width="1440" height="900"/>
   <text x="72" y="72" class="title">实验结果总览</text>
-  <text x="72" y="108" class="subtitle">当前报告覆盖 130 个 MLIR seed，重点展示真实 issue 复现、基线稳定性和失败聚类能力</text>
+  <text x="72" y="108" class="subtitle">当前证据覆盖 130 个 MLIR seed，重点展示真实 issue 复现、基线稳定性和失败聚类能力</text>
 
   <rect x="72" y="145" width="610" height="585" class="card"/>
   <text x="105" y="188" class="label">Runs / Issues / Failure Clusters</text>
@@ -88,5 +88,5 @@
 
   <rect x="72" y="770" width="1296" height="82" class="card"/>
   <text x="105" y="805" class="label">结论</text>
-  <text x="105" y="835" class="small">Mock Baseline 验证框架链路稳定，Issue Repros 展示 8 个真实问题和 4 个失败簇，支持比赛现场从统计总览下钻到案例复现。</text>
+  <text x="105" y="835" class="small">Mock Baseline 验证框架链路稳定，Issue Repros 展示 8 个真实问题和 4 个失败簇，支持从统计总览下钻到案例复现。</text>
 </svg>

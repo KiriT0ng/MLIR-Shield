@@ -64,8 +64,8 @@ $required = @(
   "web\server.py",
   "web\index.html",
   "docs\project_overview.md",
-  "docs\min004_case_report.md",
-  "docs\originality_evidence.md",
+  "docs\seed_library_overview.md",
+  "docs\source_review_notes.md",
   "outputs\current_validation\min004_current_validation.json",
   "outputs\orig001_variants\report.html"
 )
@@ -121,10 +121,10 @@ if ($sshRequested) {
 }
 
 if (-not $SkipSelfCheck) {
-  Write-Host "Running project self-check..."
-  & $Python scripts\final_check.py --web $Dashboard
+  Write-Host "Running project smoke test..."
+  & $Python run.py --demo --seeds seeds\demo_failures --out outputs\smoke_demo --timeout 3
   if ($LASTEXITCODE -ne 0) {
-    Write-Host "Project self-check failed." -ForegroundColor Red
+    Write-Host "Project smoke test failed." -ForegroundColor Red
     exit $LASTEXITCODE
   }
 }
@@ -133,8 +133,8 @@ Write-Host ""
 Write-Host "Suggested review path:"
 Write-Host "1. $Dashboard"
 Write-Host "2. GETTING_STARTED.md"
-Write-Host "3. docs\case_version_matrix.md"
-Write-Host "4. docs\min004_case_report.md"
-Write-Host "5. docs\originality_evidence.md"
+Write-Host "3. docs\project_overview.md"
+Write-Host "4. docs\source_review_notes.md"
+Write-Host "5. docs\seed_library_overview.md"
 
 Start-Process $Dashboard

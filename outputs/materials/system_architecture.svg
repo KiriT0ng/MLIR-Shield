@@ -25,7 +25,7 @@
   </defs>
   <rect class="bg" width="1440" height="900"/>
   <text x="72" y="72" class="title">MLIR 差分一致性与安全验证系统架构</text>
-  <text x="72" y="108" class="subtitle">从真实 seed 到多 pipeline 调度、失败分类、根因聚类和比赛演示报告的端到端链路</text>
+  <text x="72" y="108" class="subtitle">从真实 seed 到多 pipeline 调度、失败分类、根因聚类和证据展示的端到端链路</text>
 
   <rect x="72" y="150" width="1296" height="160" class="lane"/>
   <text x="96" y="185" class="stage-title">输入层：Seed Library</text>
@@ -120,7 +120,7 @@
   </g>
   <g>
     <rect x="1010" y="795" width="190" height="36" class="pill"/>
-    <text x="1028" y="819" class="pill-text">比赛技术报告 / 答辩材料</text>
+    <text x="1028" y="819" class="pill-text">证据图表 / 复核材料</text>
   </g>
   <path class="arrow" d="M1160 691 C1240 700 1270 760 1180 795"/>
 </svg>

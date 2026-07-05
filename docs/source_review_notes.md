@@ -9,13 +9,13 @@
 | 路径 | 作用 |
 | --- | --- |
 | `mlirdiff/` | 核心检测框架，包括执行引擎、分类器、差分分析、报告生成、案例库构建。 |
-| `scripts/` | 数据导入、VM runner、Discovery triage、最小化、版本差分、自检和证据导出脚本。 |
+| `scripts/` | 数据导入、VM runner、Discovery triage、最小化、版本差分和工具链验证脚本。 |
 | `configs/` | pass pipeline、版本差分案例和工具链配置。 |
 | `seeds/` | MLIR seed 库，包括官方测试、真实 issue 复现和本地 demo seed。 |
 | `data/seed_sources.json` | seed 来源索引，用于标记官方、issue、generated 来源。 |
 | `outputs/` | 已生成的实验报告、运行产物、最小化复现和图表。 |
 | `web/` | 本地 Web 展示台。 |
-| `docs/` | 项目说明、案例报告、源码检查说明和应用价值文档。 |
+| `docs/` | 项目概览、Seed 说明和开发者导览。 |
 
 ## 3. 核心模块
 
@@ -97,8 +97,8 @@
 | `scripts/minimize_seed.py` | 行级 delta minimization。 |
 | `scripts/minimize_mlir_chunks.py` | 函数/块级进一步最小化。 |
 | `scripts/run_version_diff.py` | 执行 MLIR 15 vs MLIR 22 版本差分。 |
-| `scripts/final_check.py` | 项目状态自检。 |
-| `scripts/build_release.py` | 生成可执行展示包。 |
+| `scripts/verify_real_toolchain.ps1` | 检查本地真实 `mlir-opt` 配置。 |
+| `scripts/user_demo_mlir_opt.py` | 为用户门户执行本地 MLIR 分析任务。 |
 
 ## 5. 运行入口
 
@@ -120,16 +120,10 @@ python web/server.py 8765
 http://127.0.0.1:8765/
 ```
 
-项目自检：
+项目 smoke test：
 
 ```powershell
-python scripts\final_check.py --web http://127.0.0.1:8765
-```
-
-生成本地展示包：
-
-```powershell
-python scripts\build_release.py --zip
+python run.py --demo --seeds seeds\demo_failures --out outputs\smoke_demo --timeout 3
 ```
 
 ## 6. 重点检查点
