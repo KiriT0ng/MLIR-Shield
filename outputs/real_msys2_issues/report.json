@@ -26,7 +26,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 84,
@@ -39,7 +39,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 47,
@@ -52,7 +52,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 51,
@@ -65,7 +65,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 39,
@@ -78,12 +78,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 122,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -91,12 +91,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 103,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -104,12 +104,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 44,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -117,12 +117,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 76,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -130,12 +130,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 77,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_113021_linalg_negative_indexing_tile__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -143,7 +143,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_113021_linalg_negative_indexing_tile.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 47,
@@ -156,7 +156,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 99,
@@ -169,7 +169,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 42,
@@ -182,7 +182,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -195,7 +195,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -208,12 +208,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 110,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -221,12 +221,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 93,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -234,12 +234,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -247,12 +247,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 69,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -260,12 +260,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 85,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_119868_linalg_fusion_multiuse_assert__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -273,7 +273,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_119868_linalg_fusion_multiuse_assert.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -286,7 +286,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 48,
@@ -299,7 +299,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -312,7 +312,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -325,7 +325,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -338,12 +338,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 113,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -351,12 +351,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 75,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -364,12 +364,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 40,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -377,12 +377,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 71,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -390,12 +390,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 67,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168179_custom_stride_read_crash__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -403,7 +403,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168179_custom_stride_read_crash.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -416,7 +416,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 57,
@@ -429,7 +429,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -442,7 +442,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -455,7 +455,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -468,12 +468,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 103,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -481,12 +481,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 67,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -494,12 +494,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 37,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -507,12 +507,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 70,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -520,12 +520,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 68,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_168695_vector_scatter_tensor_canonicalize__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -533,7 +533,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_168695_vector_scatter_tensor_canonicalize.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -546,7 +546,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 70,
@@ -559,7 +559,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 43,
@@ -572,7 +572,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 43,
@@ -585,7 +585,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 42,
@@ -598,12 +598,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 108,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -611,12 +611,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 67,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -624,12 +624,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 40,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -637,12 +637,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 67,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -650,12 +650,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 68,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60210_transform_tile_reduction_assert__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -663,7 +663,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60210_transform_tile_reduction_assert.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 43,
@@ -676,7 +676,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 42,
@@ -689,7 +689,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -702,7 +702,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -715,7 +715,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -728,12 +728,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 123,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -741,12 +741,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 86,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -754,12 +754,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 46,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -767,12 +767,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 79,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -780,12 +780,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 75,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_60569_unregistered_dependent_dialect__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -793,7 +793,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_60569_unregistered_dependent_dialect.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -806,7 +806,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 50,
@@ -819,7 +819,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -832,7 +832,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 39,
@@ -845,7 +845,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -858,12 +858,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 108,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -871,12 +871,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 71,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -884,12 +884,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 40,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -897,12 +897,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 71,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -910,12 +910,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 74,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_61085_tosa_linalg_affine_assert__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -923,7 +923,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_61085_tosa_linalg_affine_assert.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 41,
@@ -936,7 +936,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 55,
@@ -949,7 +949,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 40,
@@ -962,7 +962,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -975,7 +975,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 37,
@@ -988,12 +988,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 108,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -1001,12 +1001,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 67,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -1014,12 +1014,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 54,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -1027,12 +1027,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 68,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -1040,12 +1040,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 74,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_75811_scf_parallel_to_gpu_destroyed_use__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -1053,7 +1053,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -1066,7 +1066,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 45,
@@ -1079,7 +1079,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "canonicalize_cse",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 39,
@@ -1092,7 +1092,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "convert_parallel_loops_to_gpu",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-parallel-loops-to-gpu -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -1105,7 +1105,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "linalg_parallel_to_gpu_issue_82382",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-linalg-to-affine-loops --affine-loop-tile=tile-sizes=4,28,28,16,7,7,3 --affine-loop-unroll=unroll-factor=4 --canonicalize --affine-parallelize --lower-affine --canonicalize --gpu-map-parallel-loops --convert-parallel-loops-to-gpu -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 42,
@@ -1118,12 +1118,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "test_linalg_multiuse_fusion_issue_119868",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 107,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__test_linalg_multiuse_fusion_issue_119868.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__test_linalg_multiuse_fusion_issue_119868.stderr.txt",
       "category": "rewrite"
@@ -1131,12 +1131,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "test_rewrite_dynamic_op_issue_60569",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --allow-unregistered-dialect --test-rewrite-dynamic-op -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 67,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__test_rewrite_dynamic_op_issue_60569.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__test_rewrite_dynamic_op_issue_60569.stderr.txt",
       "category": "rewrite"
@@ -1144,12 +1144,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "tosa_linalg_affine_issue_61085",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --pass-pipeline=func.func(tosa-to-arith) --linalg-bufferize --pass-pipeline=func.func(tosa-to-linalg) --convert-linalg-to-affine-loops -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__tosa_linalg_affine_issue_61085.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__tosa_linalg_affine_issue_61085.stderr.txt",
       "category": "unknown failure"
@@ -1157,12 +1157,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "transform_tile_reduction_issue_60210",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 67,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__transform_tile_reduction_issue_60210.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__transform_tile_reduction_issue_60210.stderr.txt",
       "category": "unknown failure"
@@ -1170,12 +1170,12 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "transform_linalg_tile_issue_113021",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --test-transform-dialect-interpreter -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --test-transform-dialect-interpreter -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 65,
       "stdout": "",
-      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
+      "stderr": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?\n",
       "stdout_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__transform_linalg_tile_issue_113021.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_issues\\artifacts\\llvm_82382_linalg_parallel_loops_to_gpu_crash__transform_linalg_tile_issue_113021.stderr.txt",
       "category": "unknown failure"
@@ -1183,7 +1183,7 @@
     {
       "seed": "seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "vector_scatter_canonicalize_issue_168695",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% seeds\\issue_repros\\llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --pass-pipeline=builtin.module(func.func(canonicalize)) -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -1295,7 +1295,7 @@
           "transform_linalg_tile_issue_113021",
           "transform_tile_reduction_issue_60210"
         ],
-        "example": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?"
+        "example": "mlir-opt.exe: Unknown command line argument '--test-transform-dialect-interpreter'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--transform-interpreter'?"
       },
       {
         "signature": "rewrite:8f006041c7",
@@ -1316,7 +1316,7 @@
         "pipelines": [
           "test_rewrite_dynamic_op_issue_60569"
         ],
-        "example": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?"
+        "example": "mlir-opt.exe: Unknown command line argument '--test-rewrite-dynamic-op'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--spirv-rewrite-inserts'?"
       },
       {
         "signature": "rewrite:c86a58a644",
@@ -1337,7 +1337,7 @@
         "pipelines": [
           "test_linalg_multiuse_fusion_issue_119868"
         ],
-        "example": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?"
+        "example": "mlir-opt.exe: Unknown command line argument '--test-linalg-elementwise-fusion-patterns=fuse-multiuse-producer'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--test-arm-sme-tile-allocation=fuse-multiuse-producer'?"
       },
       {
         "signature": "unknown failure:11bf0ff5f7",
@@ -1358,7 +1358,7 @@
         "pipelines": [
           "tosa_linalg_affine_issue_61085"
         ],
-        "example": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: 'E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?"
+        "example": "mlir-opt.exe: Unknown command line argument '--linalg-bufferize'.  Try: '%MLIRSHIELD_MLIR_OPT% --help'\nmlir-opt.exe: Did you mean '--linalg-detensorize'?"
       },
       {
         "signature": "dialect registration:9f12a94b88",

@@ -1,5 +1,5 @@
 {
-  "generated_from": "D:\\_KiriTong_\\信安赛\\MILR",
+  "generated_from": "%MLIRSHIELD_WORKSPACE%",
   "seed_summary": {
     "total": 4822,
     "indexed": 4522,
@@ -509,7 +509,7 @@
   "service_smoke_summary": {
     "runtime": {
       "available": true,
-      "configured": "C:\\Users\\KiriTong\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\user_demo_mlir_opt.py",
+      "configured": "%USERPROFILE%\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts\\user_demo_mlir_opt.py",
       "display_name": "MLIRShield demo runner 1.0 (UI flow only, not a real LLVM toolchain)",
       "detail": "MLIRShield demo runner 1.0 (UI flow only, not a real LLVM toolchain)"
     },

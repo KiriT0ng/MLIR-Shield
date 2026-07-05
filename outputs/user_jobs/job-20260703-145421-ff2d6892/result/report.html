@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>MLIR Differential Report</title>
+  <style>
+    body { font-family: Arial, "Microsoft YaHei", sans-serif; margin: 32px; color: #1f2933; }
+    h1, h2 { color: #102a43; }
+    .summary { display: flex; gap: 16px; margin: 20px 0; }
+    .metric { border: 1px solid #d9e2ec; border-radius: 6px; padding: 12px 16px; min-width: 120px; }
+    .metric strong { display: block; font-size: 24px; }
+    .issue { border-left: 4px solid #c2410c; background: #fff7ed; padding: 12px 16px; margin: 12px 0; }
+    .cluster { border: 1px solid #d9e2ec; border-left: 4px solid #475569; border-radius: 6px; padding: 12px 16px; margin: 12px 0; }
+    .cluster h3 { margin: 0 0 8px; font-size: 16px; }
+    .cluster .meta { color: #52606d; }
+    .tables { display: grid; grid-template-columns: repeat(2, minmax(240px, 1fr)); gap: 16px; margin-bottom: 20px; }
+    table { border-collapse: collapse; width: 100%; font-size: 14px; }
+    th, td { border: 1px solid #d9e2ec; padding: 8px; vertical-align: top; }
+    th { background: #f0f4f8; text-align: left; }
+    pre { white-space: pre-wrap; background: #111827; color: #f9fafb; padding: 12px; overflow: auto; }
+    code { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>MLIR Differential Consistency and Safety Report</h1>
+  <div class="summary">
+    <div class="metric"><span>Seeds</span><strong>1</strong></div>
+    <div class="metric"><span>Pipelines</span><strong>5</strong></div>
+    <div class="metric"><span>Runs</span><strong>5</strong></div>
+    <div class="metric"><span>Issues</span><strong>1</strong></div>
+  </div>
+  <h2>Issues</h2>
+  <div class="issue"><h3>[high] pipeline divergence</h3><p><strong>Seed:</strong> <code>seeds\min004_isolation_2.mlir</code></p><p>Some pipelines succeeded while others failed.</p><pre>pipeline | return_code | category | timed_out
+--- | --- | --- | ---
+parse_verify | 0 | success | false
+canonicalize | 3221225477 | memory/assertion | false
+cse | 0 | success | false
+canonicalize_cse | 3221225477 | memory/assertion | false
+symbol_dce_canonicalize | 3221225477 | memory/assertion | false</pre></div>
+  <h2>Summary</h2>
+  <div class="tables">
+    <table>
+      <thead><tr><th>Issue severity</th><th>Count</th></tr></thead>
+      <tbody><tr><td>high</td><td>1</td></tr></tbody>
+    </table>
+    <table>
+      <thead><tr><th>Run category</th><th>Count</th></tr></thead>
+      <tbody><tr><td>memory/assertion</td><td>3</td></tr>
+<tr><td>success</td><td>2</td></tr></tbody>
+    </table>
+    <table>
+      <thead><tr><th>Issue kind</th><th>Count</th></tr></thead>
+      <tbody><tr><td>pipeline divergence</td><td>1</td></tr></tbody>
+    </table>
+  </div>
+  <h2>Failure Clusters</h2>
+  <div class="cluster"><h3>memory/assertion:686452065c</h3><p class="meta">1 runs, 1 seeds, 1 pipelines, category memory/assertion</p><p><strong>Seeds:</strong> seeds\min004_isolation_2.mlir</p><p><strong>Pipelines:</strong> canonicalize_cse</p><pre>PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize --cse -o -
+Exception Code: 0xC0000005
+0x00007FF681412BFA, %MLIRSHIELD_MSYS2_ROOT%\m...</pre></div>
+<div class="cluster"><h3>memory/assertion:b3d7a4342c</h3><p class="meta">1 runs, 1 seeds, 1 pipelines, category memory/assertion</p><p><strong>Seeds:</strong> seeds\min004_isolation_2.mlir</p><p><strong>Pipelines:</strong> symbol_dce_canonicalize</p><pre>PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --symbol-dce --canonicalize -o -
+Exception Code: 0xC0000005
+0x00007FF681412BFA, %MLIRSHIELD_MLIR_OPT%...</pre></div>
+<div class="cluster"><h3>memory/assertion:eb21419775</h3><p class="meta">1 runs, 1 seeds, 1 pipelines, category memory/assertion</p><p><strong>Seeds:</strong> seeds\min004_isolation_2.mlir</p><p><strong>Pipelines:</strong> canonicalize</p><pre>PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
+Stack dump:
+0.	Program arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize -o -
+Exception Code: 0xC0000005
+0x00007FF681412BFA, %MLIRSHIELD_MSYS2_ROOT%\mingw64...</pre></div>
+  <h2>Post-Lowering Invariants</h2>
+  <p>No invariant findings.</p>
+  <h2>Runs</h2>
+  <table>
+    <thead><tr><th>Seed</th><th>Pipeline</th><th>Return</th><th>Category</th><th>Time</th><th>Stdout</th><th>Stderr</th></tr></thead>
+    <tbody><tr><td>seeds\min004_isolation_2.mlir</td><td>parse_verify</td><td>0</td><td>success</td><td>28 ms</td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__parse_verify.stdout.mlir</code></td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__parse_verify.stderr.txt</code></td></tr>
+<tr><td>seeds\min004_isolation_2.mlir</td><td>canonicalize</td><td>3221225477</td><td>memory/assertion</td><td>78 ms</td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__canonicalize.stdout.mlir</code></td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__canonicalize.stderr.txt</code></td></tr>
+<tr><td>seeds\min004_isolation_2.mlir</td><td>cse</td><td>0</td><td>success</td><td>28 ms</td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__cse.stdout.mlir</code></td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__cse.stderr.txt</code></td></tr>
+<tr><td>seeds\min004_isolation_2.mlir</td><td>canonicalize_cse</td><td>3221225477</td><td>memory/assertion</td><td>74 ms</td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__canonicalize_cse.stdout.mlir</code></td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__canonicalize_cse.stderr.txt</code></td></tr>
+<tr><td>seeds\min004_isolation_2.mlir</td><td>symbol_dce_canonicalize</td><td>3221225477</td><td>memory/assertion</td><td>79 ms</td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__symbol_dce_canonicalize.stdout.mlir</code></td><td><code>%MLIRSHIELD_WORKSPACE%\outputs\user_jobs\job-20260703-145421-ff2d6892\result\artifacts\min004_isolation_2__symbol_dce_canonicalize.stderr.txt</code></td></tr></tbody>
+  </table>
+</body>
+</html>

@@ -1,6 +1,6 @@
 PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.
 Stack dump:
-0.	Program arguments: E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\minimized\\mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -
+0.	Program arguments: %MLIRSHIELD_MLIR_OPT% outputs\\minimized\\mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -
 Exception Code: 0xC0000005
 0x00007FF7B61E2BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1272BFA byte(s)
 0x00007FF7B8585FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3615FE8 byte(s)

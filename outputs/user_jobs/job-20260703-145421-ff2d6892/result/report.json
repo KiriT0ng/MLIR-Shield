@@ -1,0 +1,148 @@
+{
+  "seeds": [
+    "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\input\\min004_isolation_2.mlir"
+  ],
+  "pipelines": [
+    "parse_verify",
+    "canonicalize",
+    "cse",
+    "canonicalize_cse",
+    "symbol_dce_canonicalize"
+  ],
+  "runs": [
+    {
+      "seed": "seeds\\min004_isolation_2.mlir",
+      "pipeline": "parse_verify",
+      "command": "E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe  -o - < %MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\input\\min004_isolation_2.mlir",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_ms": 28,
+      "stdout": "module {\n  func.func @no_crash_dim_of_ambiguous_subview(%arg0: memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>>, %arg1: index) -> index {\n    %c1 = arith.constant 1 : index\n    %subview = memref.subview %arg0[0, 0, 0] [1, %arg1, 1] [1, 1, 1] : memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>> to memref<1x?xf32, strided<[?, ?], offset: ?>>\n    %dim = memref.dim %subview, %c1 : memref<1x?xf32, strided<[?, ?], offset: ?>>\n    return %dim : index\n  }\n}\n\n",
+      "stderr": "",
+      "stdout_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__parse_verify.stdout.mlir",
+      "stderr_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__parse_verify.stderr.txt",
+      "category": "success"
+    },
+    {
+      "seed": "seeds\\min004_isolation_2.mlir",
+      "pipeline": "canonicalize",
+      "command": "E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize -o - < %MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\input\\min004_isolation_2.mlir",
+      "return_code": 3221225477,
+      "timed_out": false,
+      "elapsed_ms": 78,
+      "stdout": "",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF681412BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x1272BFA byte(s)\n0x00007FF6837B5FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3615FE8 byte(s)\n0x00007FF6837B61E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x36161E2 byte(s)\n0x00007FF68413F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3F9F6D7 byte(s)\n0x00007FF68413D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3F9D32F byte(s)\n0x00007FF682A9BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x28FBD42 byte(s)\n0x00007FF68027C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xDC434 byte(s)\n0x00007FF6802801B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xE01B9 byte(s)\n0x00007FF6801AFAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xFAFC byte(s)\n0x00007FF6801AECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xECEC byte(s)\n0x00007FF68027705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xD705A byte(s)\n0x00007FF6801A32C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x32C0 byte(s)\n0x00007FF6801A3634, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3634 byte(s)\n0x00007FF6801A3904, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3904 byte(s)\n0x00007FF6801A1565, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x1565 byte(s)\n0x00007FF6801A10FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x10FA byte(s)\n0x00007FF8BF48E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FF8BF460000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FF8C0247C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FF8C01C0000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stdout_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__canonicalize.stdout.mlir",
+      "stderr_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__canonicalize.stderr.txt",
+      "category": "memory/assertion"
+    },
+    {
+      "seed": "seeds\\min004_isolation_2.mlir",
+      "pipeline": "cse",
+      "command": "E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --cse -o - < %MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\input\\min004_isolation_2.mlir",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_ms": 28,
+      "stdout": "module {\n  func.func @no_crash_dim_of_ambiguous_subview(%arg0: memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>>, %arg1: index) -> index {\n    %c1 = arith.constant 1 : index\n    %subview = memref.subview %arg0[0, 0, 0] [1, %arg1, 1] [1, 1, 1] : memref<?x?x?xf32, strided<[?, ?, ?], offset: ?>> to memref<1x?xf32, strided<[?, ?], offset: ?>>\n    %dim = memref.dim %subview, %c1 : memref<1x?xf32, strided<[?, ?], offset: ?>>\n    return %dim : index\n  }\n}\n\n",
+      "stderr": "",
+      "stdout_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__cse.stdout.mlir",
+      "stderr_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__cse.stderr.txt",
+      "category": "success"
+    },
+    {
+      "seed": "seeds\\min004_isolation_2.mlir",
+      "pipeline": "canonicalize_cse",
+      "command": "E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize --cse -o - < %MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\input\\min004_isolation_2.mlir",
+      "return_code": 3221225477,
+      "timed_out": false,
+      "elapsed_ms": 74,
+      "stdout": "",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize --cse -o -\nException Code: 0xC0000005\n0x00007FF681412BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x1272BFA byte(s)\n0x00007FF6837B5FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3615FE8 byte(s)\n0x00007FF6837B61E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x36161E2 byte(s)\n0x00007FF68413F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3F9F6D7 byte(s)\n0x00007FF68413D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3F9D32F byte(s)\n0x00007FF682A9BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x28FBD42 byte(s)\n0x00007FF68027C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xDC434 byte(s)\n0x00007FF6802801B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xE01B9 byte(s)\n0x00007FF6801AFAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xFAFC byte(s)\n0x00007FF6801AECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xECEC byte(s)\n0x00007FF68027705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xD705A byte(s)\n0x00007FF6801A32C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x32C0 byte(s)\n0x00007FF6801A3634, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3634 byte(s)\n0x00007FF6801A3904, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3904 byte(s)\n0x00007FF6801A1565, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x1565 byte(s)\n0x00007FF6801A10FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x10FA byte(s)\n0x00007FF8BF48E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FF8BF460000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FF8C0247C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FF8C01C0000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stdout_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__canonicalize_cse.stdout.mlir",
+      "stderr_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__canonicalize_cse.stderr.txt",
+      "category": "memory/assertion"
+    },
+    {
+      "seed": "seeds\\min004_isolation_2.mlir",
+      "pipeline": "symbol_dce_canonicalize",
+      "command": "E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --symbol-dce --canonicalize -o - < %MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\input\\min004_isolation_2.mlir",
+      "return_code": 3221225477,
+      "timed_out": false,
+      "elapsed_ms": 79,
+      "stdout": "",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --symbol-dce --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF681412BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x1272BFA byte(s)\n0x00007FF6837B5FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3615FE8 byte(s)\n0x00007FF6837B61E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x36161E2 byte(s)\n0x00007FF68413F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3F9F6D7 byte(s)\n0x00007FF68413D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3F9D32F byte(s)\n0x00007FF682A9BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x28FBD42 byte(s)\n0x00007FF68027C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xDC434 byte(s)\n0x00007FF6802801B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xE01B9 byte(s)\n0x00007FF6801AFAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xFAFC byte(s)\n0x00007FF6801AECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xECEC byte(s)\n0x00007FF68027705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0xD705A byte(s)\n0x00007FF6801A32C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x32C0 byte(s)\n0x00007FF6801A3634, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3634 byte(s)\n0x00007FF6801A3904, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x3904 byte(s)\n0x00007FF6801A1565, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x1565 byte(s)\n0x00007FF6801A10FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF6801A0000) + 0x10FA byte(s)\n0x00007FF8BF48E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FF8BF460000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FF8C0247C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FF8C01C0000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stdout_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__symbol_dce_canonicalize.stdout.mlir",
+      "stderr_path": "%MLIRSHIELD_WORKSPACE%\\outputs\\user_jobs\\job-20260703-145421-ff2d6892\\result\\artifacts\\min004_isolation_2__symbol_dce_canonicalize.stderr.txt",
+      "category": "memory/assertion"
+    }
+  ],
+  "issues": [
+    {
+      "seed": "seeds\\min004_isolation_2.mlir",
+      "severity": "high",
+      "kind": "pipeline divergence",
+      "summary": "Some pipelines succeeded while others failed.",
+      "details": "pipeline | return_code | category | timed_out\n--- | --- | --- | ---\nparse_verify | 0 | success | false\ncanonicalize | 3221225477 | memory/assertion | false\ncse | 0 | success | false\ncanonicalize_cse | 3221225477 | memory/assertion | false\nsymbol_dce_canonicalize | 3221225477 | memory/assertion | false"
+    }
+  ],
+  "summary": {
+    "run_categories": {
+      "memory/assertion": 3,
+      "success": 2
+    },
+    "issue_severities": {
+      "high": 1
+    },
+    "issue_kinds": {
+      "pipeline divergence": 1
+    },
+    "failure_clusters": [
+      {
+        "signature": "memory/assertion:686452065c",
+        "category": "memory/assertion",
+        "count": 1,
+        "seed_count": 1,
+        "pipeline_count": 1,
+        "seeds": [
+          "seeds\\min004_isolation_2.mlir"
+        ],
+        "pipelines": [
+          "canonicalize_cse"
+        ],
+        "example": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize --cse -o -\nException Code: 0xC0000005\n0x00007FF681412BFA, %MLIRSHIELD_MSYS2_ROOT%\\m..."
+      },
+      {
+        "signature": "memory/assertion:b3d7a4342c",
+        "category": "memory/assertion",
+        "count": 1,
+        "seed_count": 1,
+        "pipeline_count": 1,
+        "seeds": [
+          "seeds\\min004_isolation_2.mlir"
+        ],
+        "pipelines": [
+          "symbol_dce_canonicalize"
+        ],
+        "example": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --symbol-dce --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF681412BFA, E:\\KiriTong\\m..."
+      },
+      {
+        "signature": "memory/assertion:eb21419775",
+        "category": "memory/assertion",
+        "count": 1,
+        "seed_count": 1,
+        "pipeline_count": 1,
+        "seeds": [
+          "seeds\\min004_isolation_2.mlir"
+        ],
+        "pipelines": [
+          "canonicalize"
+        ],
+        "example": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:/KiriTong/msys64/mingw64/bin/mlir-opt.exe --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF681412BFA, %MLIRSHIELD_MSYS2_ROOT%\\mingw64..."
+      }
+    ],
+    "invariant_findings": [],
+    "invariant_kinds": {},
+    "output_deltas": [],
+    "output_delta_count": 0
+  }
+}

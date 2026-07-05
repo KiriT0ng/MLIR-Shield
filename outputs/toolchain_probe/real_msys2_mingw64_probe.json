@@ -1,0 +1,36 @@
+{
+    "probed_at":  "2026-07-04T02:24:02.8666905+08:00",
+    "msys2_root":  "%MLIRSHIELD_MSYS2_ROOT%",
+    "mlir_opt":  "%MLIRSHIELD_MLIR_OPT%",
+    "msys2_root_exists":  true,
+    "mlir_opt_exists":  true,
+    "file":  {
+                 "full_name":  "%MLIRSHIELD_MLIR_OPT%",
+                 "length":  138557440,
+                 "last_write_time":  "2026-07-01T11:00:41.0000000+08:00"
+             },
+    "sha256":  "492FF14B8EB28D267B888EF3F3323CE7483B8767B88018B38B9068AC4FDB9E3E",
+    "powershell_direct":  {
+                              "attempted":  true,
+                              "exit_code":  0,
+                              "stdout":  "LLVM (http://llvm.org/):\r\n  LLVM version 22.1.8\r\n  Optimized build.",
+                              "stderr":  "",
+                              "error":  ""
+                          },
+    "powershell_with_path":  {
+                                 "attempted":  false,
+                                 "exit_code":  null,
+                                 "stdout":  "",
+                                 "stderr":  "",
+                                 "error":  ""
+                             },
+    "msys2_bash":  {
+                       "attempted":  true,
+                       "exit_code":  0,
+                       "stdout":  "bash.exe : \u001b[1;32mMSYS2 is starting for the first time. Executing the initial setup.\u001b[1;0m\r\nAt %MLIRSHIELD_WORKSPACE%\\scripts\\verify_real_toolchain.ps1:70 char:14\r\n+       $out = \u0026 $bash -lc \"/mingw64/bin/mlir-opt.exe --version\" 2\u003e\u00261\r\n+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (\u001b[1;32mMSYS2 is...al setup.\u001b[1;0m:String) [], RemoteException\r\n    + FullyQualifiedErrorId : NativeCommandError\r\n \r\nmkdir: cannot create directory \u0027/home/<runtime-user>\u0027: Permission denied\r\n/home/<runtime-user> could not be created.\r\nSetting HOME to /tmp.\r\n\u001b[1;32mInitial setup complete. MSYS2 is now ready to use.\u001b[1;0m\r\nLLVM (http://llvm.org/):\r\n  LLVM version 22.1.8\r\n  Optimized build.",
+                       "stderr":  "",
+                       "error":  ""
+                   },
+    "final_status":  "real available",
+    "requires_msys2_bash":  false
+}

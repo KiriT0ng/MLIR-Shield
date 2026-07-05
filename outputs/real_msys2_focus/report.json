@@ -36,7 +36,7 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 56,
@@ -49,12 +49,12 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 3221225477,
       "timed_out": false,
       "elapsed_ms": 100,
       "stdout": "",
-      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --canonicalize --cse --sccp --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
       "stdout_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__canonicalize_cse_sccp.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__canonicalize_cse_sccp.stderr.txt",
       "category": "memory/assertion"
@@ -62,12 +62,12 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 3221225477,
       "timed_out": false,
       "elapsed_ms": 76,
       "stdout": "",
-      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --symbol-dce --inline --canonicalize --cse -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B504CE66, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDCE66 byte(s)\n0x00007FF7B5051EE0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE1EE0 byte(s)\n0x00007FF7B9194FD1, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x4224FD1 byte(s)\n0x00007FF7B9194C58, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x4224C58 byte(s)\n0x00007FF7B9195CB5, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x4225CB5 byte(s)\n0x00007FF7B7871774, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x2901774 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --symbol-dce --inline --canonicalize --cse -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B504CE66, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDCE66 byte(s)\n0x00007FF7B5051EE0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE1EE0 byte(s)\n0x00007FF7B9194FD1, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x4224FD1 byte(s)\n0x00007FF7B9194C58, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x4224C58 byte(s)\n0x00007FF7B9195CB5, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x4225CB5 byte(s)\n0x00007FF7B7871774, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x2901774 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
       "stdout_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__symbol_dce_inliner_canonicalize.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__symbol_dce_inliner_canonicalize.stderr.txt",
       "category": "memory/assertion"
@@ -75,7 +75,7 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -88,12 +88,12 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 3221225477,
       "timed_out": false,
       "elapsed_ms": 89,
       "stdout": "",
-      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-scf-to-cf --canonicalize --cse -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-scf-to-cf --canonicalize --cse -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
       "stdout_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__scf_to_cf_stress.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__scf_to_cf_stress.stderr.txt",
       "category": "memory/assertion"
@@ -101,12 +101,12 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 3221225477,
       "timed_out": false,
       "elapsed_ms": 84,
       "stdout": "",
-      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B7A1D0B8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x2AAD0B8 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B7A1D0B8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x2AAD0B8 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
       "stdout_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__vector_lowering_stress.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__vector_lowering_stress.stderr.txt",
       "category": "memory/assertion"
@@ -114,12 +114,12 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 3221225477,
       "timed_out": false,
       "elapsed_ms": 78,
       "stdout": "",
-      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --one-shot-bufferize --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B5033FF0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xC3FF0 byte(s)\n0x00007FF7B502A14C, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xBA14C byte(s)\n0x00007FF7B8F0F439, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9F439 byte(s)\n0x00007FF7B8F0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --one-shot-bufferize --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B5033FF0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xC3FF0 byte(s)\n0x00007FF7B502A14C, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xBA14C byte(s)\n0x00007FF7B8F0F439, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9F439 byte(s)\n0x00007FF7B8F0D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
       "stdout_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__bufferization_probe.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__bufferization_probe.stderr.txt",
       "category": "memory/assertion"
@@ -127,12 +127,12 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 3221225477,
       "timed_out": false,
       "elapsed_ms": 94,
       "stdout": "",
-      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-linalg-to-affine-loops --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B7B25027, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x2BB5027 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-linalg-to-affine-loops --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B7B25027, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x2BB5027 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
       "stdout_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__linalg_affine_probe.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__linalg_affine_probe.stderr.txt",
       "category": "memory/assertion"
@@ -140,12 +140,12 @@
     {
       "seed": "seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 3221225477,
       "timed_out": false,
       "elapsed_ms": 76,
       "stdout": "",
-      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-parallel-loops-to-gpu --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
+      "stderr": "PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace and instructions to reproduce the bug.\nStack dump:\n0.\tProgram arguments: E:\\\\KiriTong\\\\msys64\\\\mingw64\\\\bin\\\\mlir-opt.exe outputs\\\\real_msys2_focus_seeds\\\\outputs_minimized_mlir22_memref_canonicalize_current.chunk.min.mlir --convert-parallel-loops-to-gpu --canonicalize -o -\nException Code: 0xC0000005\n0x00007FF7B61E2BFA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1272BFA byte(s)\n0x00007FF7B8585FE8, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3615FE8 byte(s)\n0x00007FF7B85861E2, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x36161E2 byte(s)\n0x00007FF7B8F0F6D7, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9F6D7 byte(s)\n0x00007FF7B8F0D32F, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3F9D32F byte(s)\n0x00007FF7B786BD42, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x28FBD42 byte(s)\n0x00007FF7B504C434, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xDC434 byte(s)\n0x00007FF7B50501B9, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xE01B9 byte(s)\n0x00007FF7B4F7FAFC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xFAFC byte(s)\n0x00007FF7B4F7ECEC, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xECEC byte(s)\n0x00007FF7B504705A, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0xD705A byte(s)\n0x00007FF7B4F732C0, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x32C0 byte(s)\n0x00007FF7B4F73634, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3634 byte(s)\n0x00007FF7B4F73904, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x3904 byte(s)\n0x00007FF7B4F71565, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x1565 byte(s)\n0x00007FF7B4F710FA, %MLIRSHIELD_MLIR_OPT%(0x00007FF7B4F70000) + 0x10FA byte(s)\n0x00007FFA3BD2E957, C:\\WINDOWS\\System32\\KERNEL32.DLL(0x00007FFA3BD00000) + 0x2E957 byte(s), BaseThreadInitThunk() + 0x17 byte(s)\n0x00007FFA3C8C7C1C, C:\\WINDOWS\\SYSTEM32\\ntdll.dll(0x00007FFA3C840000) + 0x87C1C byte(s), RtlUserThreadStart() + 0x2C byte(s)\n",
       "stdout_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__gpu_parallel_probe.stdout.mlir",
       "stderr_path": "outputs\\real_msys2_focus\\artifacts\\outputs_minimized_mlir22_memref_canonicalize_current_chunk_min__gpu_parallel_probe.stderr.txt",
       "category": "memory/assertion"
@@ -153,7 +153,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 64,
@@ -166,7 +166,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -179,7 +179,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -192,7 +192,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -205,7 +205,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -218,7 +218,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -231,7 +231,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -244,7 +244,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -257,7 +257,7 @@
     {
       "seed": "seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\outputs_minimized_shape_fold_div_canonicalize.min.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -270,7 +270,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -283,7 +283,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -296,7 +296,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -309,7 +309,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -322,7 +322,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -335,7 +335,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 51,
@@ -348,7 +348,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -361,7 +361,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -374,7 +374,7 @@
     {
       "seed": "seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_current_mlir23_llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 50,
@@ -387,7 +387,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 40,
@@ -400,7 +400,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 40,
@@ -413,7 +413,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 40,
@@ -426,7 +426,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 53,
@@ -439,7 +439,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 39,
@@ -452,7 +452,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -465,7 +465,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -478,7 +478,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 41,
@@ -491,7 +491,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_113021_linalg_negative_indexing_tile.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 41,
@@ -504,7 +504,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 49,
@@ -517,7 +517,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -530,7 +530,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -543,7 +543,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -556,7 +556,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -569,7 +569,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -582,7 +582,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -595,7 +595,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 44,
@@ -608,7 +608,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_168695_vector_scatter_tensor_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -621,7 +621,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 37,
@@ -634,7 +634,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -647,7 +647,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -660,7 +660,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -673,7 +673,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -686,7 +686,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -699,7 +699,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -712,7 +712,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -725,7 +725,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_61085_tosa_linalg_affine_assert.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -738,7 +738,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -751,7 +751,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -764,7 +764,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -777,7 +777,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -790,7 +790,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -803,7 +803,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -816,7 +816,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -829,7 +829,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -842,7 +842,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_75811_scf_parallel_to_gpu_destroyed_use.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -855,7 +855,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -868,7 +868,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -881,7 +881,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 40,
@@ -894,7 +894,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -907,7 +907,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -920,7 +920,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -933,7 +933,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -946,7 +946,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 51,
@@ -959,7 +959,7 @@
     {
       "seed": "seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_issue_repros_llvm_82382_linalg_parallel_loops_to_gpu_crash.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -972,7 +972,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 43,
@@ -985,7 +985,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 29,
@@ -998,7 +998,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1011,7 +1011,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -1024,7 +1024,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1037,7 +1037,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 28,
@@ -1050,7 +1050,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -1063,7 +1063,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1076,7 +1076,7 @@
     {
       "seed": "seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_original_candidates_orig_001_inliner_nested_region_returned_func.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 29,
@@ -1089,7 +1089,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 81,
@@ -1102,7 +1102,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -1115,7 +1115,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1128,7 +1128,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1141,7 +1141,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1154,7 +1154,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1167,7 +1167,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1180,7 +1180,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1193,7 +1193,7 @@
     {
       "seed": "seeds\\seeds_real_official_affine_canonicalize.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_affine_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1206,7 +1206,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1219,7 +1219,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1232,7 +1232,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 48,
@@ -1245,7 +1245,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1258,7 +1258,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1271,7 +1271,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 29,
@@ -1284,7 +1284,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 29,
@@ -1297,7 +1297,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 29,
@@ -1310,7 +1310,7 @@
     {
       "seed": "seeds\\seeds_real_official_arith_int_range_opts_crash.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_arith_int_range_opts_crash.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1323,7 +1323,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -1336,7 +1336,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -1349,7 +1349,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1362,7 +1362,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1375,7 +1375,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -1388,7 +1388,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1401,7 +1401,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1414,7 +1414,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1427,7 +1427,7 @@
     {
       "seed": "seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_bufferization_one_shot_bufferize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 366,
@@ -1440,7 +1440,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 70,
@@ -1453,7 +1453,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -1466,7 +1466,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 37,
@@ -1479,7 +1479,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -1492,7 +1492,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -1505,7 +1505,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 43,
@@ -1518,7 +1518,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 45,
@@ -1531,7 +1531,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -1544,7 +1544,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_scf_to_gpu_parallel_loop.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 48,
@@ -1557,7 +1557,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 65,
@@ -1570,7 +1570,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1583,7 +1583,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1596,7 +1596,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1609,7 +1609,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -1622,7 +1622,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -1635,7 +1635,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1648,7 +1648,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 50,
@@ -1661,7 +1661,7 @@
     {
       "seed": "seeds\\seeds_real_official_conversion_vector_to_llvm.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_conversion_vector_to_llvm.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1674,7 +1674,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 58,
@@ -1687,7 +1687,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1700,7 +1700,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1713,7 +1713,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 28,
@@ -1726,7 +1726,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -1739,7 +1739,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1752,7 +1752,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1765,7 +1765,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1778,7 +1778,7 @@
     {
       "seed": "seeds\\seeds_real_official_gpu_canonicalize.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_gpu_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -1791,7 +1791,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 79,
@@ -1804,7 +1804,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -1817,7 +1817,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 50,
@@ -1830,7 +1830,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -1843,7 +1843,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -1856,7 +1856,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1869,7 +1869,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1882,7 +1882,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1895,7 +1895,7 @@
     {
       "seed": "seeds\\seeds_real_official_linalg_canonicalize.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_linalg_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1908,7 +1908,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 77,
@@ -1921,7 +1921,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 35,
@@ -1934,7 +1934,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -1947,7 +1947,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -1960,7 +1960,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1973,7 +1973,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1986,7 +1986,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -1999,7 +1999,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -2012,7 +2012,7 @@
     {
       "seed": "seeds\\seeds_real_official_memref_canonicalize_extra.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_memref_canonicalize_extra.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -2025,7 +2025,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir  -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 78,
@@ -2038,7 +2038,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -2051,7 +2051,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -2064,7 +2064,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -2077,7 +2077,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -2090,7 +2090,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -2103,7 +2103,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -2116,7 +2116,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -2129,7 +2129,7 @@
     {
       "seed": "seeds\\seeds_real_official_scf_canonicalize.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_scf_canonicalize.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 1,
       "timed_out": false,
       "elapsed_ms": 53,
@@ -2142,7 +2142,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 39,
@@ -2155,7 +2155,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -2168,7 +2168,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -2181,7 +2181,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -2194,7 +2194,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -2207,7 +2207,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 37,
@@ -2220,7 +2220,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 32,
@@ -2233,7 +2233,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 33,
@@ -2246,7 +2246,7 @@
     {
       "seed": "seeds\\seeds_real_official_shape_fold_div.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_shape_fold_div.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 34,
@@ -2259,7 +2259,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "parse_verify",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir  -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir  -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 38,
@@ -2272,7 +2272,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "canonicalize_cse_sccp",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --canonicalize --cse --sccp --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --canonicalize --cse --sccp --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 29,
@@ -2285,7 +2285,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "symbol_dce_inliner_canonicalize",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --symbol-dce --inline --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --symbol-dce --inline --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -2298,7 +2298,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "affine_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --lower-affine --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --lower-affine --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 36,
@@ -2311,7 +2311,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "scf_to_cf_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-scf-to-cf --canonicalize --cse -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-scf-to-cf --canonicalize --cse -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 30,
@@ -2324,7 +2324,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "vector_lowering_stress",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-vector-to-scf --convert-vector-to-llvm --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 39,
@@ -2337,7 +2337,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "bufferization_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --one-shot-bufferize --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --one-shot-bufferize --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 37,
@@ -2350,7 +2350,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "linalg_affine_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-linalg-to-affine-loops --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 31,
@@ -2363,7 +2363,7 @@
     {
       "seed": "seeds\\seeds_real_official_vector_constant_fold.mlir",
       "pipeline": "gpu_parallel_probe",
-      "command": "E:\\KiriTong\\msys64\\mingw64\\bin\\mlir-opt.exe outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
+      "command": "%MLIRSHIELD_MLIR_OPT% outputs\\real_msys2_focus_seeds\\seeds_real_official_vector_constant_fold.mlir --convert-parallel-loops-to-gpu --canonicalize -o -",
       "return_code": 0,
       "timed_out": false,
       "elapsed_ms": 31,

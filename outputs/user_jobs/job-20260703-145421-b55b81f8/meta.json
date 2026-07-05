@@ -1,0 +1,37 @@
+{
+  "id": "job-20260703-145421-b55b81f8",
+  "created_at": "2026-07-03T14:54:22+08:00",
+  "filename": "min004_isolation_3.mlir",
+  "profile": "standard",
+  "profile_name": "标准检查",
+  "summary": {
+    "status": "attention",
+    "risk": "high",
+    "kicker": "需要进一步复核",
+    "title": "发现需要项目成员复核的内部异常",
+    "description": "至少一条预设检查路径没有以正常诊断方式结束。建议先保存本次结果，再由项目成员查看技术详情、最小化输入并进行版本复核。",
+    "recommendations": [
+      "不要把该结论直接理解为已确认漏洞；它表示存在值得进一步核查的稳定性风险候选。",
+      "保留本次检测记录，并向项目成员提供“完整技术报告”链接。",
+      "项目成员应优先检查触发 pipeline、错误摘要和输入是否可被进一步最小化。"
+    ],
+    "categories": [
+      {
+        "label": "正常完成",
+        "count": 3,
+        "key": "success"
+      },
+      {
+        "label": "内部异常",
+        "count": 2,
+        "key": "attention"
+      }
+    ],
+    "category_explanation": "系统观察到内部异常或超时。此类情况不会直接等同于安全漏洞，但比普通语法错误更值得进入后续复核流程。",
+    "technical_hint": "技术详情列出了每条预设 pipeline 的状态。原始日志和完整运行记录可在“完整技术报告”中查看。",
+    "elapsed_ms": 272
+  },
+  "pipeline_count": 5,
+  "run_count": 5,
+  "report_url": "/outputs/user_jobs/job-20260703-145421-b55b81f8/result/report.html"
+}
