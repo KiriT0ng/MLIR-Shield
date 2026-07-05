@@ -65,12 +65,3 @@ python web/server.py
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\Start-MLIRShield.ps1
 ```
-
-## 验证说明
-
-修改代码或更新证据后建议运行：
-
-```powershell
-git status --ignored
-python run.py --demo --seeds seeds\demo_failures --out outputs\smoke_demo --timeout 3
-```
