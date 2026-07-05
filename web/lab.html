@@ -29,21 +29,21 @@
   <main>
     <section id="overview" class="hero-panel">
       <div class="hero-copy">
-        <span class="eyebrow">信息安全竞赛作品包装版</span>
+        <span class="eyebrow">MLIRShield 实验室</span>
         <h2>从复现历史 issue，推进到发现当前 MLIR 22 新问题候选</h2>
-        <p>系统面向 MLIR pass pipeline 组合空间，使用 LLVM 官方测试和真实 issue 样例进行批量验证，并将高价值 crash 候选压缩成可答辩、可复现、可继续上游报告的最小案例。</p>
+        <p>系统面向 MLIR pass pipeline 组合空间，使用 LLVM 官方测试和真实 issue 样例进行批量验证，并将高价值 crash 候选压缩成可复现、可复核、可继续上游报告的最小案例。</p>
       </div>
       <div class="hero-focus">
         <span>核心案例</span>
         <strong>MIN-004</strong>
         <p>官方 memref seed -> MLIR22 Discovery -> 8 行最小复现 -> hard failure 候选</p>
-        <a href="/docs/MIN-004案例报告.md" target="_blank" rel="noreferrer">打开案例报告</a>
+        <a href="/docs/min004_case_report.md" target="_blank" rel="noreferrer">打开案例报告</a>
       </div>
     </section>
 
     <section class="demo-strip" aria-label="Demo path">
       <div>
-        <span>30 分钟答辩路径</span>
+        <span>30 分钟演示路径</span>
         <strong>背景 -> 架构 -> 实验 -> MIN-004 -> 源码 -> 应用价值</strong>
       </div>
       <div class="demo-steps">
@@ -80,7 +80,7 @@
         <p>区分历史问题、已修复问题和当前版本候选。</p>
       </article>
       <article>
-        <span>答辩重点</span>
+        <span>核心案例</span>
         <strong>MIN-004 当前候选</strong>
         <p>8 行 IR 触发 MLIR 22 hard failure。</p>
       </article>
@@ -88,22 +88,22 @@
 
     <section class="panel judge-entry">
       <div class="panel-title">
-        <h2>Judge Quick Entry</h2>
-        <a href="/docs/评委快速入口.md" target="_blank" rel="noreferrer">Open Guide</a>
+        <h2>Project Quick Entry</h2>
+        <a href="/docs/project_overview.md" target="_blank" rel="noreferrer">Open Overview</a>
       </div>
       <div class="quick-path">
-        <a href="/docs/重点案例版本状态矩阵.md" target="_blank" rel="noreferrer">版本状态矩阵</a>
-        <a href="/docs/MIN-004案例报告.md" target="_blank" rel="noreferrer">MIN-004 核心案例</a>
-        <a href="/docs/ORIG-CAND-001变体验证.md" target="_blank" rel="noreferrer">ORIG-CAND-001 变体验证</a>
-        <a href="/docs/源码检查说明.md" target="_blank" rel="noreferrer">源码说明</a>
-        <a href="/docs/提交包说明.md" target="_blank" rel="noreferrer">提交说明</a>
+        <a href="/docs/case_version_matrix.md" target="_blank" rel="noreferrer">版本状态矩阵</a>
+        <a href="/docs/min004_case_report.md" target="_blank" rel="noreferrer">MIN-004 核心案例</a>
+        <a href="/docs/originality_evidence.md" target="_blank" rel="noreferrer">原创候选说明</a>
+        <a href="/docs/source_review_notes.md" target="_blank" rel="noreferrer">源码说明</a>
+        <a href="/docs/application_value.md" target="_blank" rel="noreferrer">应用价值</a>
       </div>
     </section>
 
     <section class="panel version-matrix">
       <div class="panel-title">
         <h2>Version Status Matrix</h2>
-        <a href="/docs/重点案例版本状态矩阵.md" target="_blank" rel="noreferrer">Open Detail</a>
+        <a href="/docs/case_version_matrix.md" target="_blank" rel="noreferrer">Open Detail</a>
       </div>
       <div class="table-wrap compact">
         <table>
@@ -155,54 +155,34 @@
         <button id="showIssues" type="button">Issue Repros</button>
         <button id="showDiscovery" type="button">Discovery</button>
         <button id="showDiscovery22" type="button">Discovery MLIR22</button>
-        <a href="/docs/competition_optimization.md" target="_blank" rel="noreferrer">Optimization Plan</a>
+        <a href="/docs/project_overview.md" target="_blank" rel="noreferrer">Project Overview</a>
       </div>
       <p id="reportNote" class="hint"></p>
     </section>
 
     <section class="panel">
       <div class="panel-title">
-        <h2>Competition Materials</h2>
+        <h2>Project Evidence</h2>
         <span>docs</span>
       </div>
       <div class="material-links">
-        <a href="/docs/作品包装说明.md" target="_blank" rel="noreferrer">作品包装说明</a>
-        <a href="/docs/MIN-004案例报告.md" target="_blank" rel="noreferrer">MIN-004 案例报告</a>
+        <a href="/docs/project_overview.md" target="_blank" rel="noreferrer">项目概览</a>
+        <a href="/docs/min004_case_report.md" target="_blank" rel="noreferrer">MIN-004 案例报告</a>
         <a href="/outputs/current_validation/min004_current_validation.md" target="_blank" rel="noreferrer">MIN-004 当前验证</a>
-        <a href="/docs/MLIR23当前开放问题复核.md" target="_blank" rel="noreferrer">MLIR23 当前开放问题复核</a>
+        <a href="/docs/issue_status_matrix.md" target="_blank" rel="noreferrer">Issue 状态矩阵</a>
         <a href="/outputs/current_issues_mlir23/llvm_197158_current_validation.md" target="_blank" rel="noreferrer">LLVM #197158 当前验证</a>
-        <a href="/docs/MLIR23最新版本问题搜索.md" target="_blank" rel="noreferrer">MLIR23 问题搜索</a>
-        <a href="/docs/原创问题搜索记录.md" target="_blank" rel="noreferrer">原创问题搜索记录</a>
-        <a href="/docs/原创漏洞候选_ORIG-001.md" target="_blank" rel="noreferrer">ORIG-CAND-001</a>
-        <a href="/docs/ORIG-CAND-001变体验证.md" target="_blank" rel="noreferrer">ORIG-CAND-001 变体验证</a>
-        <a href="/docs/原创性证明材料.md" target="_blank" rel="noreferrer">原创性证明材料</a>
-        <a href="/docs/ORIG-CAND-001上游沟通草稿.md" target="_blank" rel="noreferrer">上游沟通草稿</a>
-        <a href="/docs/ORIG-CAND-001_github_comment.md" target="_blank" rel="noreferrer">GitHub 评论正文</a>
+        <a href="/docs/originality_evidence.md" target="_blank" rel="noreferrer">ORIG-CAND-001 证据说明</a>
         <a href="/outputs/orig001_variants/report.html" target="_blank" rel="noreferrer">ORIG-CAND-001 结果页</a>
-        <a href="/docs/独立原创漏洞搜索_20260601.md" target="_blank" rel="noreferrer">独立原创漏洞搜索</a>
         <a href="/outputs/independent_fuzz_mlir23/report.html" target="_blank" rel="noreferrer">独立搜索结果页</a>
-        <a href="/docs/评委快速入口.md" target="_blank" rel="noreferrer">评委快速入口</a>
-        <a href="/docs/重点案例版本状态矩阵.md" target="_blank" rel="noreferrer">版本状态矩阵</a>
-        <a href="/docs/最终清理建议.md" target="_blank" rel="noreferrer">最终清理建议</a>
-        <a href="/docs/答辩讲稿.md" target="_blank" rel="noreferrer">答辩讲稿</a>
-        <a href="/docs/源码检查说明.md" target="_blank" rel="noreferrer">源码检查说明</a>
-        <a href="/docs/应用前景与安全价值.md" target="_blank" rel="noreferrer">应用前景</a>
-        <a href="/docs/提交包说明.md" target="_blank" rel="noreferrer">提交包说明</a>
-        <a href="/docs/Mojo应用桥接扩展.md" target="_blank" rel="noreferrer">Mojo 应用桥接扩展</a>
+        <a href="/docs/case_version_matrix.md" target="_blank" rel="noreferrer">版本状态矩阵</a>
+        <a href="/docs/source_review_notes.md" target="_blank" rel="noreferrer">源码检查说明</a>
+        <a href="/docs/application_value.md" target="_blank" rel="noreferrer">应用价值</a>
+        <a href="/docs/real_portal_e2e.md" target="_blank" rel="noreferrer">门户端到端验证</a>
+        <a href="/docs/local_toolchain_setup.md" target="_blank" rel="noreferrer">本地工具链配置</a>
+        <a href="/docs/seed_library_overview.md" target="_blank" rel="noreferrer">Seed 库说明</a>
         <a href="/apps/mojo/README.md" target="_blank" rel="noreferrer">Mojo 样例说明</a>
         <a href="/apps/mojo/mojo_manifest.json" target="_blank" rel="noreferrer">Mojo 采集 Manifest</a>
         <a href="/outputs/mojo_core_profile/report.html" target="_blank" rel="noreferrer">Mojo Core Profile 结果页</a>
-        <a href="/docs/比赛技术报告.md" target="_blank" rel="noreferrer">技术报告</a>
-        <a href="/docs/典型案例库.md" target="_blank" rel="noreferrer">典型案例库</a>
-        <a href="/docs/威胁模型.md" target="_blank" rel="noreferrer">威胁模型</a>
-        <a href="/docs/演示脚本.md" target="_blank" rel="noreferrer">演示脚本</a>
-        <a href="/docs/答辩PPT大纲.md" target="_blank" rel="noreferrer">答辩 PPT 大纲</a>
-        <a href="/docs/真实Issue扩展队列.md" target="_blank" rel="noreferrer">真实 Issue 队列</a>
-        <a href="/docs/新问题候选.md" target="_blank" rel="noreferrer">新问题候选</a>
-        <a href="/docs/P0候选复核报告.md" target="_blank" rel="noreferrer">P0 复核报告</a>
-        <a href="/docs/项目发现清单.md" target="_blank" rel="noreferrer">项目发现清单</a>
-        <a href="/docs/版本差分实验.md" target="_blank" rel="noreferrer">版本差分实验</a>
-        <a href="/docs/P0版本差分实验.md" target="_blank" rel="noreferrer">P0 版本差分</a>
         <a href="/materials/system_architecture.svg" target="_blank" rel="noreferrer">系统架构图</a>
         <a href="/materials/experiment_results.svg" target="_blank" rel="noreferrer">实验结果图表</a>
       </div>
@@ -211,7 +191,7 @@
     <section id="application-value" class="panel">
       <div class="panel-title">
         <h2>Application Value</h2>
-        <a href="/docs/应用前景与安全价值.md" target="_blank" rel="noreferrer">Open Detail</a>
+        <a href="/docs/application_value.md" target="_blank" rel="noreferrer">Open Detail</a>
       </div>
       <div class="value-grid">
         <article>
@@ -257,7 +237,7 @@
     <section id="source-review" class="panel">
       <div class="panel-title">
         <h2>Source Review Path</h2>
-        <a href="/docs/源码检查说明.md" target="_blank" rel="noreferrer">Open Source Guide</a>
+        <a href="/docs/source_review_notes.md" target="_blank" rel="noreferrer">Open Source Guide</a>
       </div>
       <p class="hint">决赛现场可能检查源代码。建议按执行引擎、分类器、差分分析、最小化、版本差分和 Web 展示的顺序讲解。</p>
       <div class="source-map">
