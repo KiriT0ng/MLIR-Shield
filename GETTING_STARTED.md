@@ -48,7 +48,7 @@ powershell -ExecutionPolicy Bypass -File .\final_demo.ps1 -UseSsh
 ## 4. 关键文件
 
 - `README.md`: 仓库概览和常用命令。
-- `PROJECT_CONTENTS.md`: 整理项目清单。
-- `UPLOAD_CHECKLIST.md`: GitHub 上传清单。
+- `mlirdiff/`: 差分执行、失败分类、签名聚类和报告生成核心模块。
+- `web/`: 本地证据门户。
+- `configs/toolchains/msys2_mingw64.example.json`: 本地工具链配置模板。
 - `docs/ORIG-CAND-001_github_comment.md`: ORIG-CAND-001 的 GitHub 问题/评论草稿。
-- `reports/MLIRShield_Report_FinalV1.pdf`: 最新报告。
