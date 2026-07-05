@@ -54,7 +54,7 @@ function Test-Tcp {
 $Python = Find-Python
 $Dashboard = "http://127.0.0.1:{0}/" -f $Port
 
-Write-Host "== MLIR safety demo entry =="
+Write-Host "== MLIRShield launcher =="
 Write-Host "Project root: $Root"
 Write-Host "Python: $Python"
 Write-Host "First-time guide: GETTING_STARTED.md"
@@ -63,7 +63,9 @@ $required = @(
   "README.md",
   "web\server.py",
   "web\index.html",
-  "docs\ORIG-CAND-001_github_comment.md",
+  "docs\project_overview.md",
+  "docs\min004_case_report.md",
+  "docs\originality_evidence.md",
   "outputs\current_validation\min004_current_validation.json",
   "outputs\orig001_variants\report.html"
 )
@@ -119,10 +121,10 @@ if ($sshRequested) {
 }
 
 if (-not $SkipSelfCheck) {
-  Write-Host "Running final self-check..."
+  Write-Host "Running project self-check..."
   & $Python scripts\final_check.py --web $Dashboard
   if ($LASTEXITCODE -ne 0) {
-    Write-Host "Final self-check failed." -ForegroundColor Red
+    Write-Host "Project self-check failed." -ForegroundColor Red
     exit $LASTEXITCODE
   }
 }
@@ -131,8 +133,8 @@ Write-Host ""
 Write-Host "Suggested review path:"
 Write-Host "1. $Dashboard"
 Write-Host "2. GETTING_STARTED.md"
-Write-Host "3. docs: version status matrix"
-Write-Host "4. docs: MIN-004 report"
-Write-Host "5. docs: ORIG-CAND-001 GitHub comment"
+Write-Host "3. docs\case_version_matrix.md"
+Write-Host "4. docs\min004_case_report.md"
+Write-Host "5. docs\originality_evidence.md"
 
 Start-Process $Dashboard

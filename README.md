@@ -65,7 +65,7 @@ python web/server.py
 也可以使用打包入口启动：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\final_demo.ps1
+powershell -ExecutionPolicy Bypass -File .\Start-MLIRShield.ps1
 ```
 
 ## 验证说明

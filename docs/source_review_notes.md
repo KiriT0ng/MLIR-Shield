@@ -9,7 +9,7 @@
 | 路径 | 作用 |
 | --- | --- |
 | `mlirdiff/` | 核心检测框架，包括执行引擎、分类器、差分分析、报告生成、案例库构建。 |
-| `scripts/` | 数据导入、VM runner、Discovery triage、最小化、版本差分、自检和提交包构建脚本。 |
+| `scripts/` | 数据导入、VM runner、Discovery triage、最小化、版本差分、自检和证据导出脚本。 |
 | `configs/` | pass pipeline、版本差分案例和工具链配置。 |
 | `seeds/` | MLIR seed 库，包括官方测试、真实 issue 复现和本地 demo seed。 |
 | `data/seed_sources.json` | seed 来源索引，用于标记官方、issue、generated 来源。 |
@@ -97,7 +97,7 @@
 | `scripts/minimize_seed.py` | 行级 delta minimization。 |
 | `scripts/minimize_mlir_chunks.py` | 函数/块级进一步最小化。 |
 | `scripts/run_version_diff.py` | 执行 MLIR 15 vs MLIR 22 版本差分。 |
-| `scripts/final_check.py` | 参赛前最终自检。 |
+| `scripts/final_check.py` | 项目状态自检。 |
 | `scripts/build_release.py` | 生成可执行展示包。 |
 
 ## 5. 运行入口
@@ -105,7 +105,7 @@
 启动 Web 展示台：
 
 ```powershell
-.\启动展示台.ps1
+powershell -ExecutionPolicy Bypass -File .\Start-MLIRShield.ps1
 ```
 
 或手动运行：
@@ -120,13 +120,13 @@ python web/server.py 8765
 http://127.0.0.1:8765/
 ```
 
-最终自检：
+项目自检：
 
 ```powershell
 python scripts\final_check.py --web http://127.0.0.1:8765
 ```
 
-构建展示包：
+生成本地展示包：
 
 ```powershell
 python scripts\build_release.py --zip
@@ -134,7 +134,7 @@ python scripts\build_release.py --zip
 
 ## 6. 重点检查点
 
-如果评委现场检查源码，建议按以下顺序说明：
+如果需要检查源码，建议按以下顺序说明：
 
 1. `mlirdiff/engine.py`：如何批量运行 seed 与 pipeline。
 2. `mlirdiff/classifier.py`：如何把 stderr/stdout 归类为安全相关失败。
@@ -151,7 +151,7 @@ python scripts\build_release.py --zip
 - 差分测试框架设计和实现。
 - pipeline 批量调度、分类、聚类、报告生成。
 - Discovery triage、最小化、版本差分流程。
-- Web 展示台和比赛包装材料。
+- Web 展示台和项目证据页面。
 
 引用/导入部分：
 

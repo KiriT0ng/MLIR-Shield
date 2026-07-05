@@ -17,7 +17,7 @@
 ```text
 outputs/minimized/mlir22_memref_canonicalize_current.chunk.min.mlir
 outputs/current_validation/min004_current_validation.md
-docs/MIN-004案例报告.md
+docs/min004_case_report.md
 ```
 
 ### LLVM #197158
@@ -25,7 +25,7 @@ docs/MIN-004案例报告.md
 ```text
 seeds/current_mlir23/llvm_197158_mem2reg_dbg_declare_use_after_erase.mlir
 outputs/current_issues_mlir23/llvm_197158_current_validation.md
-docs/MLIR23当前开放问题复核.md
+docs/issue_status_matrix.md
 ```
 
 ### ORIG-CAND-001
@@ -34,14 +34,13 @@ docs/MLIR23当前开放问题复核.md
 seeds/original_candidates/orig_001_inliner_nested_region_returned_func.mlir
 outputs/orig001_variants/report.json
 outputs/orig001_variants/report.html
-docs/ORIG-CAND-001变体验证.md
-docs/原创性证明材料.md
-docs/ORIG-CAND-001上游沟通草稿.md
+docs/originality_evidence.md
+outputs/orig001_variants/report.html
 ```
 
-## 答辩建议
+## 演示与复核建议
 
-建议把矩阵作为答辩中的“证据地图”：
+建议把矩阵作为项目复核中的“证据地图”：
 
 - MIN-004 证明系统能做版本差分和最小化。
 - LLVM #197158 证明系统能跟踪当前 MLIR 23 开放问题。
@@ -50,10 +49,4 @@ docs/ORIG-CAND-001上游沟通草稿.md
 
 ## 上游确认状态
 
-ORIG-CAND-001 当前还未得到 LLVM 维护者确认。已经准备了上游沟通草稿：
-
-```text
-docs/ORIG-CAND-001上游沟通草稿.md
-```
-
-建议正式发布前，由参赛队员确认 GitHub 账号、公开评论内容和署名方式后，再在 LLVM #197960 下发出补充 comment。
+ORIG-CAND-001 当前还未得到 LLVM 维护者确认。后续若要向上游反馈，建议先根据 `docs/originality_evidence.md` 中的边界说明整理英文复现材料，并在 LLVM #197960 下询问是否同根因。

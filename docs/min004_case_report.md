@@ -2,7 +2,7 @@
 
 ## 1. 案例定位
 
-MIN-004 是本项目目前最适合作为答辩核心展示的“发现闭环”案例。它不是历史 issue 的简单复现，而是由 Discovery 流程在 MLIR 22 工具链上，从 LLVM 官方 memref/canonicalize 测试种子中触发、分类、最小化并版本差分得到的 hard failure 候选。
+MIN-004 是本项目最能体现“发现闭环”的核心案例。它不是历史 issue 的简单复现，而是由 Discovery 流程在 MLIR 22 工具链上，从 LLVM 官方 memref/canonicalize 测试种子中触发、分类、最小化并版本差分得到的 hard failure 候选。
 
 2026-05-31 复核结论：该最小复现在 apt.llvm.org 的 MLIR 23 development snapshot 上未复现 hard failure，`mlir-opt-23` 返回 0 并将函数优化为直接返回 `%arg1`。因此，MIN-004 更准确的表述应是“MLIR 22 hard failure，已在更新开发快照中修复或优化路径改变”，不应继续表述为“最新版本仍存在”。
 
@@ -111,7 +111,7 @@ module {
 - 上层框架难以定位问题来源，因为错误发生在底层 pass 组合中。
 - pass 组合复杂时，人工构造触发样例成本高，适合自动化差分系统发现。
 
-## 6. 答辩展示建议
+## 6. 演示与复核建议
 
 演示时不建议先展示大量日志，建议按下面顺序讲：
 

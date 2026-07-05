@@ -1,4 +1,4 @@
-# 报告数据快照
+# 证据数据快照
 
 - 快照目录：`outputs/competition_evidence/`
 - 主快照：`outputs/competition_evidence/competition_evidence.json`
@@ -34,8 +34,8 @@
 - 返回码：本轮证据见 `outputs/real_msys2_mingw64/20260704_002907/summary.json`。
 - 结论边界：用于说明 MLIR 22.1.8 上的真实异常与历史版本差分，不宣称最新版本漏洞或可利用性。
 
-## 口径不一致与处理
+## 数据边界与处理
 
-- 固定快照记录 seed 总数为 4822；用户门户动态扫描历史记录中出现过 4825。报告统一采用 4822，因为其来自冻结 evidence bundle。
-- Discovery MLIR22 的 `clusters=61` 与 review metrics 的 `triage_signatures=92` 不是同一指标。前者来自报告聚类字段，后者来自人工分诊候选签名统计；报告中分别称为“稳定簇”和“候选签名”。
+- 固定快照记录 seed 总数为 4822；用户门户动态扫描历史记录中出现过 4825。项目证据页统一采用 4822，因为其来自冻结 evidence bundle。
+- Discovery MLIR22 的 `clusters=61` 与 review metrics 的 `triage_signatures=92` 不是同一指标。前者来自报告聚类字段，后者来自候选分诊签名统计；项目中分别称为“稳定簇”和“候选签名”。
 - Mock baseline 38576 runs 属于 `showcase` 或负结果展示基线，不写成真实工具链漏洞发现结论。

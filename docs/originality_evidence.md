@@ -59,7 +59,7 @@ module {
 - 注册 dialect 的正常 region/call control 不触发。
 - 公开 no-return 形态和本项目 returned-parent 形态都触发。
 
-## 答辩时的安全表述
+## 公开展示时的安全表述
 
 推荐说法：
 

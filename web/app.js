@@ -187,7 +187,7 @@ function renderOverview() {
     .reduce((sum, [, value]) => sum + Number(value || 0), 0);
 
   $("snapshotTime").textContent = state.evidence
-    ? "固定快照未记录 generated_at；本轮说明见 docs/report_data_snapshot.md"
+    ? "固定快照未记录 generated_at；本轮说明见 docs/evidence_snapshot.md"
     : "未能读取固定快照";
   $("metricRuns").textContent = number(discovery22.runs || metrics.discovery_runs);
   $("metricNonSuccess").textContent = number(nonSuccess);
